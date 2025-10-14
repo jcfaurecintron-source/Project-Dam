@@ -1,5 +1,5 @@
-import Map from '@/components/Map';
+import MapLive from '../components/MapLive';
 
 export default function Home() {
-  return <Map />;
+  return <MapLive />;
 }

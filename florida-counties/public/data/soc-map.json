@@ -1,0 +1,150 @@
+{
+  "programs": [
+    {
+      "category": "Allied Health",
+      "programs": [
+        {
+          "name": "Medical Assistants",
+          "soc": "31-9092",
+          "description": "Perform administrative and clinical tasks in healthcare settings"
+        },
+        {
+          "name": "Physical Therapist Assistants",
+          "soc": "31-2021",
+          "description": "Assist physical therapists in providing treatment"
+        },
+        {
+          "name": "Occupational Therapy Assistants",
+          "soc": "31-2011",
+          "description": "Assist occupational therapists in providing treatment"
+        },
+        {
+          "name": "Dental Assistants",
+          "soc": "31-9091",
+          "description": "Assist dentists in providing patient care"
+        },
+        {
+          "name": "Pharmacy Technicians",
+          "soc": "29-2052",
+          "description": "Prepare medications under pharmacist supervision"
+        },
+        {
+          "name": "Medical Laboratory Technicians",
+          "soc": "29-2012",
+          "description": "Perform routine medical laboratory tests"
+        },
+        {
+          "name": "Radiologic Technologists",
+          "soc": "29-2034",
+          "description": "Perform diagnostic imaging examinations"
+        },
+        {
+          "name": "Surgical Technologists",
+          "soc": "29-2055",
+          "description": "Assist in surgical operations"
+        },
+        {
+          "name": "Respiratory Therapists",
+          "soc": "29-1126",
+          "description": "Care for patients with breathing disorders"
+        },
+        {
+          "name": "Emergency Medical Technicians",
+          "soc": "29-2042",
+          "description": "Provide emergency medical care and transportation"
+        }
+      ]
+    },
+    {
+      "category": "Trades",
+      "programs": [
+        {
+          "name": "Electricians",
+          "soc": "47-2111",
+          "description": "Install and maintain electrical systems"
+        },
+        {
+          "name": "Plumbers",
+          "soc": "47-2152",
+          "description": "Install and repair pipes and fixtures"
+        },
+        {
+          "name": "HVAC Technicians",
+          "soc": "49-9021",
+          "description": "Install and repair heating, cooling, and refrigeration systems"
+        },
+        {
+          "name": "Welders",
+          "soc": "51-4121",
+          "description": "Join metal parts using welding equipment"
+        },
+        {
+          "name": "Carpenters",
+          "soc": "47-2031",
+          "description": "Construct and repair building frameworks and structures"
+        },
+        {
+          "name": "Automotive Service Technicians",
+          "soc": "49-3023",
+          "description": "Inspect, maintain, and repair cars and light trucks"
+        },
+        {
+          "name": "Construction Equipment Operators",
+          "soc": "47-2073",
+          "description": "Operate heavy equipment for construction"
+        },
+        {
+          "name": "Industrial Machinery Mechanics",
+          "soc": "49-9041",
+          "description": "Maintain and repair factory equipment"
+        }
+      ]
+    },
+    {
+      "category": "Nursing",
+      "programs": [
+        {
+          "name": "Registered Nurses",
+          "soc": "29-1141",
+          "description": "Provide and coordinate patient care"
+        },
+        {
+          "name": "Licensed Practical Nurses",
+          "soc": "29-2061",
+          "description": "Provide basic nursing care under RN supervision"
+        },
+        {
+          "name": "Nursing Assistants",
+          "soc": "31-1131",
+          "description": "Provide basic patient care under nursing staff supervision"
+        },
+        {
+          "name": "Nurse Practitioners",
+          "soc": "29-1171",
+          "description": "Provide advanced nursing care and services"
+        }
+      ]
+    },
+    {
+      "category": "Veterinary",
+      "programs": [
+        {
+          "name": "Veterinary Technologists and Technicians",
+          "soc": "29-2056",
+          "description": "Perform medical tests and assist veterinarians"
+        },
+        {
+          "name": "Veterinary Assistants",
+          "soc": "31-9096",
+          "description": "Care for animals and assist veterinarians"
+        },
+        {
+          "name": "Veterinarians",
+          "soc": "29-1131",
+          "description": "Diagnose and treat diseases and injuries of animals"
+        }
+      ]
+    }
+  ]
+}
+
