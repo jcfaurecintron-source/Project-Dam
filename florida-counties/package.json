@@ -17,6 +17,11 @@
     "validate:totals": "echo 'TODO: Add validation script'"
   },
   "dependencies": {
+    "@turf/buffer": "^7.2.0",
+    "@turf/combine": "^7.2.0",
+    "@turf/dissolve": "^7.2.0",
+    "@turf/flatten": "^7.2.0",
+    "@turf/helpers": "^7.2.0",
     "@turf/union": "^7.2.0",
     "@types/mapbox-gl": "^3.4.1",
     "csv-parse": "^6.1.0",

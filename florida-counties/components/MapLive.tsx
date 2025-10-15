@@ -54,35 +54,53 @@ const MapLive = () => {
         });
         console.log('✅ Added MSA GeoJSON source');
 
-        // Add fill layer (data-driven coloring)
+        // Add fill layer with distinct colors per MSA
         map.addLayer({
           id: 'msas-fill',
           type: 'fill',
           source: 'fl-msas',
           paint: {
             'fill-color': [
-              'interpolate',
-              ['linear'],
-              ['coalesce', ['feature-state', 'median'], 0],
-              0, '#f7fafc',
-              40000, '#e3f2fd',
-              60000, '#90caf9',
-              75000, '#42a5f5',
-              90000, '#1e88e5',
-              110000, '#1565c0'
+              'match',
+              ['get', 'CBSAFP'],
+              // Major metros - blue shades
+              '33100', '#4A90E2', // Miami - bright blue
+              '45300', '#7B68EE', // Tampa - medium slate blue
+              '36740', '#50C878', // Orlando - emerald
+              '27740', '#FF6B6B', // Jacksonville - coral red
+              // Mid-size metros - varied colors
+              '15980', '#FFA07A', // Fort Myers - light salmon
+              '35840', '#20B2AA', // Sarasota - light sea green
+              '34940', '#DDA0DD', // Naples - plum
+              '29460', '#F4A460', // Lakeland - sandy brown
+              '37340', '#87CEEB', // Melbourne - sky blue
+              '38940', '#98D8C8', // Port St. Lucie - teal
+              // Smaller metros - pastels
+              '23540', '#FFB6C1', // Gainesville - light pink
+              '45220', '#DEB887', // Tallahassee - burlywood
+              '19660', '#B0E0E6', // Daytona - powder blue
+              '18880', '#F0E68C', // Crestview - khaki
+              '37860', '#E6E6FA', // Pensacola - lavender
+              '37300', '#FFDAB9', // Ocala - peach puff
+              '42680', '#D8BFD8', // Vero Beach - thistle
+              '39460', '#F5DEB3', // Punta Gorda - wheat
+              '30460', '#AFEEEE', // Homosassa - pale turquoise
+              '36100', '#FFE4B5', // Sebring - moccasin
+              '46060', '#E0BBE4', // The Villages - light purple
+              '#CCCCCC' // Default fallback
             ],
-            'fill-opacity': 0.7,
+            'fill-opacity': 0.65,
           },
         });
 
-        // Add outline layer
+        // Add outline layer with white borders for clarity
         map.addLayer({
           id: 'msas-outline',
           type: 'line',
           source: 'fl-msas',
           paint: {
-            'line-color': '#333',
-            'line-width': 1.5,
+            'line-color': '#FFFFFF',
+            'line-width': 2,
           },
         });
 
@@ -261,23 +279,18 @@ const MapLive = () => {
         </div>
       )}
 
-      {/* Legend */}
+      {/* Info Panel */}
       {mapLoaded && (
-        <div className="absolute bottom-4 left-3 bg-white px-4 py-3 rounded-lg shadow-lg z-10">
-          <div className="text-xs font-semibold text-gray-700 mb-2">Median Annual Wage</div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-600">$40k</span>
-            <div className="flex h-4 w-32">
-              <div className="flex-1" style={{ backgroundColor: '#f7fafc' }}></div>
-              <div className="flex-1" style={{ backgroundColor: '#e3f2fd' }}></div>
-              <div className="flex-1" style={{ backgroundColor: '#90caf9' }}></div>
-              <div className="flex-1" style={{ backgroundColor: '#42a5f5' }}></div>
-              <div className="flex-1" style={{ backgroundColor: '#1e88e5' }}></div>
-              <div className="flex-1" style={{ backgroundColor: '#1565c0' }}></div>
-            </div>
-            <span className="text-xs text-gray-600">$110k</span>
+        <div className="absolute bottom-4 left-3 bg-white px-4 py-3 rounded-lg shadow-lg z-10 max-w-xs">
+          <div className="text-sm font-semibold text-gray-800 mb-1">Florida MSAs</div>
+          <div className="text-xs text-gray-600 mb-2">
+            21 Metropolitan Statistical Areas
           </div>
-          <div className="text-xs text-gray-500 mt-2">Click MSA for details</div>
+          <div className="text-xs text-gray-500">
+            • Each MSA has a distinct color<br/>
+            • Click any MSA for live wage data<br/>
+            • White borders separate regions
+          </div>
         </div>
       )}
 
