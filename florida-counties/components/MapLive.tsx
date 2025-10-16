@@ -67,7 +67,7 @@ const MapLive = () => {
               '33100', '#4A90E2', // Miami - bright blue
               '45300', '#7B68EE', // Tampa - medium slate blue
               '36740', '#50C878', // Orlando - emerald
-              '27740', '#FF6B6B', // Jacksonville - coral red
+              '27260', '#FF6B6B', // Jacksonville - coral red
               // Mid-size metros - varied colors
               '15980', '#FFA07A', // Fort Myers - light salmon
               '35840', '#20B2AA', // Sarasota - light sea green
@@ -81,12 +81,12 @@ const MapLive = () => {
               '19660', '#B0E0E6', // Daytona - powder blue
               '18880', '#F0E68C', // Crestview - khaki
               '37860', '#E6E6FA', // Pensacola - lavender
-              '37300', '#FFDAB9', // Ocala - peach puff
+              '36100', '#FFDAB9', // Ocala - peach puff
               '42680', '#D8BFD8', // Vero Beach - thistle
               '39460', '#F5DEB3', // Punta Gorda - wheat
-              '30460', '#AFEEEE', // Homosassa - pale turquoise
-              '36100', '#FFE4B5', // Sebring - moccasin
-              '46060', '#E0BBE4', // The Villages - light purple
+              '26140', '#AFEEEE', // Homosassa - pale turquoise
+              '42700', '#FFE4B5', // Sebring - moccasin
+              '48680', '#E0BBE4', // The Villages - light purple
               '#CCCCCC' // Default fallback
             ],
             'fill-opacity': 0.65,
@@ -323,12 +323,22 @@ function showPopup(
   msaCode: string,
   data: OccupationData
 ) {
-  new mapboxgl.Popup({ closeButton: true, maxWidth: '320px' })
+  // Determine scope from area name
+  const isState = data.areaName.includes('Statewide') || data.areaCode === 'FL';
+  const scopeBadge = isState ? 'State' : 'MSA';
+  const scopeColor = isState ? '#f59e0b' : '#10b981';
+
+  new mapboxgl.Popup({ closeButton: true, maxWidth: '340px' })
     .setLngLat(lngLat)
     .setHTML(`
       <div style="font-family: system-ui; padding: 16px; color: #1a1a1a;">
-        <div style="font-weight:600; font-size: 18px; margin-bottom: 4px; color: #000;">${msaName}</div>
-        <div style="font-size: 11px; color: #666; margin-bottom: 12px;">MSA Code: ${msaCode}</div>
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+          <div style="font-weight:600; font-size: 18px; color: #000; flex: 1;">${msaName}</div>
+          <div style="background: ${scopeColor}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 600; margin-left: 8px; white-space: nowrap;">
+            ${scopeBadge}
+          </div>
+        </div>
+        <div style="font-size: 11px; color: #666; margin-bottom: 12px;">${data.areaName}</div>
         
         <div style="background: #f3f4f6; padding: 8px; border-radius: 4px; margin-bottom: 12px;">
           <div style="font-size: 13px; font-weight: 600; color: #374151;">${data.socTitle}</div>
@@ -336,13 +346,17 @@ function showPopup(
         </div>
         
         <div style="margin-bottom: 8px;">
-          <div style="font-size: 13px; color: #1a1a1a; margin-bottom: 6px;"><strong>Median Wage:</strong> ${formatWage(data.medianAnnual)}</div>
-          <div style="font-size: 12px; color: #4b5563; margin-bottom: 4px;"><strong>Mean Wage:</strong> ${formatWage(data.meanAnnual)}</div>
+          <div style="font-size: 13px; color: #1a1a1a; margin-bottom: 6px; font-weight: 600;">
+            <strong>Median:</strong> ${formatWage(data.medianAnnual)}<span style="font-size: 10px; color: #6b7280;">/year</span>
+          </div>
+          <div style="font-size: 12px; color: #4b5563; margin-bottom: 4px;">
+            <strong>Mean:</strong> ${formatWage(data.meanAnnual)}<span style="font-size: 10px; color: #6b7280;">/year</span>
+          </div>
         </div>
         
         ${data.p10 || data.p90 ? `
           <div style="border-top: 1px solid #e5e7eb; padding-top: 8px; margin-top: 8px;">
-            <div style="font-size: 11px; font-weight: 600; color: #6b7280; margin-bottom: 4px;">Wage Percentiles</div>
+            <div style="font-size: 11px; font-weight: 600; color: #6b7280; margin-bottom: 4px;">Annual Wage Percentiles</div>
             ${data.p10 ? `<div style="font-size: 11px; color: #4b5563;">10th: ${formatWage(data.p10)}</div>` : ''}
             ${data.p25 ? `<div style="font-size: 11px; color: #4b5563;">25th: ${formatWage(data.p25)}</div>` : ''}
             ${data.p75 ? `<div style="font-size: 11px; color: #4b5563;">75th: ${formatWage(data.p75)}</div>` : ''}
@@ -351,8 +365,11 @@ function showPopup(
         ` : ''}
         
         <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #e5e7eb; font-size: 10px; color: #9ca3af;">
-          <div>Source: CareerOneStop (${data.year} OEWS)</div>
-          <div style="margin-top: 2px;">🔴 LIVE DATA</div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Source: CareerOneStop</span>
+            <span>${data.year} OEWS</span>
+          </div>
+          <div style="margin-top: 4px; font-weight: 600; color: #10b981;">🔴 LIVE DATA</div>
         </div>
       </div>
     `)

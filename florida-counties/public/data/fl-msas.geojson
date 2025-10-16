@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "CBSAFP": "37300",
+        "CBSAFP": "36100",
         "NAME": "Ocala, FL"
       },
       "geometry": {
@@ -782,7 +782,7 @@
     {
       "type": "Feature",
       "properties": {
-        "CBSAFP": "46060",
+        "CBSAFP": "48680",
         "NAME": "The Villages, FL"
       },
       "geometry": {
@@ -1308,7 +1308,7 @@
     {
       "type": "Feature",
       "properties": {
-        "CBSAFP": "36100",
+        "CBSAFP": "42700",
         "NAME": "Sebring, FL"
       },
       "geometry": {
@@ -1374,7 +1374,7 @@
     {
       "type": "Feature",
       "properties": {
-        "CBSAFP": "27740",
+        "CBSAFP": "27260",
         "NAME": "Jacksonville, FL"
       },
       "geometry": {
@@ -5776,7 +5776,7 @@
     {
       "type": "Feature",
       "properties": {
-        "CBSAFP": "30460",
+        "CBSAFP": "26140",
         "NAME": "Homosassa Springs, FL"
       },
       "geometry": {

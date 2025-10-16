@@ -40,7 +40,7 @@ interface NormalizedOewsData {
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const soc = searchParams.get('soc');
-  const location = searchParams.get('location') || 'FL';
+  const rawLocation = searchParams.get('location');
   const targetMsaCode = searchParams.get('msaCode');
 
   if (!soc) {
@@ -49,112 +49,121 @@ export async function GET(request: NextRequest) {
 
   if (!USER_ID || !AUTH_TOKEN) {
     console.error('❌ CareerOneStop credentials not configured');
-    console.error('   USER_ID present:', !!USER_ID);
-    console.error('   TOKEN present:', !!AUTH_TOKEN);
     return NextResponse.json({ error: 'API credentials not configured' }, { status: 500 });
   }
 
-  // Format SOC with decimals (CareerOneStop expects XX-XXXX.XX format)
+  // Format SOC with decimals
   const socFormatted = soc.includes('.') ? soc : `${soc}.00`;
   
-  // Build URL - credentials go in headers, NOT URL
-  const url = `${BASE_URL}/comparesalaries/${USER_ID}/wage?keyword=${encodeURIComponent(socFormatted)}&location=${encodeURIComponent(location)}`;
+  // Build location variations (robust resolver for cities like Port St. Lucie)
+  const locationVariations: string[] = [];
   
-  console.log(`📡 CareerOneStop GET: ${url}`);
-  console.log(`   Auth header: Bearer ${AUTH_TOKEN.substring(0, 10)}...`);
-
-  try {
-    const response = await fetch(url, {
-      headers: {
-        'Authorization': `Bearer ${AUTH_TOKEN}`,
-        'Accept': 'application/json',
-      },
-    });
-
-    console.log(`   Response: ${response.status} ${response.statusText}`);
-
-    if (!response.ok) {
-      console.error(`❌ CareerOneStop API error: ${response.status} ${response.statusText}`);
-      
-      // If location-specific fails, try state-level
-      if (location !== 'FL') {
-        console.log('⚠️ Retrying with state-level (FL)');
-        const stateUrl = `${BASE_URL}/comparesalaries/${USER_ID}/wage?keyword=${encodeURIComponent(socFormatted)}&location=FL`;
-        
-        const stateResponse = await fetch(stateUrl, {
-          headers: {
-            'Authorization': `Bearer ${AUTH_TOKEN}`,
-            'Accept': 'application/json',
-          },
-        });
-
-        if (!stateResponse.ok) {
-          return NextResponse.json({ error: 'API request failed' }, { status: 502 });
-        }
-
-        const stateData = await stateResponse.json();
-        return processCareerOneStopResponse(stateData, soc, targetMsaCode, true);
-      }
-      
-      return NextResponse.json({ error: 'API request failed' }, { status: 502 });
-    }
-
-    const data = await response.json();
-    console.log(`   Response keys:`, Object.keys(data));
+  if (rawLocation && rawLocation !== 'FL') {
+    locationVariations.push(rawLocation);                              // Original
+    locationVariations.push(rawLocation.replace(/\./g, ''));          // Remove periods
+    locationVariations.push(rawLocation.replace(/St\./g, 'Saint'));   // St. → Saint
+    locationVariations.push(rawLocation.replace(/St(?=\s)/g, 'Saint')); // St → Saint (before space)
     
-    // Debug: Log the full structure
-    if (data.OccupationDetail) {
-      console.log(`   OccupationDetail keys:`, Object.keys(data.OccupationDetail));
-      console.log(`   OccupationDetail type:`, Array.isArray(data.OccupationDetail) ? 'Array' : 'Object');
-      
-      // If it's an array, check first element
-      if (Array.isArray(data.OccupationDetail) && data.OccupationDetail.length > 0) {
-        console.log(`   OccupationDetail[0] keys:`, Object.keys(data.OccupationDetail[0]));
+    // Extract last 2 words + state (e.g., "Lucie, FL" from "Port St. Lucie, FL")
+    const parts = rawLocation.split(',')[0].trim().split(/\s+/);
+    if (parts.length >= 2) {
+      const shortName = parts.slice(-2).join(' ') + ', FL';
+      if (!locationVariations.includes(shortName)) {
+        locationVariations.push(shortName);
       }
     }
+  }
+  
+  // Always end with FL as final fallback
+  locationVariations.push('FL');
+  
+  // Remove duplicates
+  const uniqueLocations = [...new Set(locationVariations)];
+  console.log(`🔍 Location attempts for MSA ${targetMsaCode}:`, uniqueLocations);
+
+  const attemptLog: Array<{ location: string; status: number | string }> = [];
+  let successfulData: any = null;
+
+  // Try each location variant
+  for (const location of uniqueLocations) {
+    const url = `${BASE_URL}/comparesalaries/${USER_ID}/wage?keyword=${encodeURIComponent(socFormatted)}&location=${encodeURIComponent(location)}`;
     
-    // Parse correct structure: OccupationDetail.Wages (not top-level Wages)
-    const wages = data?.OccupationDetail?.Wages;
-    console.log(`   Has OccupationDetail.Wages:`, !!wages);
-    
-    if (wages) {
-      console.log(`   BLSAreaWagesList length:`, wages.BLSAreaWagesList?.length || 0);
-      console.log(`   StateWagesList length:`, wages.StateWagesList?.length || 0);
-      console.log(`   NationalWagesList length:`, wages.NationalWagesList?.length || 0);
-    }
-    
-    // If BLSAreaWagesList is empty and we requested a city, retry with FL
-    if (wages && (!wages.BLSAreaWagesList || wages.BLSAreaWagesList.length === 0) && location !== 'FL') {
-      console.log(`⚠️ Empty BLSAreaWagesList for ${location}, retrying with location=FL to get all MSAs`);
-      
-      const stateUrl = `${BASE_URL}/comparesalaries/${USER_ID}/wage?keyword=${encodeURIComponent(socFormatted)}&location=FL`;
-      console.log(`📡 CareerOneStop GET (retry): ${stateUrl}`);
-      
-      const stateResponse = await fetch(stateUrl, {
+    console.log(`📡 Trying: "${location}"`);
+
+    try {
+      const response = await fetch(url, {
         headers: {
           'Authorization': `Bearer ${AUTH_TOKEN}`,
           'Accept': 'application/json',
         },
       });
-      
-      console.log(`   Response: ${stateResponse.status} ${stateResponse.statusText}`);
-      
-      if (stateResponse.ok) {
-        const stateData = await stateResponse.json();
-        const stateWages = stateData?.OccupationDetail?.Wages;
-        if (stateWages) {
-          console.log(`   BLSAreaWagesList length (retry):`, stateWages.BLSAreaWagesList?.length || 0);
-        }
-        return processCareerOneStopResponse(stateData, soc, targetMsaCode, true);
-      }
-    }
-    
-    return processCareerOneStopResponse(data, soc, targetMsaCode, false);
 
-  } catch (error) {
-    console.error('CareerOneStop fetch error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+      attemptLog.push({ location, status: response.status });
+
+      if (!response.ok) {
+        console.log(`   ❌ ${response.status} ${response.statusText}`);
+        continue;
+      }
+
+      const data = await response.json();
+      const wages = data?.OccupationDetail?.Wages;
+
+      if (!wages?.BLSAreaWagesList || wages.BLSAreaWagesList.length === 0) {
+        console.log(`   ⚠️ Empty BLSAreaWagesList`);
+        continue;
+      }
+
+      // Log sample of available MSAs
+      const sample = wages.BLSAreaWagesList.slice(0, 3).map((x: any) => ({
+        Area: x.Area,
+        AreaName: x.AreaName,
+        RateType: x.RateType,
+        Year: x.Year,
+      }));
+      console.log(`   BLSAreaWagesList preview:`, sample);
+
+      // Check if target MSA is in this response
+      if (targetMsaCode) {
+        const normalizedTarget = norm(targetMsaCode);
+        const hasMsa = wages.BLSAreaWagesList.some((x: any) => 
+          norm(x.Area || '') === normalizedTarget
+        );
+
+        if (hasMsa) {
+          console.log(`   ✅ Found MSA ${normalizedTarget} in response`);
+          successfulData = data;
+          break;
+        } else {
+          console.log(`   ⚠️ MSA ${normalizedTarget} not found, continuing...`);
+        }
+      } else {
+        // No MSA filter, use first successful response
+        successfulData = data;
+        break;
+      }
+
+    } catch (err) {
+      console.error(`   ❌ Request error:`, err);
+      attemptLog.push({ location, status: 'ERROR' });
+    }
   }
+
+  console.log(`📊 Attempt summary:`, attemptLog);
+
+  if (!successfulData) {
+    console.error(`❌ All attempts failed for ${soc} MSA ${targetMsaCode || 'N/A'}`);
+    return NextResponse.json({ 
+      error: `MISSING_CBSA_${targetMsaCode || 'UNKNOWN'}`,
+      attempts: attemptLog 
+    }, { status: 404 });
+  }
+
+  return processCareerOneStopResponse(successfulData, soc, targetMsaCode, false);
+}
+
+// Shared normalization utility
+function norm(v: string): string {
+  return (v ?? '').replace(/\D+/g, '').slice(-5).padStart(5, '0');
 }
 
 function processCareerOneStopResponse(
@@ -164,7 +173,6 @@ function processCareerOneStopResponse(
   isStateFallback: boolean
 ): NextResponse {
   try {
-    // Correct path: OccupationDetail.Wages (not top-level)
     const wages = data?.OccupationDetail?.Wages;
     const occTitle = data?.OccupationDetail?.OnetTitle || soc;
     
@@ -173,89 +181,132 @@ function processCareerOneStopResponse(
       return NextResponse.json({ error: 'No wage data in response' }, { status: 404 });
     }
     
-    console.log(`✅ Processing wages for ${occTitle}`);
+    console.log(`✅ Processing wages for ${soc}`);
 
-    // If targetMsaCode specified, try to find it in BLSAreaWagesList
-    if (targetMsaCode && wages.BLSAreaWagesList && wages.BLSAreaWagesList.length > 0) {
-      // Normalize: Extract digits only, take last 5, compare as strings
-      const normalizeCode = (code: string): string => {
-        const digits = code.replace(/\D/g, ''); // Remove non-digits
-        return digits.slice(-5); // Take last 5 digits
-      };
-      
-      const normalizedTarget = normalizeCode(targetMsaCode);
-      console.log(`   Searching BLSAreaWagesList for MSA ${targetMsaCode} (normalized: ${normalizedTarget})...`);
-      
-      // Log first item for sanity check
-      if (wages.BLSAreaWagesList[0]) {
-        const first = wages.BLSAreaWagesList[0];
-        console.log(`   Sample item - Raw Area: "${first.Area}", AreaName: "${first.AreaName}"`);
-        console.log(`   Sample item - Normalized: "${normalizeCode(first.Area || first.AreaName)}"`);
-      }
-      
-      // Extract and log available codes
-      const availableCodes = wages.BLSAreaWagesList.map((a: any) => {
-        const areaStr = a.Area || a.AreaCode || a.AreaName || '';
-        return normalizeCode(areaStr);
-      });
-      console.log(`   Available MSA codes (normalized):`, availableCodes);
-      
-      // Find matching MSA by normalized code
-      const msaData = wages.BLSAreaWagesList.find((area: any) => {
-        const areaStr = area.Area || area.AreaCode || area.AreaName || '';
-        const normalizedArea = normalizeCode(areaStr);
-        return normalizedArea === normalizedTarget;
-      });
+    // Strict MSA filtering (no state fallback if MSA requested)
+    let candidates: any[] = [];
+    let scope = 'State';
 
-      if (msaData) {
-        console.log(`   ✅ Found MSA data:`, msaData.AreaName || msaData.Area);
-        
-        const normalized: NormalizedOewsData = {
-          areaCode: msaData.Area || targetMsaCode,
-          areaName: msaData.AreaName || 'MSA Area',
-          soc,
-          socTitle: occTitle,
-          employment: null, // Not available in wage endpoint
-          meanAnnual: parseFloat(msaData.Median || '0') || null,
-          medianAnnual: parseFloat(msaData.Median || '0') || null,
-          p10: parseFloat(msaData.Pct10 || '0') || null,
-          p25: parseFloat(msaData.Pct25 || '0') || null,
-          p75: parseFloat(msaData.Pct75 || '0') || null,
-          p90: parseFloat(msaData.Pct90 || '0') || null,
-          year: 2023,
-          source: 'CareerOneStop',
-        };
-        return NextResponse.json(normalized);
+    if (targetMsaCode) {
+      const normalizedTarget = norm(targetMsaCode);
+      console.log(`   Target MSA: ${targetMsaCode} (normalized: ${normalizedTarget})`);
+      
+      if (wages.BLSAreaWagesList && wages.BLSAreaWagesList.length > 0) {
+        // Filter ONLY by exact MSA match
+        candidates = wages.BLSAreaWagesList.filter((area: any) => {
+          const areaStr = area.Area || '';
+          return norm(areaStr) === normalizedTarget;
+        });
+
+        if (candidates.length > 0) {
+          scope = 'MSA';
+          console.log(`   ✅ Found ${candidates.length} MSA candidate(s) for ${normalizedTarget}`);
+        } else {
+          // MSA requested but not found - HARD FAIL (no state fallback)
+          console.error(`   ❌ MISSING_CBSA_${targetMsaCode}`);
+          console.error(`   Available MSAs:`, wages.BLSAreaWagesList.map((a: any) => ({
+            code: a.Area,
+            name: a.AreaName
+          })).slice(0, 5));
+          
+          return NextResponse.json({ 
+            error: `MISSING_CBSA_${targetMsaCode}`,
+            available: wages.BLSAreaWagesList.map((a: any) => norm(a.Area || '')).slice(0, 10)
+          }, { status: 404 });
+        }
       } else {
-        console.log(`   ⚠️ MSA ${targetMsaCode} not found in BLSAreaWagesList`);
+        console.error(`   ❌ No BLSAreaWagesList in response`);
+        return NextResponse.json({ error: 'No MSA data available' }, { status: 404 });
+      }
+    } else {
+      // No MSA filter - use state or national
+      if (wages.StateWagesList && wages.StateWagesList.length > 0) {
+        candidates = wages.StateWagesList;
+        scope = 'State';
+      } else if (wages.NationalWagesList && wages.NationalWagesList.length > 0) {
+        candidates = wages.NationalWagesList;
+        scope = 'National';
       }
     }
 
-    // Fallback to state or national data
-    const stateData = wages.StateWagesList?.[0];
-    const nationalData = wages.NationalWagesList?.[0];
-    const wageSource = stateData || nationalData;
-
-    if (!wageSource) {
-      console.error('❌ No wage data available (no state or national)');
+    if (candidates.length === 0) {
+      console.error('❌ No wage candidates found');
       return NextResponse.json({ error: 'No wage data available' }, { status: 404 });
     }
 
-    console.log(`   Using fallback: ${stateData ? 'State' : 'National'} level`);
+    // Prefer Annual over Hourly
+    const annual = candidates.filter((r: any) => r.RateType === 'Annual');
+    const hourly = candidates.filter((r: any) => r.RateType === 'Hourly');
+    
+    let pool: any[] = [];
+    let convertedFromHourly = false;
+
+    if (annual.length > 0) {
+      pool = annual;
+      console.log(`   Using Annual rates (${annual.length} record(s))`);
+    } else if (hourly.length > 0) {
+      pool = hourly;
+      convertedFromHourly = true;
+      console.log(`   Using Hourly rates (${hourly.length} record(s)), will convert`);
+    } else {
+      pool = candidates; // Use whatever we have
+    }
+
+    // Pick latest year
+    const chosen = pool.reduce((a, b) => {
+      const yearA = parseInt(a.Year || '0');
+      const yearB = parseInt(b.Year || '0');
+      return yearB > yearA ? b : a;
+    });
+
+    // Comprehensive logging
+    console.log(`   📊 Final chosen record:`, {
+      Area: chosen.Area,
+      AreaName: chosen.AreaName,
+      RateType: chosen.RateType,
+      Year: chosen.Year,
+      Median: chosen.Median,
+      Mean: chosen.Mean,
+      Pct10: chosen.Pct10,
+      Pct25: chosen.Pct25,
+      Pct75: chosen.Pct75,
+      Pct90: chosen.Pct90,
+      convertedFromHourly
+    });
+
+    // Convert hourly to annual if needed
+    const parseWage = (value: string | number | undefined): number | null => {
+      if (!value) return null;
+      const num = parseFloat(String(value).replace(/,/g, ''));
+      if (isNaN(num)) return null;
+      return convertedFromHourly ? Math.round(num * 2080) : num;
+    };
+
+    const medianAnnual = parseWage(chosen.Median);
+    const meanAnnual = parseWage(chosen.Mean);
+    const p10 = parseWage(chosen.Pct10);
+    const p25 = parseWage(chosen.Pct25);
+    const p75 = parseWage(chosen.Pct75);
+    const p90 = parseWage(chosen.Pct90);
+
+    // Validate median
+    if (medianAnnual && medianAnnual < 20000) {
+      console.warn(`   ⚠️ Suspiciously low median: $${medianAnnual}`);
+    }
 
     const normalized: NormalizedOewsData = {
-      areaCode: stateData ? 'FL' : 'US',
-      areaName: stateData ? 'Florida (Statewide)' : 'United States',
+      areaCode: chosen.Area || (scope === 'State' ? 'FL' : 'US'),
+      areaName: chosen.AreaName || `${scope} Average`,
       soc,
       socTitle: occTitle,
-      employment: null, // Wage endpoint does not include employment counts
-      meanAnnual: parseFloat(wageSource.Median || '0') || null,
-      medianAnnual: parseFloat(wageSource.Median || '0') || null,
-      p10: parseFloat(wageSource.Pct10 || '0') || null,
-      p25: parseFloat(wageSource.Pct25 || '0') || null,
-      p75: parseFloat(wageSource.Pct75 || '0') || null,
-      p90: parseFloat(wageSource.Pct90 || '0') || null,
-      year: 2023,
+      employment: null,
+      meanAnnual,
+      medianAnnual,
+      p10,
+      p25,
+      p75,
+      p90,
+      year: parseInt(chosen.Year || '2023'),
       source: 'CareerOneStop',
     };
 

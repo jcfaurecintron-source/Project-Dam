@@ -45,8 +45,17 @@ export async function fetchOccupationData(
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      console.error('CareerOneStop error:', error);
+      const error = await response.json().catch(() => ({ error: 'Unknown error' }));
+      console.error(`CareerOneStop ${response.status} error for ${soc}${msaCode ? ` MSA ${msaCode}` : ''}:`, error);
+      
+      // Log helpful details if it's a missing CBSA
+      if (error.error?.startsWith('MISSING_CBSA')) {
+        console.warn(`   MSA ${msaCode} not found in CareerOneStop API`);
+        if (error.available) {
+          console.warn(`   Available MSAs:`, error.available.slice(0, 5));
+        }
+      }
+      
       return null;
     }
 
