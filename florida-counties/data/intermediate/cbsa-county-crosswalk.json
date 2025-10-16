@@ -1,0 +1,26 @@
+[
+  {
+    "cbsaCode": "37340",
+    "cbsaTitle": "Palm Bay-Melbourne-Titusville, FL",
+    "countyGeoid": "12009",
+    "countyName": "Brevard",
+    "state": "FL",
+    "allocationWeight": 1
+  },
+  {
+    "cbsaCode": "45300",
+    "cbsaTitle": "Tampa-St. Petersburg-Clearwater, FL",
+    "countyGeoid": "12057",
+    "countyName": "Hillsborough",
+    "state": "FL",
+    "allocationWeight": 0.5
+  },
+  {
+    "cbsaCode": "45300",
+    "cbsaTitle": "Tampa-St. Petersburg-Clearwater, FL",
+    "countyGeoid": "12103",
+    "countyName": "Pinellas",
+    "state": "FL",
+    "allocationWeight": 0.5
+  }
+]
