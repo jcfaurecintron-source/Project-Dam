@@ -6,14 +6,30 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "etl:crosswalk": "tsx scripts/build-cbsa-crosswalk.ts",
+    "etl:oews": "tsx scripts/build-oews-county.ts",
+    "etl:projections": "tsx scripts/build-projections.ts",
+    "etl:all": "npm run etl:crosswalk && npm run etl:oews && npm run etl:projections && npm run etl:copy",
+    "etl:copy": "cp data/intermediate/*.json public/data/ && cp src/data/soc-map.json public/data/",
+    "generate:sample": "tsx scripts/generate-comprehensive-data.ts",
+    "etl:parse-oews": "tsx scripts/fetch-florida-oews.ts && tsx scripts/add-nonmsa-counties.ts",
+    "validate:totals": "echo 'TODO: Add validation script'"
   },
   "dependencies": {
+    "@turf/buffer": "^7.2.0",
+    "@turf/combine": "^7.2.0",
+    "@turf/dissolve": "^7.2.0",
+    "@turf/flatten": "^7.2.0",
+    "@turf/helpers": "^7.2.0",
+    "@turf/union": "^7.2.0",
     "@types/mapbox-gl": "^3.4.1",
+    "csv-parse": "^6.1.0",
     "mapbox-gl": "^3.15.0",
     "next": "15.5.5",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "tsx": "^4.20.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
