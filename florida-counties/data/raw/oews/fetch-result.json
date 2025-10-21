@@ -1,0 +1,17 @@
+{
+  "status": "SKIP_UNCHANGED",
+  "url": "https://www.bls.gov/oes/special-requests/oesm24ma.zip",
+  "lastModified": "Wed, 23 Jul 2025 13:19:58 GMT",
+  "etag": "\"0139f7cd4fbdb1:0\"",
+  "sha256": "ff3de028d513d34b6c5e48a99ca4b194f528248f380935ea534a485e9c7c950b",
+  "tablesFound": [
+    "BOS_M2024_dl.xlsx",
+    "file_descriptions.xlsx",
+    "MSA_M2024_dl.xlsx"
+  ],
+  "xlsxPaths": [
+    "data/raw/oews/msa/oesm24ma/BOS_M2024_dl.xlsx",
+    "data/raw/oews/msa/oesm24ma/file_descriptions.xlsx",
+    "data/raw/oews/msa/oesm24ma/MSA_M2024_dl.xlsx"
+  ]
+}

@@ -1,0 +1,3080 @@
+[
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 5830,
+      "2022": null,
+      "2023": 6390,
+      "2024": 6560
+    },
+    "yoy_abs": 170,
+    "yoy_pct": 2.7,
+    "abs_3y": 730,
+    "pct_3y": 12.5,
+    "cagr_3y": 4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 210,
+      "2022": null,
+      "2023": 150,
+      "2024": 200
+    },
+    "yoy_abs": 50,
+    "yoy_pct": 33.3,
+    "abs_3y": -10,
+    "pct_3y": -4.8,
+    "cagr_3y": -1.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 220,
+      "2022": null,
+      "2023": 240,
+      "2024": 250
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 4.2,
+    "abs_3y": 30,
+    "pct_3y": 13.6,
+    "cagr_3y": 4.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 2420,
+      "2022": null,
+      "2023": 2290,
+      "2024": 2320
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 1.3,
+    "abs_3y": -100,
+    "pct_3y": -4.1,
+    "cagr_3y": -1.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 240,
+      "2022": null,
+      "2023": 230,
+      "2024": 250
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 8.7,
+    "abs_3y": 10,
+    "pct_3y": 4.2,
+    "cagr_3y": 1.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 1380,
+      "2022": null,
+      "2023": 1660,
+      "2024": 1950
+    },
+    "yoy_abs": 290,
+    "yoy_pct": 17.5,
+    "abs_3y": 570,
+    "pct_3y": 41.3,
+    "cagr_3y": 12.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 1320,
+      "2022": null,
+      "2023": 1620,
+      "2024": 1750
+    },
+    "yoy_abs": 130,
+    "yoy_pct": 8,
+    "abs_3y": 430,
+    "pct_3y": 32.6,
+    "cagr_3y": 9.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "15980",
+    "msa_name": "Cape Coral-Fort Myers, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 400,
+      "2022": null,
+      "2023": 490,
+      "2024": 560
+    },
+    "yoy_abs": 70,
+    "yoy_pct": 14.3,
+    "abs_3y": 160,
+    "pct_3y": 40,
+    "cagr_3y": 11.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 1700,
+      "2022": null,
+      "2023": 1900,
+      "2024": 2010
+    },
+    "yoy_abs": 110,
+    "yoy_pct": 5.8,
+    "abs_3y": 310,
+    "pct_3y": 18.2,
+    "cagr_3y": 5.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 60,
+      "2022": null,
+      "2023": 60,
+      "2024": 60
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Flat",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 90,
+      "2022": null,
+      "2023": 90,
+      "2024": 90
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Flat",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 460,
+      "2022": null,
+      "2023": 570,
+      "2024": 670
+    },
+    "yoy_abs": 100,
+    "yoy_pct": 17.5,
+    "abs_3y": 210,
+    "pct_3y": 45.7,
+    "cagr_3y": 13.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 140,
+      "2022": null,
+      "2023": null,
+      "2024": null
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 550,
+      "2022": null,
+      "2023": 560,
+      "2024": 580
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 3.6,
+    "abs_3y": 30,
+    "pct_3y": 5.5,
+    "cagr_3y": 1.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 460,
+      "2022": null,
+      "2023": 510,
+      "2024": 510
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 50,
+    "pct_3y": 10.9,
+    "cagr_3y": 3.5,
+    "trend_yoy": "Flat",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "18880",
+    "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 110,
+      "2022": null,
+      "2023": 110,
+      "2024": 110
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Flat",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 5430,
+      "2022": null,
+      "2023": 5940,
+      "2024": 6220
+    },
+    "yoy_abs": 280,
+    "yoy_pct": 4.7,
+    "abs_3y": 790,
+    "pct_3y": 14.5,
+    "cagr_3y": 4.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 160,
+      "2022": null,
+      "2023": 160,
+      "2024": 180
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 12.5,
+    "abs_3y": 20,
+    "pct_3y": 12.5,
+    "cagr_3y": 4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 280,
+      "2022": null,
+      "2023": 280,
+      "2024": 300
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 7.1,
+    "abs_3y": 20,
+    "pct_3y": 7.1,
+    "cagr_3y": 2.3,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1470,
+      "2022": null,
+      "2023": 1310,
+      "2024": 1400
+    },
+    "yoy_abs": 90,
+    "yoy_pct": 6.9,
+    "abs_3y": -70,
+    "pct_3y": -4.8,
+    "cagr_3y": -1.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 200,
+      "2022": null,
+      "2023": 230,
+      "2024": 220
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -4.3,
+    "abs_3y": 20,
+    "pct_3y": 10,
+    "cagr_3y": 3.2,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 960,
+      "2022": null,
+      "2023": 1130,
+      "2024": 1120
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -0.9,
+    "abs_3y": 160,
+    "pct_3y": 16.7,
+    "cagr_3y": 5.3,
+    "trend_yoy": "Flat",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 730,
+      "2022": null,
+      "2023": 760,
+      "2024": 900
+    },
+    "yoy_abs": 140,
+    "yoy_pct": 18.4,
+    "abs_3y": 170,
+    "pct_3y": 23.3,
+    "cagr_3y": 7.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "19660",
+    "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 360,
+      "2022": null,
+      "2023": 370,
+      "2024": 400
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 8.1,
+    "abs_3y": 40,
+    "pct_3y": 11.1,
+    "cagr_3y": 3.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 6010,
+      "2022": null,
+      "2023": 6410,
+      "2024": 7000
+    },
+    "yoy_abs": 590,
+    "yoy_pct": 9.2,
+    "abs_3y": 990,
+    "pct_3y": 16.5,
+    "cagr_3y": 5.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 130,
+      "2022": null,
+      "2023": 150,
+      "2024": 160
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 6.7,
+    "abs_3y": 30,
+    "pct_3y": 23.1,
+    "cagr_3y": 7.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1060,
+      "2022": null,
+      "2023": 740,
+      "2024": 710
+    },
+    "yoy_abs": -30,
+    "yoy_pct": -4.1,
+    "abs_3y": -350,
+    "pct_3y": -33,
+    "cagr_3y": -12.5,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 180,
+      "2022": null,
+      "2023": 160,
+      "2024": 160
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": -20,
+    "pct_3y": -11.1,
+    "cagr_3y": -3.9,
+    "trend_yoy": "Flat",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 540,
+      "2022": null,
+      "2023": 490,
+      "2024": 570
+    },
+    "yoy_abs": 80,
+    "yoy_pct": 16.3,
+    "abs_3y": 30,
+    "pct_3y": 5.6,
+    "cagr_3y": 1.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 420,
+      "2022": null,
+      "2023": 460,
+      "2024": 540
+    },
+    "yoy_abs": 80,
+    "yoy_pct": 17.4,
+    "abs_3y": 120,
+    "pct_3y": 28.6,
+    "cagr_3y": 8.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "23540",
+    "msa_name": "Gainesville, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 130,
+      "2022": null,
+      "2023": 130,
+      "2024": 150
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 15.4,
+    "abs_3y": 20,
+    "pct_3y": 15.4,
+    "cagr_3y": 4.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 880,
+      "2022": null,
+      "2023": 870,
+      "2024": 870
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": -10,
+    "pct_3y": -1.1,
+    "cagr_3y": -0.4,
+    "trend_yoy": "Flat",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 270,
+      "2022": null,
+      "2023": 320,
+      "2024": 350
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 9.4,
+    "abs_3y": 80,
+    "pct_3y": 29.6,
+    "cagr_3y": 9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 190,
+      "2022": null,
+      "2023": 170,
+      "2024": 210
+    },
+    "yoy_abs": 40,
+    "yoy_pct": 23.5,
+    "abs_3y": 20,
+    "pct_3y": 10.5,
+    "cagr_3y": 3.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 190,
+      "2022": null,
+      "2023": 200,
+      "2024": 170
+    },
+    "yoy_abs": -30,
+    "yoy_pct": -15,
+    "abs_3y": -20,
+    "pct_3y": -10.5,
+    "cagr_3y": -3.6,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 50,
+      "2022": null,
+      "2023": 40,
+      "2024": null
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 16970,
+      "2022": null,
+      "2023": 18720,
+      "2024": 18470
+    },
+    "yoy_abs": -250,
+    "yoy_pct": -1.3,
+    "abs_3y": 1500,
+    "pct_3y": 8.8,
+    "cagr_3y": 2.9,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 510,
+      "2022": null,
+      "2023": 410,
+      "2024": 460
+    },
+    "yoy_abs": 50,
+    "yoy_pct": 12.2,
+    "abs_3y": -50,
+    "pct_3y": -9.8,
+    "cagr_3y": -3.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 780,
+      "2022": null,
+      "2023": 860,
+      "2024": 870
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 1.2,
+    "abs_3y": 90,
+    "pct_3y": 11.5,
+    "cagr_3y": 3.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 4610,
+      "2022": null,
+      "2023": 4790,
+      "2024": 5580
+    },
+    "yoy_abs": 790,
+    "yoy_pct": 16.5,
+    "abs_3y": 970,
+    "pct_3y": 21,
+    "cagr_3y": 6.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 530,
+      "2022": null,
+      "2023": 610,
+      "2024": 640
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 4.9,
+    "abs_3y": 110,
+    "pct_3y": 20.8,
+    "cagr_3y": 6.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 3660,
+      "2022": null,
+      "2023": 3700,
+      "2024": 3940
+    },
+    "yoy_abs": 240,
+    "yoy_pct": 6.5,
+    "abs_3y": 280,
+    "pct_3y": 7.7,
+    "cagr_3y": 2.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 2040,
+      "2022": null,
+      "2023": 2950,
+      "2024": 3150
+    },
+    "yoy_abs": 200,
+    "yoy_pct": 6.8,
+    "abs_3y": 1110,
+    "pct_3y": 54.4,
+    "cagr_3y": 15.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "27260",
+    "msa_name": "Jacksonville, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 1330,
+      "2022": null,
+      "2023": 1280,
+      "2024": 1300
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 1.6,
+    "abs_3y": -30,
+    "pct_3y": -2.3,
+    "cagr_3y": -0.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 4240,
+      "2022": null,
+      "2023": 5330,
+      "2024": 5840
+    },
+    "yoy_abs": 510,
+    "yoy_pct": 9.6,
+    "abs_3y": 1600,
+    "pct_3y": 37.7,
+    "cagr_3y": 11.3,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 180,
+      "2022": null,
+      "2023": 170,
+      "2024": 170
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": -10,
+    "pct_3y": -5.6,
+    "cagr_3y": -1.9,
+    "trend_yoy": "Flat",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 200,
+      "2022": null,
+      "2023": 250,
+      "2024": 300
+    },
+    "yoy_abs": 50,
+    "yoy_pct": 20,
+    "abs_3y": 100,
+    "pct_3y": 50,
+    "cagr_3y": 14.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1590,
+      "2022": null,
+      "2023": 1510,
+      "2024": 1600
+    },
+    "yoy_abs": 90,
+    "yoy_pct": 6,
+    "abs_3y": 10,
+    "pct_3y": 0.6,
+    "cagr_3y": 0.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 940,
+      "2022": null,
+      "2023": 1090,
+      "2024": 960
+    },
+    "yoy_abs": -130,
+    "yoy_pct": -11.9,
+    "abs_3y": 20,
+    "pct_3y": 2.1,
+    "cagr_3y": 0.7,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 950,
+      "2022": null,
+      "2023": 910,
+      "2024": 960
+    },
+    "yoy_abs": 50,
+    "yoy_pct": 5.5,
+    "abs_3y": 10,
+    "pct_3y": 1.1,
+    "cagr_3y": 0.3,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 680,
+      "2022": null,
+      "2023": 680,
+      "2024": 720
+    },
+    "yoy_abs": 40,
+    "yoy_pct": 5.9,
+    "abs_3y": 40,
+    "pct_3y": 5.9,
+    "cagr_3y": 1.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 53110,
+      "2022": null,
+      "2023": 56660,
+      "2024": 59880
+    },
+    "yoy_abs": 3220,
+    "yoy_pct": 5.7,
+    "abs_3y": 6770,
+    "pct_3y": 12.7,
+    "cagr_3y": 4.1,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 1650,
+      "2022": null,
+      "2023": 1680,
+      "2024": 2110
+    },
+    "yoy_abs": 430,
+    "yoy_pct": 25.6,
+    "abs_3y": 460,
+    "pct_3y": 27.9,
+    "cagr_3y": 8.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 1860,
+      "2022": null,
+      "2023": 1930,
+      "2024": 2180
+    },
+    "yoy_abs": 250,
+    "yoy_pct": 13,
+    "abs_3y": 320,
+    "pct_3y": 17.2,
+    "cagr_3y": 5.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 15310,
+      "2022": null,
+      "2023": 15190,
+      "2024": 17560
+    },
+    "yoy_abs": 2370,
+    "yoy_pct": 15.6,
+    "abs_3y": 2250,
+    "pct_3y": 14.7,
+    "cagr_3y": 4.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 1640,
+      "2022": null,
+      "2023": 1950,
+      "2024": 1610
+    },
+    "yoy_abs": -340,
+    "yoy_pct": -17.4,
+    "abs_3y": -30,
+    "pct_3y": -1.8,
+    "cagr_3y": -0.6,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 11100,
+      "2022": null,
+      "2023": 12400,
+      "2024": 12570
+    },
+    "yoy_abs": 170,
+    "yoy_pct": 1.4,
+    "abs_3y": 1470,
+    "pct_3y": 13.2,
+    "cagr_3y": 4.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 8450,
+      "2022": null,
+      "2023": 9540,
+      "2024": 9200
+    },
+    "yoy_abs": -340,
+    "yoy_pct": -3.6,
+    "abs_3y": 750,
+    "pct_3y": 8.9,
+    "cagr_3y": 2.9,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "33100",
+    "msa_name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 2890,
+      "2022": null,
+      "2023": 3190,
+      "2024": 3520
+    },
+    "yoy_abs": 330,
+    "yoy_pct": 10.3,
+    "abs_3y": 630,
+    "pct_3y": 21.8,
+    "cagr_3y": 6.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 2670,
+      "2022": null,
+      "2023": 2770,
+      "2024": 2910
+    },
+    "yoy_abs": 140,
+    "yoy_pct": 5.1,
+    "abs_3y": 240,
+    "pct_3y": 9,
+    "cagr_3y": 2.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 100,
+      "2022": null,
+      "2023": 130,
+      "2024": 140
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 7.7,
+    "abs_3y": 40,
+    "pct_3y": 40,
+    "cagr_3y": 11.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 90,
+      "2022": null,
+      "2023": 110,
+      "2024": 110
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 20,
+    "pct_3y": 22.2,
+    "cagr_3y": 6.9,
+    "trend_yoy": "Flat",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1000,
+      "2022": null,
+      "2023": 950,
+      "2024": 1180
+    },
+    "yoy_abs": 230,
+    "yoy_pct": 24.2,
+    "abs_3y": 180,
+    "pct_3y": 18,
+    "cagr_3y": 5.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 120,
+      "2022": null,
+      "2023": 140,
+      "2024": 120
+    },
+    "yoy_abs": -20,
+    "yoy_pct": -14.3,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Down",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 780,
+      "2022": null,
+      "2023": 870,
+      "2024": 1010
+    },
+    "yoy_abs": 140,
+    "yoy_pct": 16.1,
+    "abs_3y": 230,
+    "pct_3y": 29.5,
+    "cagr_3y": 9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 650,
+      "2022": null,
+      "2023": 1070,
+      "2024": 950
+    },
+    "yoy_abs": -120,
+    "yoy_pct": -11.2,
+    "abs_3y": 300,
+    "pct_3y": 46.2,
+    "cagr_3y": 13.5,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "34940",
+    "msa_name": "Naples-Immokalee-Marco Island, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 140,
+      "2022": null,
+      "2023": 200,
+      "2024": 190
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -5,
+    "abs_3y": 50,
+    "pct_3y": 35.7,
+    "cagr_3y": 10.7,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 6970,
+      "2022": null,
+      "2023": 7140,
+      "2024": 7760
+    },
+    "yoy_abs": 620,
+    "yoy_pct": 8.7,
+    "abs_3y": 790,
+    "pct_3y": 11.3,
+    "cagr_3y": 3.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 250,
+      "2022": null,
+      "2023": 190,
+      "2024": 270
+    },
+    "yoy_abs": 80,
+    "yoy_pct": 42.1,
+    "abs_3y": 20,
+    "pct_3y": 8,
+    "cagr_3y": 2.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 330,
+      "2022": null,
+      "2023": 350,
+      "2024": 360
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 2.9,
+    "abs_3y": 30,
+    "pct_3y": 9.1,
+    "cagr_3y": 2.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 2280,
+      "2022": null,
+      "2023": 2380,
+      "2024": 1970
+    },
+    "yoy_abs": -410,
+    "yoy_pct": -17.2,
+    "abs_3y": -310,
+    "pct_3y": -13.6,
+    "cagr_3y": -4.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 310,
+      "2022": null,
+      "2023": 300,
+      "2024": 220
+    },
+    "yoy_abs": -80,
+    "yoy_pct": -26.7,
+    "abs_3y": -90,
+    "pct_3y": -29,
+    "cagr_3y": -10.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 1710,
+      "2022": null,
+      "2023": 1700,
+      "2024": 1700
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": -10,
+    "pct_3y": -0.6,
+    "cagr_3y": -0.2,
+    "trend_yoy": "Flat",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 1340,
+      "2022": null,
+      "2023": 1730,
+      "2024": 1860
+    },
+    "yoy_abs": 130,
+    "yoy_pct": 7.5,
+    "abs_3y": 520,
+    "pct_3y": 38.8,
+    "cagr_3y": 11.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "35840",
+    "msa_name": "North Port-Sarasota-Bradenton, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 760,
+      "2022": null,
+      "2023": 880,
+      "2024": 900
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 2.3,
+    "abs_3y": 140,
+    "pct_3y": 18.4,
+    "cagr_3y": 5.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 2240,
+      "2022": null,
+      "2023": 2930,
+      "2024": 3050
+    },
+    "yoy_abs": 120,
+    "yoy_pct": 4.1,
+    "abs_3y": 810,
+    "pct_3y": 36.2,
+    "cagr_3y": 10.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 80,
+      "2022": null,
+      "2023": 80,
+      "2024": 90
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 12.5,
+    "abs_3y": 10,
+    "pct_3y": 12.5,
+    "cagr_3y": 4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 70,
+      "2022": null,
+      "2023": 120,
+      "2024": 140
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 16.7,
+    "abs_3y": 70,
+    "pct_3y": 100,
+    "cagr_3y": 26,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 990,
+      "2022": null,
+      "2023": 930,
+      "2024": 1070
+    },
+    "yoy_abs": 140,
+    "yoy_pct": 15.1,
+    "abs_3y": 80,
+    "pct_3y": 8.1,
+    "cagr_3y": 2.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 170,
+      "2022": null,
+      "2023": 160,
+      "2024": 190
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 18.8,
+    "abs_3y": 20,
+    "pct_3y": 11.8,
+    "cagr_3y": 3.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 400,
+      "2022": null,
+      "2023": 550,
+      "2024": 590
+    },
+    "yoy_abs": 40,
+    "yoy_pct": 7.3,
+    "abs_3y": 190,
+    "pct_3y": 47.5,
+    "cagr_3y": 13.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 370,
+      "2022": null,
+      "2023": 510,
+      "2024": 580
+    },
+    "yoy_abs": 70,
+    "yoy_pct": 13.7,
+    "abs_3y": 210,
+    "pct_3y": 56.8,
+    "cagr_3y": 16.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36100",
+    "msa_name": "Ocala, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 520,
+      "2022": null,
+      "2023": 400,
+      "2024": 430
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 7.5,
+    "abs_3y": -90,
+    "pct_3y": -17.3,
+    "cagr_3y": -6.1,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 21530,
+      "2022": null,
+      "2023": 26020,
+      "2024": 28020
+    },
+    "yoy_abs": 2000,
+    "yoy_pct": 7.7,
+    "abs_3y": 6490,
+    "pct_3y": 30.1,
+    "cagr_3y": 9.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 610,
+      "2022": null,
+      "2023": 740,
+      "2024": 820
+    },
+    "yoy_abs": 80,
+    "yoy_pct": 10.8,
+    "abs_3y": 210,
+    "pct_3y": 34.4,
+    "cagr_3y": 10.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 900,
+      "2022": null,
+      "2023": 1130,
+      "2024": 1210
+    },
+    "yoy_abs": 80,
+    "yoy_pct": 7.1,
+    "abs_3y": 310,
+    "pct_3y": 34.4,
+    "cagr_3y": 10.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 7750,
+      "2022": null,
+      "2023": 6670,
+      "2024": 7160
+    },
+    "yoy_abs": 490,
+    "yoy_pct": 7.3,
+    "abs_3y": -590,
+    "pct_3y": -7.6,
+    "cagr_3y": -2.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 690,
+      "2022": null,
+      "2023": 750,
+      "2024": 840
+    },
+    "yoy_abs": 90,
+    "yoy_pct": 12,
+    "abs_3y": 150,
+    "pct_3y": 21.7,
+    "cagr_3y": 6.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 5180,
+      "2022": null,
+      "2023": 6460,
+      "2024": 6780
+    },
+    "yoy_abs": 320,
+    "yoy_pct": 5,
+    "abs_3y": 1600,
+    "pct_3y": 30.9,
+    "cagr_3y": 9.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 3900,
+      "2022": null,
+      "2023": 4930,
+      "2024": 5300
+    },
+    "yoy_abs": 370,
+    "yoy_pct": 7.5,
+    "abs_3y": 1400,
+    "pct_3y": 35.9,
+    "cagr_3y": 10.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "36740",
+    "msa_name": "Orlando-Kissimmee-Sanford, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 1540,
+      "2022": null,
+      "2023": 1770,
+      "2024": 2020
+    },
+    "yoy_abs": 250,
+    "yoy_pct": 14.1,
+    "abs_3y": 480,
+    "pct_3y": 31.2,
+    "cagr_3y": 9.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 4800,
+      "2022": null,
+      "2023": 5040,
+      "2024": 5160
+    },
+    "yoy_abs": 120,
+    "yoy_pct": 2.4,
+    "abs_3y": 360,
+    "pct_3y": 7.5,
+    "cagr_3y": 2.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 160,
+      "2022": null,
+      "2023": 210,
+      "2024": 240
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 14.3,
+    "abs_3y": 80,
+    "pct_3y": 50,
+    "cagr_3y": 14.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 200,
+      "2022": null,
+      "2023": 250,
+      "2024": 230
+    },
+    "yoy_abs": -20,
+    "yoy_pct": -8,
+    "abs_3y": 30,
+    "pct_3y": 15,
+    "cagr_3y": 4.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1090,
+      "2022": null,
+      "2023": 1220,
+      "2024": 1700
+    },
+    "yoy_abs": 480,
+    "yoy_pct": 39.3,
+    "abs_3y": 610,
+    "pct_3y": 56,
+    "cagr_3y": 16,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 210,
+      "2022": null,
+      "2023": 200,
+      "2024": 210
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 5,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Up",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 1190,
+      "2022": null,
+      "2023": 1220,
+      "2024": 1250
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 2.5,
+    "abs_3y": 60,
+    "pct_3y": 5,
+    "cagr_3y": 1.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 960,
+      "2022": null,
+      "2023": 920,
+      "2024": 1030
+    },
+    "yoy_abs": 110,
+    "yoy_pct": 12,
+    "abs_3y": 70,
+    "pct_3y": 7.3,
+    "cagr_3y": 2.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37340",
+    "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 670,
+      "2022": null,
+      "2023": 640,
+      "2024": 630
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -1.6,
+    "abs_3y": -40,
+    "pct_3y": -6,
+    "cagr_3y": -2,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 4970,
+      "2022": null,
+      "2023": 5320,
+      "2024": 5730
+    },
+    "yoy_abs": 410,
+    "yoy_pct": 7.7,
+    "abs_3y": 760,
+    "pct_3y": 15.3,
+    "cagr_3y": 4.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 130,
+      "2022": null,
+      "2023": 110,
+      "2024": 140
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 27.3,
+    "abs_3y": 10,
+    "pct_3y": 7.7,
+    "cagr_3y": 2.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 240,
+      "2022": null,
+      "2023": 280,
+      "2024": 260
+    },
+    "yoy_abs": -20,
+    "yoy_pct": -7.1,
+    "abs_3y": 20,
+    "pct_3y": 8.3,
+    "cagr_3y": 2.7,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1330,
+      "2022": null,
+      "2023": 1070,
+      "2024": 1460
+    },
+    "yoy_abs": 390,
+    "yoy_pct": 36.4,
+    "abs_3y": 130,
+    "pct_3y": 9.8,
+    "cagr_3y": 3.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 180,
+      "2022": null,
+      "2023": 180,
+      "2024": null
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 820,
+      "2022": null,
+      "2023": 1050,
+      "2024": 980
+    },
+    "yoy_abs": -70,
+    "yoy_pct": -6.7,
+    "abs_3y": 160,
+    "pct_3y": 19.5,
+    "cagr_3y": 6.1,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 670,
+      "2022": null,
+      "2023": 1070,
+      "2024": 1040
+    },
+    "yoy_abs": -30,
+    "yoy_pct": -2.8,
+    "abs_3y": 370,
+    "pct_3y": 55.2,
+    "cagr_3y": 15.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "37860",
+    "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 210,
+      "2022": null,
+      "2023": 250,
+      "2024": 260
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 4,
+    "abs_3y": 50,
+    "pct_3y": 23.8,
+    "cagr_3y": 7.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 3570,
+      "2022": null,
+      "2023": 3110,
+      "2024": 4350
+    },
+    "yoy_abs": 1240,
+    "yoy_pct": 39.9,
+    "abs_3y": 780,
+    "pct_3y": 21.8,
+    "cagr_3y": 6.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 80,
+      "2022": null,
+      "2023": 80,
+      "2024": 80
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Flat",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 130,
+      "2022": null,
+      "2023": 90,
+      "2024": 140
+    },
+    "yoy_abs": 50,
+    "yoy_pct": 55.6,
+    "abs_3y": 10,
+    "pct_3y": 7.7,
+    "cagr_3y": 2.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 930,
+      "2022": null,
+      "2023": 1390,
+      "2024": 1350
+    },
+    "yoy_abs": -40,
+    "yoy_pct": -2.9,
+    "abs_3y": 420,
+    "pct_3y": 45.2,
+    "cagr_3y": 13.2,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 150,
+      "2022": null,
+      "2023": 150,
+      "2024": 150
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Flat",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 810,
+      "2022": null,
+      "2023": 890,
+      "2024": 1020
+    },
+    "yoy_abs": 130,
+    "yoy_pct": 14.6,
+    "abs_3y": 210,
+    "pct_3y": 25.9,
+    "cagr_3y": 8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 490,
+      "2022": null,
+      "2023": 550,
+      "2024": 760
+    },
+    "yoy_abs": 210,
+    "yoy_pct": 38.2,
+    "abs_3y": 270,
+    "pct_3y": 55.1,
+    "cagr_3y": 15.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "38940",
+    "msa_name": "Port St. Lucie, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 310,
+      "2022": null,
+      "2023": 360,
+      "2024": 390
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 8.3,
+    "abs_3y": 80,
+    "pct_3y": 25.8,
+    "cagr_3y": 8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 1440,
+      "2022": null,
+      "2023": 1290,
+      "2024": 1480
+    },
+    "yoy_abs": 190,
+    "yoy_pct": 14.7,
+    "abs_3y": 40,
+    "pct_3y": 2.8,
+    "cagr_3y": 0.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 70,
+      "2022": null,
+      "2023": null,
+      "2024": 60
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": -10,
+    "pct_3y": -14.3,
+    "cagr_3y": -5,
+    "trend_yoy": null,
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 360,
+      "2022": null,
+      "2023": 560,
+      "2024": 540
+    },
+    "yoy_abs": -20,
+    "yoy_pct": -3.6,
+    "abs_3y": 180,
+    "pct_3y": 50,
+    "cagr_3y": 14.5,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 80,
+      "2022": null,
+      "2023": 60,
+      "2024": 60
+    },
+    "yoy_abs": 0,
+    "yoy_pct": 0,
+    "abs_3y": -20,
+    "pct_3y": -25,
+    "cagr_3y": -9.1,
+    "trend_yoy": "Flat",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 200,
+      "2022": null,
+      "2023": 260,
+      "2024": 250
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -3.8,
+    "abs_3y": 50,
+    "pct_3y": 25,
+    "cagr_3y": 7.7,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 270,
+      "2022": null,
+      "2023": 310,
+      "2024": 330
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 6.5,
+    "abs_3y": 60,
+    "pct_3y": 22.2,
+    "cagr_3y": 6.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 60,
+      "2022": null,
+      "2023": 70,
+      "2024": 90
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 28.6,
+    "abs_3y": 30,
+    "pct_3y": 50,
+    "cagr_3y": 14.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 1710,
+      "2022": null,
+      "2023": 1630,
+      "2024": 1780
+    },
+    "yoy_abs": 150,
+    "yoy_pct": 9.2,
+    "abs_3y": 70,
+    "pct_3y": 4.1,
+    "cagr_3y": 1.3,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 30,
+      "2022": null,
+      "2023": 40,
+      "2024": 50
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 25,
+    "abs_3y": 20,
+    "pct_3y": 66.7,
+    "cagr_3y": 18.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 90,
+      "2022": null,
+      "2023": 90,
+      "2024": 80
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -11.1,
+    "abs_3y": -10,
+    "pct_3y": -11.1,
+    "cagr_3y": -3.9,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 400,
+      "2022": null,
+      "2023": 360,
+      "2024": 440
+    },
+    "yoy_abs": 80,
+    "yoy_pct": 22.2,
+    "abs_3y": 40,
+    "pct_3y": 10,
+    "cagr_3y": 3.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 50,
+      "2022": null,
+      "2023": 70,
+      "2024": 90
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 28.6,
+    "abs_3y": 40,
+    "pct_3y": 80,
+    "cagr_3y": 21.6,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 200,
+      "2022": null,
+      "2023": 210,
+      "2024": 240
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 14.3,
+    "abs_3y": 40,
+    "pct_3y": 20,
+    "cagr_3y": 6.3,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 250,
+      "2022": null,
+      "2023": 350,
+      "2024": 340
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -2.9,
+    "abs_3y": 90,
+    "pct_3y": 36,
+    "cagr_3y": 10.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42680",
+    "msa_name": "Sebastian-Vero Beach, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 70,
+      "2022": null,
+      "2023": 50,
+      "2024": 90
+    },
+    "yoy_abs": 40,
+    "yoy_pct": 80,
+    "abs_3y": 20,
+    "pct_3y": 28.6,
+    "cagr_3y": 8.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42700",
+    "msa_name": "Sebring, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 880,
+      "2022": null,
+      "2023": 870,
+      "2024": 860
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -1.1,
+    "abs_3y": -20,
+    "pct_3y": -2.3,
+    "cagr_3y": -0.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42700",
+    "msa_name": "Sebring, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 220,
+      "2022": null,
+      "2023": 280,
+      "2024": 270
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -3.6,
+    "abs_3y": 50,
+    "pct_3y": 22.7,
+    "cagr_3y": 7.1,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42700",
+    "msa_name": "Sebring, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 50,
+      "2022": null,
+      "2023": 80,
+      "2024": 100
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 25,
+    "abs_3y": 50,
+    "pct_3y": 100,
+    "cagr_3y": 26,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42700",
+    "msa_name": "Sebring, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 130,
+      "2022": null,
+      "2023": 120,
+      "2024": 130
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 8.3,
+    "abs_3y": 0,
+    "pct_3y": 0,
+    "cagr_3y": 0,
+    "trend_yoy": "Up",
+    "trend_3y": "Flat",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "42700",
+    "msa_name": "Sebring, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 40,
+      "2022": null,
+      "2023": 60,
+      "2024": 50
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -16.7,
+    "abs_3y": 10,
+    "pct_3y": 25,
+    "cagr_3y": 7.7,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 3330,
+      "2022": null,
+      "2023": 3730,
+      "2024": 3830
+    },
+    "yoy_abs": 100,
+    "yoy_pct": 2.7,
+    "abs_3y": 500,
+    "pct_3y": 15,
+    "cagr_3y": 4.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 100,
+      "2022": null,
+      "2023": 110,
+      "2024": 150
+    },
+    "yoy_abs": 40,
+    "yoy_pct": 36.4,
+    "abs_3y": 50,
+    "pct_3y": 50,
+    "cagr_3y": 14.5,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 160,
+      "2022": null,
+      "2023": 120,
+      "2024": 150
+    },
+    "yoy_abs": 30,
+    "yoy_pct": 25,
+    "abs_3y": -10,
+    "pct_3y": -6.2,
+    "cagr_3y": -2.1,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 1010,
+      "2022": null,
+      "2023": 1140,
+      "2024": 1230
+    },
+    "yoy_abs": 90,
+    "yoy_pct": 7.9,
+    "abs_3y": 220,
+    "pct_3y": 21.8,
+    "cagr_3y": 6.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 190,
+      "2022": null,
+      "2023": 190,
+      "2024": 200
+    },
+    "yoy_abs": 10,
+    "yoy_pct": 5.3,
+    "abs_3y": 10,
+    "pct_3y": 5.3,
+    "cagr_3y": 1.7,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 670,
+      "2022": null,
+      "2023": 680,
+      "2024": 750
+    },
+    "yoy_abs": 70,
+    "yoy_pct": 10.3,
+    "abs_3y": 80,
+    "pct_3y": 11.9,
+    "cagr_3y": 3.8,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 450,
+      "2022": null,
+      "2023": 510,
+      "2024": 630
+    },
+    "yoy_abs": 120,
+    "yoy_pct": 23.5,
+    "abs_3y": 180,
+    "pct_3y": 40,
+    "cagr_3y": 11.9,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45220",
+    "msa_name": "Tallahassee, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 110,
+      "2022": null,
+      "2023": 120,
+      "2024": 160
+    },
+    "yoy_abs": 40,
+    "yoy_pct": 33.3,
+    "abs_3y": 50,
+    "pct_3y": 45.5,
+    "cagr_3y": 13.3,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": 30940,
+      "2022": null,
+      "2023": 34240,
+      "2024": 35050
+    },
+    "yoy_abs": 810,
+    "yoy_pct": 2.4,
+    "abs_3y": 4110,
+    "pct_3y": 13.3,
+    "cagr_3y": 4.2,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": 1020,
+      "2022": null,
+      "2023": 870,
+      "2024": 890
+    },
+    "yoy_abs": 20,
+    "yoy_pct": 2.3,
+    "abs_3y": -130,
+    "pct_3y": -12.7,
+    "cagr_3y": -4.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": 1110,
+      "2022": null,
+      "2023": 1580,
+      "2024": 1240
+    },
+    "yoy_abs": -340,
+    "yoy_pct": -21.5,
+    "abs_3y": 130,
+    "pct_3y": 11.7,
+    "cagr_3y": 3.8,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": 10310,
+      "2022": null,
+      "2023": 8870,
+      "2024": 8170
+    },
+    "yoy_abs": -700,
+    "yoy_pct": -7.9,
+    "abs_3y": -2140,
+    "pct_3y": -20.8,
+    "cagr_3y": -7.5,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": 1140,
+      "2022": null,
+      "2023": 1250,
+      "2024": 1120
+    },
+    "yoy_abs": -130,
+    "yoy_pct": -10.4,
+    "abs_3y": -20,
+    "pct_3y": -1.8,
+    "cagr_3y": -0.6,
+    "trend_yoy": "Down",
+    "trend_3y": "Down",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": 6240,
+      "2022": null,
+      "2023": 7630,
+      "2024": 7110
+    },
+    "yoy_abs": -520,
+    "yoy_pct": -6.8,
+    "abs_3y": 870,
+    "pct_3y": 13.9,
+    "cagr_3y": 4.4,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": 4790,
+      "2022": null,
+      "2023": 6050,
+      "2024": 5640
+    },
+    "yoy_abs": -410,
+    "yoy_pct": -6.8,
+    "abs_3y": 850,
+    "pct_3y": 17.7,
+    "cagr_3y": 5.6,
+    "trend_yoy": "Down",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "45300",
+    "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": 2210,
+      "2022": null,
+      "2023": 2300,
+      "2024": 2370
+    },
+    "yoy_abs": 70,
+    "yoy_pct": 3,
+    "abs_3y": 160,
+    "pct_3y": 7.2,
+    "cagr_3y": 2.4,
+    "trend_yoy": "Up",
+    "trend_3y": "Up",
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": 40,
+      "2024": null
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "39460",
+    "msa_name": "Punta Gorda, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": 60,
+      "2024": 50
+    },
+    "yoy_abs": -10,
+    "yoy_pct": -16.7,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": "Down",
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "26140",
+    "msa_name": "Homosassa Springs, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 40
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "29460",
+    "msa_name": "Lakeland-Winter Haven, FL",
+    "soc": "31-9096",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 180
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "29-1141",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 940
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "29-2032",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 50
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "29-2055",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 50
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "31-9092",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 480
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "47-2111",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 210
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "49-9021",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 190
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  },
+  {
+    "msa_code": "48680",
+    "msa_name": "Wildwood-The Villages, FL",
+    "soc": "51-4121",
+    "employment_by_year": {
+      "2021": null,
+      "2022": null,
+      "2023": null,
+      "2024": 80
+    },
+    "yoy_abs": null,
+    "yoy_pct": null,
+    "abs_3y": null,
+    "pct_3y": null,
+    "cagr_3y": null,
+    "trend_yoy": null,
+    "trend_3y": null,
+    "latest_year": 2024
+  }
+]

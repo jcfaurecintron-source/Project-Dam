@@ -3,8 +3,64 @@
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { fetchOccupationData, formatWage } from '@/lib/careeronestop';
-import type { OccupationData } from '@/lib/careeronestop';
+import InsightPanel from './InsightPanel';
+
+// OEWS 2024 Data Types
+interface OewsRecord {
+  msa_code: string;
+  msa_name: string;
+  soc: string;
+  employment: number | null;
+  median_annual: number | null;
+  mean_annual: number | null;
+  p10_annual: number | null;
+  p25_annual: number | null;
+  p75_annual: number | null;
+  p90_annual: number | null;
+  year: number;
+}
+
+// OEWS Series Data (Historical Employment)
+interface OewsSeriesRecord {
+  msa_code: string;
+  msa_name: string;
+  soc: string;
+  employment_by_year: Record<string, number | null>;
+  yoy_abs: number | null;
+  yoy_pct: number | null;
+  abs_3y: number | null;
+  pct_3y: number | null;
+  cagr_3y: number | null;
+  trend_yoy: 'Up' | 'Down' | 'Flat' | null;
+  trend_3y: 'Up' | 'Down' | 'Flat' | null;
+  latest_year: number;
+}
+
+// InsightPanel Data Type
+interface InsightPanelData {
+  scope: 'MSA' | 'State';
+  msaCode: string;
+  msaName: string;
+  soc: string;
+  year: number;
+  employment: number | null;
+  medianAnnual: number | null;
+  meanAnnual: number | null;
+  p10Annual: number | null;
+  p25Annual?: number | null;
+  p75Annual?: number | null;
+  p90Annual: number | null;
+  // Growth metrics (from employment history)
+  yoyAbs?: number | null;
+  yoyPct?: number | null;
+  trendYoy?: 'Up' | 'Down' | 'Flat' | null;
+  abs3y?: number | null;
+  pct3y?: number | null;
+  cagr3y?: number | null;
+  trend3y?: 'Up' | 'Down' | 'Flat' | null;
+  // Employment time series for sparkline
+  employmentByYear?: Record<string, number | null>;
+}
 
 const MapLive = () => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -12,9 +68,49 @@ const MapLive = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
-  // State for selected SOC and wage cache
+  // State for selected SOC and OEWS data
   const [selectedSoc, setSelectedSoc] = useState<string>('29-1141'); // Default: Registered Nurses
-  const wageCache = useRef(new (globalThis.Map)<string, OccupationData>());
+  const oewsDataRef = useRef<OewsRecord[]>([]);
+  const oewsSeriesRef = useRef<OewsSeriesRecord[]>([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  
+  // InsightPanel state
+  const [panelData, setPanelData] = useState<InsightPanelData | null>(null);
+  const [panelPosition, setPanelPosition] = useState<{ x: number; y: number } | undefined>();
+  const [panelLoading, setPanelLoading] = useState(false);
+  const [panelError, setPanelError] = useState<string | null>(null);
+
+  // Load OEWS 2024 data and series data
+  useEffect(() => {
+    const loadOewsData = async () => {
+      try {
+        // Load current year wages
+        const response = await fetch('/data/oews_fl_msa_2024.json');
+        if (response.ok) {
+          const data = await response.json();
+          oewsDataRef.current = data;
+          console.log(`✅ Loaded ${data.length} OEWS 2024 records`);
+        } else {
+          console.error('Failed to load OEWS 2024 data');
+        }
+
+        // Load historical employment series
+        const seriesResponse = await fetch('/data/oews_fl_msa_series.json');
+        if (seriesResponse.ok) {
+          const seriesData = await seriesResponse.json();
+          oewsSeriesRef.current = seriesData;
+          console.log(`✅ Loaded ${seriesData.length} OEWS series records`);
+        } else {
+          console.warn('Historical series data not available');
+        }
+
+        setDataLoaded(true);
+      } catch (err) {
+        console.error('Error loading OEWS data:', err);
+      }
+    };
+    loadOewsData();
+  }, []);
 
   useEffect(() => {
     if (!mapContainerRef.current) return;
@@ -30,7 +126,7 @@ const MapLive = () => {
     try {
       const map = new mapboxgl.Map({
         container: mapContainerRef.current,
-        style: 'mapbox://styles/mapbox/light-v11',
+        style: 'mapbox://styles/mapbox/streets-v12', // Colorful streets map
         center: [-81.5158, 27.9944] as [number, number],
         zoom: 6.5,
       });
@@ -150,7 +246,7 @@ const MapLive = () => {
           map.setFilter('msas-hover', ['==', 'CBSAFP', '']);
         });
 
-        // Click handler - Fetch LIVE MSA wage data
+        // Click handler - Display OEWS 2024 MSA data in InsightPanel
         map.on('click', 'msas-fill', async (e) => {
           const f = e.features?.[0];
           if (!f) return;
@@ -160,62 +256,62 @@ const MapLive = () => {
           
           if (!msaCode) return;
 
-          // Check cache first
-          const cacheKey = `${selectedSoc}-${msaCode}`;
-          if (wageCache.current.has(cacheKey)) {
-            console.log(`💾 Using cached data for ${msaCode}`);
-            showPopup(map, e.lngLat, msaName, msaCode, wageCache.current.get(cacheKey)!);
-            return;
-          }
+          // Convert map coordinates to screen position
+          const point = map.project(e.lngLat);
+          setPanelPosition({ x: point.x, y: point.y });
+          setPanelLoading(true);
+          setPanelError(null);
 
-          // Show loading popup
-          const loadingPopup = new mapboxgl.Popup({ closeButton: true })
-            .setLngLat(e.lngLat)
-            .setHTML(`
-              <div style="font-family: system-ui; padding: 16px; color: #1a1a1a;">
-                <div style="font-weight:600; font-size: 16px; margin-bottom: 8px; color: #000;">${msaName}</div>
-                <div style="font-size: 12px; color: #333; margin-bottom: 8px;">MSA Code: ${msaCode}</div>
-                <div style="font-size: 12px; color: #333; margin-bottom: 8px;">SOC: ${selectedSoc}</div>
-                <div style="margin-top: 12px;">
-                  <div style="display: inline-block; width: 20px; height: 20px; border: 3px solid #3b82f6; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-                  <span style="margin-left: 8px; color: #666;">Fetching live wage data...</span>
-                </div>
-                <style>
-                  @keyframes spin { to { transform: rotate(360deg); } }
-                </style>
-              </div>
-            `)
-            .addTo(map);
+          // Find data for this MSA and SOC
+          const record = oewsDataRef.current.find(
+            r => r.msa_code === msaCode && r.soc === selectedSoc
+          );
 
-          // Extract city name for API call
-          const cityMatch = msaName.match(/^([^-,]+)/);
-          const city = cityMatch ? cityMatch[1].trim() : msaName.split(',')[0];
-          const location = `${city}, FL`;
+          if (record) {
+            // Find growth data for this MSA×SOC
+            const seriesRecord = oewsSeriesRef.current.find(
+              r => r.msa_code === msaCode && r.soc === selectedSoc
+            );
 
-          console.log(`📡 Fetching ${selectedSoc} for MSA ${msaCode} (${location})`);
-
-          // Fetch live data from CareerOneStop
-          const data = await fetchOccupationData(selectedSoc, location, msaCode);
-
-          if (data) {
-            wageCache.current.set(cacheKey, data);
-            showPopup(map, e.lngLat, msaName, msaCode, data);
+            // Convert to InsightPanel format with growth metrics
+            const insightData: InsightPanelData = {
+              scope: 'MSA',
+              msaCode: record.msa_code,
+              msaName: record.msa_name,
+              soc: record.soc,
+              year: record.year,
+              employment: record.employment,
+              medianAnnual: record.median_annual,
+              meanAnnual: record.mean_annual,
+              p10Annual: record.p10_annual,
+              p25Annual: record.p25_annual,
+              p75Annual: record.p75_annual,
+              p90Annual: record.p90_annual,
+              // Growth metrics from series data
+              yoyAbs: seriesRecord?.yoy_abs ?? null,
+              yoyPct: seriesRecord?.yoy_pct ?? null,
+              trendYoy: seriesRecord?.trend_yoy ?? null,
+              abs3y: seriesRecord?.abs_3y ?? null,
+              pct3y: seriesRecord?.pct_3y ?? null,
+              cagr3y: seriesRecord?.cagr_3y ?? null,
+              trend3y: seriesRecord?.trend_3y ?? null,
+              employmentByYear: seriesRecord?.employment_by_year ?? undefined,
+            };
+            
+            setPanelData(insightData);
+            setPanelLoading(false);
             
             // Update feature state for choropleth
-            map.setFeatureState(
-              { source: 'fl-msas', id: msaCode },
-              { median: data.medianAnnual || 0 }
-            );
+            if (record.median_annual !== null) {
+              map.setFeatureState(
+                { source: 'fl-msas', id: msaCode },
+                { median: record.median_annual }
+              );
+            }
           } else {
-            loadingPopup.setHTML(`
-              <div style="font-family: system-ui; padding: 16px; color: #1a1a1a;">
-                <div style="font-weight:600; font-size: 16px; margin-bottom: 8px; color: #000;">${msaName}</div>
-                <div style="font-size: 12px; color: #333; margin-bottom: 8px;">SOC: ${selectedSoc}</div>
-                <div style="color: #dc2626; margin-top: 12px;">
-                  ⚠️ Wage data unavailable for this MSA/occupation
-                </div>
-              </div>
-            `);
+            // No data found - show error in panel
+            setPanelError(`Data not available for ${msaName} (SOC ${selectedSoc}). BLS may have suppressed this data.`);
+            setPanelLoading(false);
           }
         });
       });
@@ -232,6 +328,60 @@ const MapLive = () => {
     };
   }, [selectedSoc]);
 
+  // Handle panel close
+  const handlePanelClose = () => {
+    setPanelData(null);
+    setPanelPosition(undefined);
+    setPanelError(null);
+  };
+
+
+  // Update panel when SOC changes
+  useEffect(() => {
+    if (panelData && mapRef.current) {
+      // Find updated record for current MSA with new SOC
+      const record = oewsDataRef.current.find(
+        r => r.msa_code === panelData.msaCode && r.soc === selectedSoc
+      );
+      
+      if (record) {
+        // Find growth data for this MSA×SOC
+        const seriesRecord = oewsSeriesRef.current.find(
+          r => r.msa_code === panelData.msaCode && r.soc === selectedSoc
+        );
+
+        const insightData: InsightPanelData = {
+          scope: 'MSA',
+          msaCode: record.msa_code,
+          msaName: record.msa_name,
+          soc: record.soc,
+          year: record.year,
+          employment: record.employment,
+          medianAnnual: record.median_annual,
+          meanAnnual: record.mean_annual,
+          p10Annual: record.p10_annual,
+          p25Annual: record.p25_annual,
+          p75Annual: record.p75_annual,
+          p90Annual: record.p90_annual,
+          // Growth metrics from series data
+          yoyAbs: seriesRecord?.yoy_abs ?? null,
+          yoyPct: seriesRecord?.yoy_pct ?? null,
+          trendYoy: seriesRecord?.trend_yoy ?? null,
+          abs3y: seriesRecord?.abs_3y ?? null,
+          pct3y: seriesRecord?.pct_3y ?? null,
+          cagr3y: seriesRecord?.cagr_3y ?? null,
+          trend3y: seriesRecord?.trend_3y ?? null,
+          employmentByYear: seriesRecord?.employment_by_year ?? undefined,
+        };
+        setPanelData(insightData);
+      } else {
+        // No data for new SOC - show error
+        setPanelError(`Data not available for this MSA with SOC ${selectedSoc}`);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedSoc]);
+
   return (
     <div className="relative w-screen h-screen" style={{ width: '100vw', height: '100vh' }}>
       <div 
@@ -240,42 +390,41 @@ const MapLive = () => {
         style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0 }}
       />
       
+      {/* InsightPanel */}
+      <InsightPanel
+        data={panelData}
+        position={panelPosition}
+        onClose={handlePanelClose}
+        loading={panelLoading}
+        error={panelError}
+      />
+      
       {/* SOC Selector */}
       {mapLoaded && (
         <select
           value={selectedSoc}
           onChange={(e) => {
             setSelectedSoc(e.target.value);
-            wageCache.current.clear(); // Clear cache on SOC change
           }}
           className="absolute z-10 top-3 left-3 bg-white border border-gray-300 rounded px-3 py-2 shadow-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="29-1141">Registered Nurses (29-1141)</option>
-          <option value="29-2061">Licensed Practical Nurses (29-2061)</option>
-          <option value="31-1131">Nursing Assistants (31-1131)</option>
+          <option value="29-2032">Diagnostic Medical Sonographers (29-2032)</option>
           <option value="31-9092">Medical Assistants (31-9092)</option>
-          <option value="31-2021">Physical Therapist Assistants (31-2021)</option>
-          <option value="29-2052">Pharmacy Technicians (29-2052)</option>
-          <option value="29-2012">Medical Laboratory Technicians (29-2012)</option>
-          <option value="29-2034">Radiologic Technologists (29-2034)</option>
           <option value="29-2055">Surgical Technologists (29-2055)</option>
           <option value="47-2111">Electricians (47-2111)</option>
-          <option value="47-2152">Plumbers (47-2152)</option>
-          <option value="49-9021">HVAC Technicians (49-9021)</option>
+          <option value="49-9021">HVAC Mechanics (49-9021)</option>
           <option value="51-4121">Welders (51-4121)</option>
-          <option value="47-2031">Carpenters (47-2031)</option>
-          <option value="49-3023">Automotive Service Technicians (49-3023)</option>
-          <option value="29-2056">Veterinary Technologists (29-2056)</option>
           <option value="31-9096">Veterinary Assistants (31-9096)</option>
         </select>
       )}
 
-      {/* CareerOneStop Logo */}
-      {mapLoaded && (
+      {/* Data Source Info */}
+      {mapLoaded && dataLoaded && (
         <div className="absolute top-3 right-3 bg-white px-3 py-2 rounded shadow-lg z-10">
-          <div className="text-xs text-gray-600 mb-1">Data provided by</div>
-          <div className="font-semibold text-sm text-blue-600">CareerOneStop</div>
-          <div className="text-xs text-gray-500">Sponsored by U.S. DOL</div>
+          <div className="text-xs text-gray-600 mb-1">Data source</div>
+          <div className="font-semibold text-sm text-blue-600">BLS OEWS May 2024</div>
+          <div className="text-xs text-gray-500">Official employment data</div>
         </div>
       )}
 
@@ -286,10 +435,11 @@ const MapLive = () => {
           <div className="text-xs text-gray-600 mb-2">
             21 Metropolitan Statistical Areas
           </div>
-          <div className="text-xs text-gray-500">
-            • Each MSA has a distinct color<br/>
-            • Click any MSA for live wage data<br/>
-            • White borders separate regions
+          <div className="text-xs text-gray-500 mb-3">
+            • 8 occupations available<br/>
+            • Click any MSA for wage data (May 2024)<br/>
+            • White borders separate regions<br/>
+            • {oewsDataRef.current.length} total records loaded
           </div>
         </div>
       )}
@@ -315,66 +465,6 @@ const MapLive = () => {
   );
 };
 
-// Helper function to show popup with data
-function showPopup(
-  map: mapboxgl.Map,
-  lngLat: mapboxgl.LngLat,
-  msaName: string,
-  msaCode: string,
-  data: OccupationData
-) {
-  // Determine scope from area name
-  const isState = data.areaName.includes('Statewide') || data.areaCode === 'FL';
-  const scopeBadge = isState ? 'State' : 'MSA';
-  const scopeColor = isState ? '#f59e0b' : '#10b981';
-
-  new mapboxgl.Popup({ closeButton: true, maxWidth: '340px' })
-    .setLngLat(lngLat)
-    .setHTML(`
-      <div style="font-family: system-ui; padding: 16px; color: #1a1a1a;">
-        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
-          <div style="font-weight:600; font-size: 18px; color: #000; flex: 1;">${msaName}</div>
-          <div style="background: ${scopeColor}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 600; margin-left: 8px; white-space: nowrap;">
-            ${scopeBadge}
-          </div>
-        </div>
-        <div style="font-size: 11px; color: #666; margin-bottom: 12px;">${data.areaName}</div>
-        
-        <div style="background: #f3f4f6; padding: 8px; border-radius: 4px; margin-bottom: 12px;">
-          <div style="font-size: 13px; font-weight: 600; color: #374151;">${data.socTitle}</div>
-          <div style="font-size: 11px; color: #6b7280;">SOC: ${data.soc}</div>
-        </div>
-        
-        <div style="margin-bottom: 8px;">
-          <div style="font-size: 13px; color: #1a1a1a; margin-bottom: 6px; font-weight: 600;">
-            <strong>Median:</strong> ${formatWage(data.medianAnnual)}<span style="font-size: 10px; color: #6b7280;">/year</span>
-          </div>
-          <div style="font-size: 12px; color: #4b5563; margin-bottom: 4px;">
-            <strong>Mean:</strong> ${formatWage(data.meanAnnual)}<span style="font-size: 10px; color: #6b7280;">/year</span>
-          </div>
-        </div>
-        
-        ${data.p10 || data.p90 ? `
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 8px; margin-top: 8px;">
-            <div style="font-size: 11px; font-weight: 600; color: #6b7280; margin-bottom: 4px;">Annual Wage Percentiles</div>
-            ${data.p10 ? `<div style="font-size: 11px; color: #4b5563;">10th: ${formatWage(data.p10)}</div>` : ''}
-            ${data.p25 ? `<div style="font-size: 11px; color: #4b5563;">25th: ${formatWage(data.p25)}</div>` : ''}
-            ${data.p75 ? `<div style="font-size: 11px; color: #4b5563;">75th: ${formatWage(data.p75)}</div>` : ''}
-            ${data.p90 ? `<div style="font-size: 11px; color: #4b5563;">90th: ${formatWage(data.p90)}</div>` : ''}
-          </div>
-        ` : ''}
-        
-        <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #e5e7eb; font-size: 10px; color: #9ca3af;">
-          <div style="display: flex; justify-content: space-between;">
-            <span>Source: CareerOneStop</span>
-            <span>${data.year} OEWS</span>
-          </div>
-          <div style="margin-top: 4px; font-weight: 600; color: #10b981;">🔴 LIVE DATA</div>
-        </div>
-      </div>
-    `)
-    .addTo(map);
-}
 
 // Helper to extract coordinates from geometry
 function getAllCoordinates(geometry: any): [number, number][] {

@@ -14,6 +14,10 @@
     "etl:copy": "cp data/intermediate/*.json public/data/ && cp src/data/soc-map.json public/data/",
     "generate:sample": "tsx scripts/generate-comprehensive-data.ts",
     "etl:parse-oews": "tsx scripts/fetch-florida-oews.ts && tsx scripts/add-nonmsa-counties.ts",
+    "oews:fetch": "tsx scripts/oews-fetch-multi.ts",
+    "oews:process": "tsx scripts/process-oews-2024.ts",
+    "oews:history": "tsx scripts/process-oews-history.ts",
+    "oews:all": "npm run oews:fetch && npm run oews:process && npm run oews:history",
     "validate:totals": "echo 'TODO: Add validation script'"
   },
   "dependencies": {
@@ -37,9 +41,14 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "adm-zip": "^0.5.16",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "15.5.5",
+    "node-fetch": "^2.7.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   }
 }

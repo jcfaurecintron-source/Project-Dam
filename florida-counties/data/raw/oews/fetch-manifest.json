@@ -1,0 +1,44 @@
+[
+  {
+    "year": 2021,
+    "status": "PROCEED_PARSE",
+    "url": "https://www.bls.gov/oes/special-requests/oesm21ma.zip",
+    "sha256": "b219099791a6d177ceec22061f0c8237c4347a13b2e1d614567d39168e29fd1b",
+    "xlsxPaths": [
+      "data/raw/oews/msa/2021/oesm21ma/BOS_M2021_dl.xlsx",
+      "data/raw/oews/msa/2021/oesm21ma/file_descriptions.xlsx",
+      "data/raw/oews/msa/2021/oesm21ma/MSA_M2021_dl.xlsx"
+    ]
+  },
+  {
+    "year": 2022,
+    "status": "PROCEED_PARSE",
+    "url": "https://www.bls.gov/oes/special-requests/oesm22ma.zip",
+    "sha256": "0e8c3ca50dd2d1d68ac1c7912e59b57da9e72baa7407c850e4e6ca746ad4d725",
+    "xlsxPaths": [
+      "data/raw/oews/msa/2022/oesm22ma/~$file_descriptions.xlsx",
+      "data/raw/oews/msa/2022/oesm22ma/~$MSA_M2022_dl.xlsx",
+      "data/raw/oews/msa/2022/oesm22ma/BOS_M2022_dl.xlsx",
+      "data/raw/oews/msa/2022/oesm22ma/file_descriptions.xlsx",
+      "data/raw/oews/msa/2022/oesm22ma/MSA_M2022_dl.xlsx"
+    ]
+  },
+  {
+    "year": 2023,
+    "status": "PROCEED_PARSE",
+    "url": "https://www.bls.gov/oes/special-requests/oesm23ma.zip",
+    "sha256": "750e6d5bf656411e072118afaf780cae8705c33e28fe39aa929c5271954fef9f",
+    "xlsxPaths": [
+      "data/raw/oews/msa/2023/oesm23ma/BOS_M2023_dl.xlsx",
+      "data/raw/oews/msa/2023/oesm23ma/file_descriptions.xlsx",
+      "data/raw/oews/msa/2023/oesm23ma/MSA_M2023_dl.xlsx"
+    ]
+  },
+  {
+    "year": 2024,
+    "status": "SKIP_UNCHANGED",
+    "url": "https://www.bls.gov/oes/special-requests/oesm24ma.zip",
+    "sha256": "ff3de028d513d34b6c5e48a99ca4b194f528248f380935ea534a485e9c7c950b",
+    "xlsxPaths": []
+  }
+]

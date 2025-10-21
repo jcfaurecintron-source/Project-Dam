@@ -1,0 +1,10 @@
+{
+  "years": [2021, 2022, 2023, 2024],
+  "urlTemplate": "https://www.bls.gov/oes/special-requests/oesm{YY}ma.zip",
+  "contact": "your-email@example.com",
+  "rawDir": "data/raw/oews",
+  "extractDir": "data/raw/oews/msa",
+  "outputFile": "public/data/oews_fl_msa_2024.json",
+  "seriesFile": "public/data/oews_fl_msa_series.json"
+}
+
