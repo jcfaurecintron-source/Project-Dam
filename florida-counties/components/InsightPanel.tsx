@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Data contract - single source of truth
 interface InsightPanelData {
@@ -26,6 +26,11 @@ interface InsightPanelData {
   trend3y?: 'Up' | 'Down' | 'Flat' | null;
   // Employment time series for sparkline
   employmentByYear?: Record<string, number | null>;
+  // Institution count (from IPEDS)
+  institutionCount?: number | null;
+  // Competition density (institutions per 100k population)
+  competitionDensity?: number | null;
+  msaPopulation?: number | null;
 }
 
 interface InsightPanelProps {
@@ -44,6 +49,9 @@ export default function InsightPanel({
   error = null 
 }: InsightPanelProps) {
   const panelRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
+  const [dragPosition, setDragPosition] = useState<{ x: number; y: number } | null>(null);
 
   // Format number with US locale
   const formatNumber = (num: number | null): string => {
@@ -59,7 +67,7 @@ export default function InsightPanel({
 
   // Generate sparkline SVG from employment history
   const generateSparkline = (employmentByYear: Record<string, number | null>, trend: 'Up' | 'Down' | 'Flat' | null): string => {
-    const years = ['2021', '2022', '2023', '2024'];
+    const years = ['2020', '2021', '2022', '2023', '2024'];
     const values = years.map(y => employmentByYear[y]).filter(v => v !== null) as number[];
     
     if (values.length < 2) return '';
@@ -126,16 +134,57 @@ export default function InsightPanel({
     return () => document.removeEventListener('keydown', handleEscape);
   }, [onClose]);
 
-  // Handle outside click
+  // Handle outside click (but not when dragging)
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+      if (!isDragging && panelRef.current && !panelRef.current.contains(e.target as Node)) {
         onClose();
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [onClose]);
+  }, [onClose, isDragging]);
+
+  // Handle drag functionality
+  const handleMouseDown = (e: React.MouseEvent) => {
+    // Only start drag from header area
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('a')) {
+      return; // Don't drag when clicking buttons or links
+    }
+    
+    if (panelRef.current && window.innerWidth >= 768) { // Only on desktop
+      const rect = panelRef.current.getBoundingClientRect();
+      setIsDragging(true);
+      setDragOffset({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (!isDragging) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setDragPosition({
+        x: e.clientX - dragOffset.x,
+        y: e.clientY - dragOffset.y,
+      });
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging, dragOffset]);
 
   // Focus trap
   useEffect(() => {
@@ -266,9 +315,34 @@ export default function InsightPanel({
       };
     }
 
+    // If dragged, use drag position
+    if (dragPosition) {
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const margin = 16;
+      const panelWidth = 520;
+      const panelHeight = 700;
+
+      // Constrain to viewport
+      const left = Math.max(margin, Math.min(dragPosition.x, viewportWidth - panelWidth - margin));
+      const top = Math.max(margin, Math.min(dragPosition.y, viewportHeight - panelHeight - margin));
+
+      return {
+        position: 'absolute' as const,
+        left: `${left}px`,
+        top: `${top}px`,
+        bottom: 'auto',
+        right: 'auto',
+        maxWidth: '520px',
+        maxHeight: `${viewportHeight - margin * 2}px`,
+        overflowY: 'auto' as const,
+        cursor: isDragging ? 'grabbing' : 'grab',
+      };
+    }
+
     // Desktop: smart positioning with better edge detection
     const panelWidth = 520;
-    const panelHeight = 650; // Generous estimate for all tiles + sparkline
+    const panelHeight = 700; // Updated for new row
     const margin = 16;
     const offset = 20; // Offset from click point
 
@@ -316,6 +390,7 @@ export default function InsightPanel({
       maxWidth: '520px',
       maxHeight: `${viewportHeight - margin * 2}px`,
       overflowY: 'auto' as const,
+      cursor: 'grab',
     };
   };
 
@@ -325,8 +400,12 @@ export default function InsightPanel({
       className="fixed md:absolute z-50 bg-white rounded-xl shadow-2xl overflow-hidden"
       style={getSmartPosition()}
     >
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 border-b border-blue-200">
+      {/* Header - Draggable */}
+      <div 
+        className="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 border-b border-blue-200 select-none"
+        onMouseDown={handleMouseDown}
+        style={{ cursor: window.innerWidth >= 768 ? (isDragging ? 'grabbing' : 'grab') : 'default' }}
+      >
         <div className="flex justify-between items-start">
           <div className="flex-1 pr-4">
             <h2 className="text-xl font-semibold text-gray-900 mb-2">{data.msaName}</h2>
@@ -354,7 +433,7 @@ export default function InsightPanel({
         </div>
       </div>
 
-      {/* Metric Tiles - 3x2 Grid */}
+      {/* Metric Tiles - 4x2 Grid */}
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Row 1: Employment | Mean Annual */}
@@ -375,7 +454,7 @@ export default function InsightPanel({
             </div>
           </div>
 
-          {/* Row 2: YoY Growth | Median Annual */}
+          {/* Row 2: YoY Growth | 3-Year Trend */}
           {/* YoY Growth */}
           <div className={`rounded-lg p-4 border ${
             data.trendYoy === 'Up' ? 'bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-200' :
@@ -415,16 +494,6 @@ export default function InsightPanel({
             )}
           </div>
 
-          {/* Median Annual */}
-          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 border border-green-200">
-            <div className="text-xs font-medium text-green-700 uppercase tracking-wide mb-1">Median Annual</div>
-            <div className="text-2xl font-bold text-gray-900 tabular-nums">
-              {formatCurrency(data.medianAnnual)}
-              {data.medianAnnual !== null && <span className="text-sm font-normal text-gray-600">/year</span>}
-            </div>
-          </div>
-
-          {/* Row 3: 3-Year Trend | Wage Range */}
           {/* 3-Year Trend with Sparkline */}
           <div className={`rounded-lg p-4 border ${
             data.trend3y === 'Up' ? 'bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200' :
@@ -479,6 +548,16 @@ export default function InsightPanel({
             )}
           </div>
 
+          {/* Row 3: Median Annual | Wage Range */}
+          {/* Median Annual */}
+          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 border border-green-200">
+            <div className="text-xs font-medium text-green-700 uppercase tracking-wide mb-1">Median Annual</div>
+            <div className="text-2xl font-bold text-gray-900 tabular-nums">
+              {formatCurrency(data.medianAnnual)}
+              {data.medianAnnual !== null && <span className="text-sm font-normal text-gray-600">/year</span>}
+            </div>
+          </div>
+
           {/* Wage Range */}
           <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-4 border border-amber-200">
             <div className="text-xs font-medium text-amber-700 uppercase tracking-wide mb-1">Wage Range</div>
@@ -497,45 +576,88 @@ export default function InsightPanel({
               ) : '—'}
             </div>
           </div>
+
+          {/* Row 4: Education Infrastructure (Institutions | Competition Density) */}
+          {/* Institutions (IPEDS) */}
+          {data.institutionCount !== undefined && data.institutionCount !== null && (
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-4 border border-indigo-200" title="Higher education institutions in this MSA (IPEDS 2020)">
+              <div className="text-xs font-medium text-indigo-700 uppercase tracking-wide mb-1">Institutions</div>
+              <div className="text-2xl font-bold text-gray-900 tabular-nums">
+                {formatNumber(data.institutionCount)} <span className="text-sm font-normal text-gray-600">colleges</span>
+              </div>
+            </div>
+          )}
+
+          {/* Competition Density - Separate Tile */}
+          {data.competitionDensity !== undefined && data.competitionDensity !== null && (
+            <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg p-4 border border-cyan-200" title="Institutions per 100k population - Lower = less competition, Higher = more saturated">
+              <div className="text-xs font-medium text-cyan-700 uppercase tracking-wide mb-1">Competition Density</div>
+              <div className="text-lg font-bold text-gray-900 tabular-nums leading-tight">
+                {data.competitionDensity.toFixed(2)} <span className="text-sm font-normal text-gray-700">institutions</span>
+              </div>
+              <div className="text-xs text-gray-600 mt-0.5">
+                / 100k residents
+              </div>
+              {data.msaPopulation && (
+                <div className="text-xs text-cyan-700 mt-2 leading-relaxed">
+                  Pop: {formatNumber(data.msaPopulation)} — reflects institutional concentration within the metro area.
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
-        {/* Percentile Bar */}
+        {/* Wage Distribution - Polished */}
         {hasPercentiles && (
-          <div className="mt-6 bg-gray-50 rounded-lg p-4 border border-gray-200">
-            <div className="text-xs font-medium text-gray-700 uppercase tracking-wide mb-3">Wage Distribution</div>
-            <div className="relative h-8 bg-gradient-to-r from-blue-200 via-green-200 to-purple-200 rounded-full overflow-hidden">
-              {/* P10 marker */}
+          <div className="mt-6 bg-white rounded-xl p-5 border border-gray-300 shadow-sm">
+            {/* Header */}
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">
+                Wage Distribution
+              </h3>
+              <span className="text-xs text-gray-500 font-medium">
+                Percentiles
+              </span>
+            </div>
+            
+            {/* Distribution Bar */}
+            <div className="relative h-10 bg-gradient-to-r from-blue-100 via-emerald-100 to-violet-100 rounded-lg overflow-hidden border border-gray-200 shadow-inner">
               {data.p10Annual !== null && data.p90Annual !== null && data.medianAnnual !== null && (
                 <>
+                  {/* P10 marker */}
                   <div 
-                    className="absolute top-0 bottom-0 w-0.5 bg-blue-600"
+                    className="absolute top-0 bottom-0 w-0.5 bg-blue-600 z-10"
                     style={{ 
                       left: `${((data.p10Annual - (data.p10Annual || 0)) / ((data.p90Annual || 100000) - (data.p10Annual || 0))) * 100}%` 
                     }}
-                  />
+                  >
+                    <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-blue-600 rounded-full"></div>
+                  </div>
                   
-                  {/* P25 marker (faint) */}
+                  {/* P25 marker (subtle) */}
                   {data.p25Annual !== null && (
                     <div 
-                      className="absolute top-0 bottom-0 w-0.5 bg-blue-400 opacity-50"
+                      className="absolute top-0 bottom-0 w-px bg-blue-400 opacity-60 z-10"
                       style={{ 
                         left: `${((data.p25Annual - data.p10Annual) / (data.p90Annual - data.p10Annual)) * 100}%` 
                       }}
                     />
                   )}
                   
-                  {/* Median marker (emphasized) */}
+                  {/* Median marker (prominent) */}
                   <div 
-                    className="absolute top-0 bottom-0 w-1 bg-green-600 shadow-lg"
+                    className="absolute top-0 bottom-0 w-1 bg-emerald-600 shadow-lg z-20"
                     style={{ 
                       left: `${((data.medianAnnual - data.p10Annual) / (data.p90Annual - data.p10Annual)) * 100}%` 
                     }}
-                  />
+                  >
+                    <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-emerald-600 rounded-full border-2 border-white shadow"></div>
+                  </div>
                   
-                  {/* P75 marker (faint) */}
+                  {/* P75 marker (subtle) */}
                   {data.p75Annual !== null && (
                     <div 
-                      className="absolute top-0 bottom-0 w-0.5 bg-purple-400 opacity-50"
+                      className="absolute top-0 bottom-0 w-px bg-violet-400 opacity-60 z-10"
                       style={{ 
                         left: `${((data.p75Annual - data.p10Annual) / (data.p90Annual - data.p10Annual)) * 100}%` 
                       }}
@@ -544,37 +666,62 @@ export default function InsightPanel({
                   
                   {/* P90 marker */}
                   <div 
-                    className="absolute top-0 bottom-0 w-0.5 bg-purple-600"
+                    className="absolute top-0 bottom-0 w-0.5 bg-violet-600 z-10"
                     style={{ 
                       left: `${((data.p90Annual - data.p10Annual) / (data.p90Annual - data.p10Annual)) * 100}%` 
                     }}
-                  />
+                  >
+                    <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-violet-600 rounded-full"></div>
+                  </div>
                 </>
               )}
             </div>
-            <div className="flex justify-between mt-2 text-xs text-gray-600 tabular-nums">
-              <span>P10: {formatCurrency(data.p10Annual)}</span>
-              <span className="font-semibold text-green-700">Median: {formatCurrency(data.medianAnnual)}</span>
-              <span>P90: {formatCurrency(data.p90Annual)}</span>
+            
+            {/* Labels */}
+            <div className="mt-3 space-y-1.5">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-gray-500 font-medium">10th Percentile</span>
+                <span className="text-sm font-semibold text-gray-700 tabular-nums">{formatCurrency(data.p10Annual)}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-emerald-700 font-semibold">Median (50th)</span>
+                <span className="text-sm font-bold text-emerald-700 tabular-nums">{formatCurrency(data.medianAnnual)}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-gray-500 font-medium">90th Percentile</span>
+                <span className="text-sm font-semibold text-gray-700 tabular-nums">{formatCurrency(data.p90Annual)}</span>
+              </div>
             </div>
+            
+            {/* Range indicator */}
+            {data.p10Annual !== null && data.p90Annual !== null && (
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <div className="flex justify-between items-center">
+                  <span className="text-xs text-gray-500 font-medium">Wage Spread (P10-P90)</span>
+                  <span className="text-xs font-semibold text-gray-700 tabular-nums">
+                    {formatCurrency(data.p90Annual - data.p10Annual)}
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
         {/* Footer Chips */}
         <div className="mt-6 flex flex-wrap gap-2 items-center">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">
-            📊 BLS OEWS May {data.year}
+          <span className="inline-flex items-center px-3 py-1.5 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-300">
+            BLS OEWS May {data.year}
           </span>
-          <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${
+          <span className={`inline-flex items-center px-3 py-1.5 rounded-md text-xs font-semibold border ${
             isStateScope 
-              ? 'bg-amber-100 text-amber-800 border-amber-200' 
-              : 'bg-green-100 text-green-800 border-green-200'
+              ? 'bg-amber-50 text-amber-700 border-amber-300' 
+              : 'bg-emerald-50 text-emerald-700 border-emerald-300'
           }`}>
-            {isStateScope ? '⚠️ State overlay' : '✓ MSA scope'}
+            {isStateScope ? 'State Overlay' : 'MSA Scope'}
           </span>
           {hasAnomaly && (
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200">
-              ⚠ Data anomaly
+            <span className="inline-flex items-center px-3 py-1.5 rounded-md text-xs font-semibold bg-red-50 text-red-700 border border-red-300">
+              Data Anomaly
             </span>
           )}
         </div>

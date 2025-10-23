@@ -1,5 +1,5 @@
 {
-  "years": [2021, 2022, 2023, 2024],
+  "years": [2020, 2021, 2022, 2023, 2024],
   "urlTemplate": "https://www.bls.gov/oes/special-requests/oesm{YY}ma.zip",
   "contact": "your-email@example.com",
   "rawDir": "data/raw/oews",

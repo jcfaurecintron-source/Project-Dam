@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "source": "Census ACS 5-Year (2022) + IPEDS (2020)",
+    "generated": "2025-10-22",
+    "metric": "institutions_per_100k",
+    "description": "Higher education institutions per 100,000 population",
+    "total_msas": 21,
+    "total_institutions": 344,
+    "total_population": 21046197
+  },
+  "msas": [
+    {
+      "msa_code": "23540",
+      "msa_name": "Gainesville, FL",
+      "census_name": "Gainesville, FL Metro Area",
+      "institution_count": 9,
+      "population": 341067,
+      "competition_density": 2.638777718160948e-05,
+      "institutions_per_100k": 2.64
+    },
+    {
+      "msa_code": "33100",
+      "msa_name": "Miami-Fort Lauderdale-Pompano Beach, FL",
+      "census_name": "Miami-Fort Lauderdale-Pompano Beach, FL Metro Area",
+      "institution_count": 133,
+      "population": 6123949,
+      "competition_density": 2.171801234791472e-05,
+      "institutions_per_100k": 2.17
+    },
+    {
+      "msa_code": "45220",
+      "msa_name": "Tallahassee, FL",
+      "census_name": "Tallahassee, FL Metro Area",
+      "institution_count": 8,
+      "population": 386064,
+      "competition_density": 2.0721952836835343e-05,
+      "institutions_per_100k": 2.07
+    },
+    {
+      "msa_code": "15980",
+      "msa_name": "Cape Coral-Fort Myers, FL",
+      "census_name": "Cape Coral-Fort Myers, FL Metro Area",
+      "institution_count": 14,
+      "population": 772902,
+      "competition_density": 1.8113551265231557e-05,
+      "institutions_per_100k": 1.81
+    },
+    {
+      "msa_code": "29460",
+      "msa_name": "Lakeland-Winter Haven, FL",
+      "census_name": "Lakeland-Winter Haven, FL Metro Area",
+      "institution_count": 12,
+      "population": 736229,
+      "competition_density": 1.6299276447953014e-05,
+      "institutions_per_100k": 1.63
+    },
+    {
+      "msa_code": "36740",
+      "msa_name": "Orlando-Kissimmee-Sanford, FL",
+      "census_name": "Orlando-Kissimmee-Sanford, FL Metro Area",
+      "institution_count": 42,
+      "population": 2679298,
+      "competition_density": 1.5675747901129325e-05,
+      "institutions_per_100k": 1.57
+    },
+    {
+      "msa_code": "37860",
+      "msa_name": "Pensacola-Ferry Pass-Brent, FL",
+      "census_name": "Pensacola-Ferry Pass-Brent, FL Metro Area",
+      "institution_count": 8,
+      "population": 510290,
+      "competition_density": 1.5677359932587352e-05,
+      "institutions_per_100k": 1.57
+    },
+    {
+      "msa_code": "27740",
+      "msa_name": "Jacksonville, FL",
+      "census_name": "Jacksonville, FL Metro Area",
+      "institution_count": 25,
+      "population": 1613587,
+      "competition_density": 1.549343171455893e-05,
+      "institutions_per_100k": 1.55
+    },
+    {
+      "msa_code": "19660",
+      "msa_name": "Deltona-Daytona Beach-Ormond Beach, FL",
+      "census_name": "Deltona-Daytona Beach-Ormond Beach, FL Metro Area",
+      "institution_count": 10,
+      "population": 676035,
+      "competition_density": 1.479213354338163e-05,
+      "institutions_per_100k": 1.48
+    },
+    {
+      "msa_code": "45300",
+      "msa_name": "Tampa-St. Petersburg-Clearwater, FL",
+      "census_name": "Tampa-St. Petersburg-Clearwater, FL Metro Area",
+      "institution_count": 46,
+      "population": 3194310,
+      "competition_density": 1.4400606077681878e-05,
+      "institutions_per_100k": 1.44
+    },
+    {
+      "msa_code": "35840",
+      "msa_name": "North Port-Sarasota-Bradenton, FL",
+      "census_name": "North Port-Sarasota-Bradenton, FL Metro Area",
+      "institution_count": 10,
+      "population": 844461,
+      "competition_density": 1.1841873100119484e-05,
+      "institutions_per_100k": 1.18
+    },
+    {
+      "msa_code": "37300",
+      "msa_name": "Ocala, FL",
+      "census_name": "Ocala, FL Metro Area",
+      "institution_count": 4,
+      "population": 378225,
+      "competition_density": 1.0575715513252693e-05,
+      "institutions_per_100k": 1.06
+    },
+    {
+      "msa_code": "34940",
+      "msa_name": "Naples-Immokalee-Marco Island, FL",
+      "census_name": "Naples-Marco Island, FL Metro Area",
+      "institution_count": 4,
+      "population": 380221,
+      "competition_density": 1.05201974641064e-05,
+      "institutions_per_100k": 1.05
+    },
+    {
+      "msa_code": "18880",
+      "msa_name": "Crestview-Fort Walton Beach-Destin, FL",
+      "census_name": "Crestview-Fort Walton Beach-Destin, FL Metro Area",
+      "institution_count": 3,
+      "population": 288639,
+      "competition_density": 1.0393605853678817e-05,
+      "institutions_per_100k": 1.04
+    },
+    {
+      "msa_code": "38940",
+      "msa_name": "Port St. Lucie, FL",
+      "census_name": "Port St. Lucie, FL Metro Area",
+      "institution_count": 5,
+      "population": 494081,
+      "competition_density": 1.0119798170745283e-05,
+      "institutions_per_100k": 1.01
+    },
+    {
+      "msa_code": "37340",
+      "msa_name": "Palm Bay-Melbourne-Titusville, FL",
+      "census_name": "Palm Bay-Melbourne-Titusville, FL Metro Area",
+      "institution_count": 5,
+      "population": 610723,
+      "competition_density": 8.18701768232079e-06,
+      "institutions_per_100k": 0.82
+    },
+    {
+      "msa_code": "46060",
+      "msa_name": "The Villages, FL",
+      "census_name": "The Villages, FL Metro Area",
+      "institution_count": 1,
+      "population": 131832,
+      "competition_density": 7.5854117361490385e-06,
+      "institutions_per_100k": 0.76
+    },
+    {
+      "msa_code": "30460",
+      "msa_name": "Homosassa Springs, FL",
+      "census_name": "Homosassa Springs, FL Metro Area",
+      "institution_count": 1,
+      "population": 155173,
+      "competition_density": 6.444420098857404e-06,
+      "institutions_per_100k": 0.64
+    },
+    {
+      "msa_code": "42680",
+      "msa_name": "Sebastian-Vero Beach, FL",
+      "census_name": "Sebastian-Vero Beach, FL Metro Area",
+      "institution_count": 1,
+      "population": 160986,
+      "competition_density": 6.211720273812629e-06,
+      "institutions_per_100k": 0.62
+    },
+    {
+      "msa_code": "39460",
+      "msa_name": "Punta Gorda, FL",
+      "census_name": "Punta Gorda, FL Metro Area",
+      "institution_count": 1,
+      "population": 189900,
+      "competition_density": 5.2659294365455505e-06,
+      "institutions_per_100k": 0.53
+    },
+    {
+      "msa_code": "36100",
+      "msa_name": "Sebring, FL",
+      "census_name": "Ocala, FL Metro Area",
+      "institution_count": 2,
+      "population": 378225,
+      "competition_density": 5.2878577566263464e-06,
+      "institutions_per_100k": 0.53
+    }
+  ]
+}

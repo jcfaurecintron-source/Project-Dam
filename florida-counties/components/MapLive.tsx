@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import InsightPanel from './InsightPanel';
+import { mapOewsToIpedsMsaName } from '../src/lib/msa-name-mapping';
 
 // OEWS 2024 Data Types
 interface OewsRecord {
@@ -60,6 +61,28 @@ interface InsightPanelData {
   trend3y?: 'Up' | 'Down' | 'Flat' | null;
   // Employment time series for sparkline
   employmentByYear?: Record<string, number | null>;
+  // Institution count (from IPEDS)
+  institutionCount?: number | null;
+  // Competition density (institutions per 100k population)
+  competitionDensity?: number | null;
+  msaPopulation?: number | null;
+}
+
+// IPEDS Institution Data Type
+interface InstitutionData {
+  msa: string;
+  count: number;
+}
+
+// Competition Density Data Type
+interface CompetitionDensityData {
+  msa_code: string;
+  msa_name: string;
+  census_name: string;
+  institution_count: number;
+  population: number;
+  competition_density: number;
+  institutions_per_100k: number;
 }
 
 const MapLive = () => {
@@ -72,6 +95,8 @@ const MapLive = () => {
   const [selectedSoc, setSelectedSoc] = useState<string>('29-1141'); // Default: Registered Nurses
   const oewsDataRef = useRef<OewsRecord[]>([]);
   const oewsSeriesRef = useRef<OewsSeriesRecord[]>([]);
+  const institutionsDataRef = useRef<Record<string, number>>({});
+  const competitionDensityRef = useRef<Record<string, CompetitionDensityData>>({});
   const [dataLoaded, setDataLoaded] = useState(false);
   
   // InsightPanel state
@@ -102,6 +127,40 @@ const MapLive = () => {
           console.log(`✅ Loaded ${seriesData.length} OEWS series records`);
         } else {
           console.warn('Historical series data not available');
+        }
+
+        // Load institution counts from IPEDS
+        const institutionsResponse = await fetch('/data/institutions_fl.json');
+        if (institutionsResponse.ok) {
+          const institutionsData = await institutionsResponse.json();
+          // Convert array to map for faster lookup
+          const msaCounts: Record<string, number> = {};
+          if (institutionsData.msa_counts) {
+            Object.entries(institutionsData.msa_counts).forEach(([msaName, count]) => {
+              msaCounts[msaName] = count as number;
+            });
+          }
+          institutionsDataRef.current = msaCounts;
+          console.log(`✅ Loaded institution counts for ${Object.keys(msaCounts).length} MSAs`);
+        } else {
+          console.warn('Institution data not available');
+        }
+
+        // Load competition density data
+        const densityResponse = await fetch('/data/msa_competition_density.json');
+        if (densityResponse.ok) {
+          const densityData = await densityResponse.json();
+          // Convert to map for faster lookup by MSA name
+          const densityMap: Record<string, CompetitionDensityData> = {};
+          if (densityData.msas) {
+            densityData.msas.forEach((msa: CompetitionDensityData) => {
+              densityMap[msa.msa_name] = msa;
+            });
+          }
+          competitionDensityRef.current = densityMap;
+          console.log(`✅ Loaded competition density for ${Object.keys(densityMap).length} MSAs`);
+        } else {
+          console.warn('Competition density data not available');
         }
 
         setDataLoaded(true);
@@ -273,6 +332,13 @@ const MapLive = () => {
               r => r.msa_code === msaCode && r.soc === selectedSoc
             );
 
+            // Get institution count and density for this MSA (map OEWS name to IPEDS name)
+            const ipedsMsaName = mapOewsToIpedsMsaName(record.msa_name);
+            const institutionCount = institutionsDataRef.current[ipedsMsaName] ?? null;
+            const densityData = competitionDensityRef.current[ipedsMsaName];
+            const competitionDensity = densityData?.institutions_per_100k ?? null;
+            const msaPopulation = densityData?.population ?? null;
+
             // Convert to InsightPanel format with growth metrics
             const insightData: InsightPanelData = {
               scope: 'MSA',
@@ -296,6 +362,11 @@ const MapLive = () => {
               cagr3y: seriesRecord?.cagr_3y ?? null,
               trend3y: seriesRecord?.trend_3y ?? null,
               employmentByYear: seriesRecord?.employment_by_year ?? undefined,
+              // Institution count from IPEDS
+              institutionCount: institutionCount,
+              // Competition density metrics
+              competitionDensity: competitionDensity,
+              msaPopulation: msaPopulation,
             };
             
             setPanelData(insightData);
@@ -350,6 +421,13 @@ const MapLive = () => {
           r => r.msa_code === panelData.msaCode && r.soc === selectedSoc
         );
 
+        // Get institution count and density for this MSA (map OEWS name to IPEDS name)
+        const ipedsMsaName = mapOewsToIpedsMsaName(record.msa_name);
+        const institutionCount = institutionsDataRef.current[ipedsMsaName] ?? null;
+        const densityData = competitionDensityRef.current[ipedsMsaName];
+        const competitionDensity = densityData?.institutions_per_100k ?? null;
+        const msaPopulation = densityData?.population ?? null;
+
         const insightData: InsightPanelData = {
           scope: 'MSA',
           msaCode: record.msa_code,
@@ -372,6 +450,11 @@ const MapLive = () => {
           cagr3y: seriesRecord?.cagr_3y ?? null,
           trend3y: seriesRecord?.trend_3y ?? null,
           employmentByYear: seriesRecord?.employment_by_year ?? undefined,
+          // Institution count from IPEDS
+          institutionCount: institutionCount,
+          // Competition density metrics
+          competitionDensity: competitionDensity,
+          msaPopulation: msaPopulation,
         };
         setPanelData(insightData);
       } else {
@@ -399,24 +482,51 @@ const MapLive = () => {
         error={panelError}
       />
       
-      {/* SOC Selector */}
+      {/* SOC Selector - Professional */}
       {mapLoaded && (
-        <select
-          value={selectedSoc}
-          onChange={(e) => {
-            setSelectedSoc(e.target.value);
-          }}
-          className="absolute z-10 top-3 left-3 bg-white border border-gray-300 rounded px-3 py-2 shadow-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="29-1141">Registered Nurses (29-1141)</option>
-          <option value="29-2032">Diagnostic Medical Sonographers (29-2032)</option>
-          <option value="31-9092">Medical Assistants (31-9092)</option>
-          <option value="29-2055">Surgical Technologists (29-2055)</option>
-          <option value="47-2111">Electricians (47-2111)</option>
-          <option value="49-9021">HVAC Mechanics (49-9021)</option>
-          <option value="51-4121">Welders (51-4121)</option>
-          <option value="31-9096">Veterinary Assistants (31-9096)</option>
-        </select>
+        <div className="absolute z-10 top-4 left-4">
+          <div className="bg-white rounded-lg shadow-lg border border-gray-300 overflow-hidden">
+            {/* Label */}
+            <div className="px-4 py-2.5 bg-gradient-to-r from-slate-50 to-gray-50 border-b border-gray-200">
+              <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                Occupation
+              </span>
+            </div>
+            
+            {/* Dropdown */}
+            <select
+              value={selectedSoc}
+              onChange={(e) => {
+                setSelectedSoc(e.target.value);
+              }}
+              className="w-full px-4 py-3 bg-white text-sm font-medium text-gray-800 cursor-pointer border-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset hover:bg-gray-50 transition-colors appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMUw2IDZMMTEgMSIgc3Ryb2tlPSIjNkI3MjgwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==')] bg-[length:12px] bg-[position:right_1rem_center] bg-no-repeat pr-10"
+              style={{ minWidth: '340px' }}
+            >
+              {/* Healthcare Occupations */}
+              <optgroup label="Healthcare Occupations">
+                <option value="29-1141">Registered Nurses</option>
+                <option value="29-2032">Diagnostic Medical Sonographers</option>
+                <option value="31-9092">Medical Assistants</option>
+                <option value="29-2055">Surgical Technologists</option>
+                <option value="31-9096">Veterinary Assistants</option>
+              </optgroup>
+              
+              {/* Skilled Trades */}
+              <optgroup label="Skilled Trades">
+                <option value="47-2111">Electricians</option>
+                <option value="49-9021">HVAC Mechanics</option>
+                <option value="51-4121">Welders</option>
+              </optgroup>
+            </select>
+            
+            {/* Footer hint */}
+            <div className="px-4 py-2 bg-slate-50 border-t border-gray-200">
+              <p className="text-xs text-gray-600 font-medium">
+                Select to view occupation-specific metrics
+              </p>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Data Source Info */}

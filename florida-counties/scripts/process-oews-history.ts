@@ -233,14 +233,25 @@ function buildSeries(allRecords: YearRecord[]): SeriesRecord[] {
       yoyCount++;
     }
 
-    // 3-Year metrics (prefer 2024 vs 2021, fallback to 2022)
+    // Multi-year trend (prefer 2024 vs 2020 for 4-year, fallback to 2021 for 3-year)
+    const e2020 = employment_by_year['2020'];
     let abs_3y: number | null = null;
     let pct_3y: number | null = null;
     let cagr_3y: number | null = null;
     let trend_3y: 'Up' | 'Down' | 'Flat' | null = null;
     let span_years = 0;
 
-    if (e2024 !== null && e2021 !== null && e2021 > 0) {
+    if (e2024 !== null && e2020 !== null && e2020 > 0) {
+      // Best case: 4-year trend (2020-2024)
+      abs_3y = e2024 - e2020;
+      pct_3y = ((e2024 / e2020) - 1) * 100;
+      pct_3y = Math.round(pct_3y * 10) / 10;
+      cagr_3y = (Math.pow(e2024 / e2020, 1/4) - 1) * 100;
+      cagr_3y = Math.round(cagr_3y * 10) / 10;
+      span_years = 4;
+      trend3yCount++;
+    } else if (e2024 !== null && e2021 !== null && e2021 > 0) {
+      // Fallback: 3-year trend (2021-2024)
       abs_3y = e2024 - e2021;
       pct_3y = ((e2024 / e2021) - 1) * 100;
       pct_3y = Math.round(pct_3y * 10) / 10;
@@ -249,11 +260,11 @@ function buildSeries(allRecords: YearRecord[]): SeriesRecord[] {
       span_years = 3;
       trend3yCount++;
     } else if (e2024 !== null && e2022 !== null && e2022 > 0) {
-      // Fallback to 2-year
+      // Fallback: 2-year trend (2022-2024)
       abs_3y = e2024 - e2022;
       pct_3y = ((e2024 / e2022) - 1) * 100;
       pct_3y = Math.round(pct_3y * 10) / 10;
-      cagr_3y = null; // Only compute CAGR for true 3-year span
+      cagr_3y = null; // Only compute CAGR for 3+ year spans
       span_years = 2;
     }
 
