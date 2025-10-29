@@ -605,6 +605,7 @@ export default function InsightPanel({
               )}
             </div>
           )}
+
         </div>
 
         {/* Wage Distribution - Polished */}
@@ -706,6 +707,7 @@ export default function InsightPanel({
             )}
           </div>
         )}
+
 
         {/* Footer Chips */}
         <div className="mt-6 flex flex-wrap gap-2 items-center">

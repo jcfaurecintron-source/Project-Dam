@@ -1,0 +1,26 @@
+[
+  {
+    "unitid":100654,
+    "msa_code":"33100",
+    "msa_name":"Miami-Fort Lauderdale-West Palm Beach, FL",
+    "inst_name":"Florida International University"
+  },
+  {
+    "unitid":134097,
+    "msa_code":"33100",
+    "msa_name":"Miami-Fort Lauderdale-West Palm Beach, FL",
+    "inst_name":"University of Miami"
+  },
+  {
+    "unitid":135391,
+    "msa_code":"27260",
+    "msa_name":"Jacksonville, FL",
+    "inst_name":"University of North Florida"
+  },
+  {
+    "unitid":134097,
+    "msa_code":"27260",
+    "msa_name":"Jacksonville, FL",
+    "inst_name":"Jacksonville University"
+  }
+]

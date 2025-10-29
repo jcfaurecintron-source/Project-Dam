@@ -163,6 +163,7 @@ const MapLive = () => {
           console.warn('Competition density data not available');
         }
 
+
         setDataLoaded(true);
       } catch (err) {
         console.error('Error loading OEWS data:', err);
@@ -339,6 +340,7 @@ const MapLive = () => {
             const competitionDensity = densityData?.institutions_per_100k ?? null;
             const msaPopulation = densityData?.population ?? null;
 
+
             // Convert to InsightPanel format with growth metrics
             const insightData: InsightPanelData = {
               scope: 'MSA',
@@ -427,6 +429,7 @@ const MapLive = () => {
         const densityData = competitionDensityRef.current[ipedsMsaName];
         const competitionDensity = densityData?.institutions_per_100k ?? null;
         const msaPopulation = densityData?.population ?? null;
+
 
         const insightData: InsightPanelData = {
           scope: 'MSA',
