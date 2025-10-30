@@ -225,7 +225,6 @@ export default function InsightPanel({
         ref={panelRef}
         className="fixed md:absolute z-50 bg-white rounded-xl shadow-2xl"
         style={{
-          bottom: 'env(safe-area-inset-bottom, 0)',
           left: 0,
           right: 0,
           maxWidth: '520px',
@@ -237,6 +236,7 @@ export default function InsightPanel({
             right: 'auto',
           } : {
             position: 'fixed',
+            bottom: 'env(safe-area-inset-bottom, 0)',
             margin: '0 auto',
           })
         }}
