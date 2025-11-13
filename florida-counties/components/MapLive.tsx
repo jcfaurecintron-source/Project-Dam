@@ -105,6 +105,23 @@ const MapLive = () => {
   const [panelLoading, setPanelLoading] = useState(false);
   const [panelError, setPanelError] = useState<string | null>(null);
 
+  // Resize map when container size changes (for tab switching)
+  useEffect(() => {
+    if (!mapContainerRef.current || !mapRef.current) return;
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (mapRef.current) {
+        mapRef.current.resize();
+      }
+    });
+
+    resizeObserver.observe(mapContainerRef.current);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [mapLoaded]);
+
   // Load OEWS 2024 data and series data
   useEffect(() => {
     const loadOewsData = async () => {
@@ -201,6 +218,11 @@ const MapLive = () => {
       map.on('load', async () => {
         console.log('Map loaded successfully');
         setMapLoaded(true);
+        
+        // Ensure map resizes to container dimensions after a brief delay
+        setTimeout(() => {
+          map.resize();
+        }, 100);
         
         // Add MSA source
         map.addSource('fl-msas', {
@@ -469,11 +491,11 @@ const MapLive = () => {
   }, [selectedSoc]);
 
   return (
-    <div className="relative w-screen h-screen" style={{ width: '100vw', height: '100vh' }}>
+    <div className="relative w-full h-full" style={{ width: '100%', height: '100%' }}>
       <div 
         ref={mapContainerRef} 
-        className="absolute inset-0" 
-        style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0 }}
+        className="absolute inset-0"
+        style={{ width: '100%', height: '100%' }}
       />
       
       {/* InsightPanel */}
