@@ -15,6 +15,13 @@ export interface CollegeScorecardInstitution {
   website: string | null;
   carnegieClassification?: string;
   institutionType?: string;
+  costs?: {
+    tuitionInState: number | null;
+    tuitionOutOfState: number | null;
+    tuitionProgramYear: number | null;
+    attendanceProgramYear: number | null;
+    booksAndSupplies: number | null;
+  };
 }
 
 interface ScorecardApiResponse {
@@ -27,6 +34,113 @@ interface ScorecardApiResponse {
   errors?: any[];
 }
 
+const SCORECARD_API_URL = 'https://api.data.gov/ed/collegescorecard/v1/schools.json';
+const SCORECARD_FIELDS = [
+  'id',
+  'school.name',
+  'school.city',
+  'school.state',
+  'school.school_url',
+  'school.carnegie_basic',
+  'school.ownership',
+  'location.lat',
+  'location.lon',
+  'latest.programs.cip_4_digit',
+  'latest.cost.tuition.in_state',
+  'latest.cost.tuition.out_of_state',
+  'latest.cost.tuition.program_year',
+  'latest.cost.attendance.program_year',
+  'latest.cost.booksupply'
+].join(',');
+const PAGE_SIZE = 100;
+
+interface CipMatcher {
+  original: string;
+  normalized: string;
+  prefix: string;
+}
+
+function assertScorecardApiKey(): string {
+  const key = process.env.COLLEGE_SCORECARD_API_KEY?.trim();
+  if (!key) {
+    throw new Error('COLLEGE_SCORECARD_API_KEY is missing or empty');
+  }
+  return key;
+}
+
+function normalizeCipCode(code: string | number | null | undefined): string {
+  if (code == null) return '';
+  return String(code).replace(/[^0-9]/g, '');
+}
+
+function buildCipMatchers(cipCodes: string[]): CipMatcher[] {
+  return cipCodes.map(code => {
+    const normalized = normalizeCipCode(code);
+    return {
+      original: code,
+      normalized,
+      prefix: normalized.slice(0, 4)
+    };
+  });
+}
+
+function findMatchingCips(code: unknown, matchers: CipMatcher[]): string[] {
+  const normalized = normalizeCipCode(typeof code === 'object' ? null : (code as string | number | null | undefined));
+  if (!normalized) return [];
+
+  const directMatches = matchers.filter(m => m.normalized === normalized).map(m => m.original);
+  if (directMatches.length > 0) {
+    return directMatches;
+  }
+
+  const prefix = normalized.slice(0, 4);
+  if (!prefix) return [];
+
+  return matchers
+    .filter(m => m.prefix === prefix)
+    .map(m => m.original);
+}
+
+function toNumber(value: unknown): number | null {
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  if (typeof value === 'string') {
+    const parsed = parseFloat(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  return null;
+}
+
+async function fetchScorecardPage(
+  stateCode: string,
+  page: number,
+  apiKey: string
+): Promise<ScorecardApiResponse> {
+  const params = new URLSearchParams({
+    api_key: apiKey,
+    'school.state': stateCode,
+    'school.operating': '1',
+    fields: SCORECARD_FIELDS,
+    per_page: String(PAGE_SIZE),
+    page: String(page),
+  });
+
+  const response = await fetch(`${SCORECARD_API_URL}?${params.toString()}`, {
+    headers: { 'Content-Type': 'application/json' },
+    cache: 'no-store',
+  });
+
+  if (!response.ok) {
+    throw new Error(`College Scorecard API error: ${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  if (data.errors && data.errors.length > 0) {
+    throw new Error(`College Scorecard API responded with errors: ${JSON.stringify(data.errors)}`);
+  }
+
+  return data as ScorecardApiResponse;
+}
+
 /**
  * Query College Scorecard API for institutions offering specific CIP programs
  * 
@@ -37,79 +151,103 @@ interface ScorecardApiResponse {
  */
 export async function fetchInstitutionsByCip(
   cipCodes: string[],
-  stateCode: string = 'FL',
-  limit: number = 100
+  stateCode: string = 'FL'
 ): Promise<CollegeScorecardInstitution[]> {
-  try {
-    // College Scorecard API endpoint
-    // Note: API key can be obtained from https://collegescorecard.ed.gov/data/documentation/
-    // Using public access (no key required for basic queries)
-    const baseUrl = 'https://api.data.gov/ed/collegescorecard/v1/schools.json';
-    
-    // Build query parameters
-    // Note: College Scorecard API doesn't support direct CIP filtering in basic queries
-    // We'll get all Florida institutions and filter client-side
-    const params = new URLSearchParams({
-      'school.state': stateCode,
-      'school.operating': '1', // Only operating schools
-      'fields': 'id,school.name,school.city,school.state,location.lat,location.lon,school.school_url',
-      'per_page': limit.toString(),
-      // Filter by degree-granting institutions
-      'school.degrees_awarded.predominant__range': '1..', // At least certificate programs
-    });
-    
-    const url = `${baseUrl}?${params.toString()}`;
-    
-    const response = await fetch(url, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+  const apiKey = assertScorecardApiKey();
+  const matchers = buildCipMatchers(cipCodes);
+  const schools = new Map<number, {
+    id: number;
+    name: string;
+    city: string;
+    state: string;
+    latitude: number;
+    longitude: number;
+    website: string | null;
+    carnegieClassification?: string;
+    institutionType?: string;
+    cipCodes: Set<string>;
+    costs?: CollegeScorecardInstitution['costs'];
+  }>();
 
-    if (!response.ok) {
-      console.error(`College Scorecard API error: ${response.status} ${response.statusText}`);
-      return [];
+  let page = 0;
+  let totalPages: number | null = null;
+
+  while (true) {
+    const response = await fetchScorecardPage(stateCode, page, apiKey);
+    const results = response.results ?? [];
+    const metadata = response.metadata;
+
+    if (metadata && typeof metadata.total === 'number' && typeof metadata.per_page === 'number' && metadata.per_page > 0) {
+      totalPages = Math.ceil(metadata.total / metadata.per_page);
     }
 
-    const data: ScorecardApiResponse = await response.json();
-    
-    // Check for errors
-    if (data.errors && data.errors.length > 0) {
-      console.error('College Scorecard API errors:', data.errors);
-      return [];
+    for (const school of results) {
+      const lat = toNumber(school?.['location.lat']);
+      const lon = toNumber(school?.['location.lon']);
+      if (lat == null || lon == null) continue;
+
+      const programs = Array.isArray(school?.['latest.programs.cip_4_digit'])
+        ? school['latest.programs.cip_4_digit']
+        : [];
+
+      let schoolRecord = schools.get(school.id);
+      if (!schoolRecord) {
+        const tuitionInState = toNumber(school?.['latest.cost.tuition.in_state']);
+        const tuitionOutOfState = toNumber(school?.['latest.cost.tuition.out_of_state']);
+        const tuitionProgramYear = toNumber(school?.['latest.cost.tuition.program_year']);
+        const attendanceProgramYear = toNumber(school?.['latest.cost.attendance.program_year']);
+        const booksAndSupplies = toNumber(school?.['latest.cost.booksupply']);
+
+        schoolRecord = {
+          id: school.id,
+          name: school?.['school.name'] || 'Unknown institution',
+          city: school?.['school.city'] || '',
+          state: school?.['school.state'] || stateCode,
+          latitude: lat,
+          longitude: lon,
+          website: typeof school?.['school.school_url'] === 'string' ? school['school.school_url'] : null,
+          carnegieClassification: school?.['school.carnegie_basic']?.toString(),
+          institutionType: school?.['school.ownership']?.toString(),
+          cipCodes: new Set<string>(),
+          costs: {
+            tuitionInState,
+            tuitionOutOfState,
+            tuitionProgramYear,
+            attendanceProgramYear,
+            booksAndSupplies,
+          },
+        };
+      }
+
+      for (const program of programs) {
+        const matches = findMatchingCips(program?.code, matchers);
+        matches.forEach(code => schoolRecord!.cipCodes.add(code));
+      }
+
+      if (schoolRecord.cipCodes.size > 0) {
+        schools.set(school.id, schoolRecord);
+      }
     }
 
-    if (!data.results || !Array.isArray(data.results)) {
-      console.error('Unexpected College Scorecard API response format');
-      return [];
+    page += 1;
+    if ((totalPages !== null && page >= totalPages) || results.length === 0) {
+      break;
     }
-
-    // Transform results to our interface
-    const institutions: CollegeScorecardInstitution[] = data.results
-      .filter(school => {
-        // Ensure we have required fields
-        return school['school.name'] && 
-               school['location.lat'] && 
-               school['location.lon'];
-      })
-      .map(school => ({
-        id: school.id,
-        name: school['school.name'],
-        city: school['school.city'] || '',
-        state: school['school.state'] || stateCode,
-        latitude: parseFloat(school['location.lat']),
-        longitude: parseFloat(school['location.lon']),
-        cipCodes: cipCodes, // Store the CIP codes we searched for
-        website: school['school.school_url'] || null,
-        carnegieClassification: school['school.carnegie_basic']?.toString() || undefined,
-        institutionType: school['school.ownership']?.toString() || undefined
-      }));
-
-    return institutions;
-  } catch (error) {
-    console.error('Error fetching College Scorecard data:', error);
-    return [];
   }
+
+  return Array.from(schools.values()).map(inst => ({
+    id: inst.id,
+    name: inst.name,
+    city: inst.city,
+    state: inst.state,
+    latitude: inst.latitude,
+    longitude: inst.longitude,
+    cipCodes: Array.from(inst.cipCodes).sort(),
+    website: inst.website,
+    carnegieClassification: inst.carnegieClassification,
+    institutionType: inst.institutionType,
+    costs: inst.costs,
+  }));
 }
 
 /**
@@ -170,4 +308,3 @@ export function filterInstitutionsByMsa(
     return false;
   });
 }
-

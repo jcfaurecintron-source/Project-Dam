@@ -1,0 +1,3705 @@
+[
+  {
+    "school_id": "446127",
+    "school_name": "ATA Career Education",
+    "city": "Spring Hill",
+    "state": "FL",
+    "lat": 28.452699,
+    "lon": -82.595376,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14895.0,
+      "tuition_and_fees_out_of_state": 14895.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 3756.0
+    }
+  },
+  {
+    "school_id": "412173",
+    "school_name": "Academy for Nursing and Health Occupations",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.70653,
+    "lon": -80.121497,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 43328.0,
+      "attendance_cost_program_year": 32519.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "444334",
+    "school_name": "Advance Science International College",
+    "city": "Miami Lakes",
+    "state": "FL",
+    "lat": 25.924708,
+    "lon": -80.284567,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 44516.0,
+      "attendance_cost_program_year": 37141.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133872",
+    "school_name": "AdventHealth University",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.576142,
+    "lon": -81.367687,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 20880.0,
+      "tuition_and_fees_out_of_state": 20880.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 3600.0
+    }
+  },
+  {
+    "school_id": "475714",
+    "school_name": "American Medical Academy",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.66273,
+    "lon": -80.393361,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2250.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "483595",
+    "school_name": "Ana G. Mendez University",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.482195,
+    "lon": -81.30843,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13575.0,
+      "tuition_and_fees_out_of_state": 13575.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2010.0
+    }
+  },
+  {
+    "school_id": "496636",
+    "school_name": "Antigua College International",
+    "city": "Miami Lakes",
+    "state": "FL",
+    "lat": 25.904817,
+    "lon": -80.327618,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 26700.0,
+      "tuition_and_fees_out_of_state": 26700.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 565.0
+    }
+  },
+  {
+    "school_id": "485342",
+    "school_name": "Aparicio-Levy Technical College",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.990625,
+    "lon": -82.332285,
+    "matching_cips": [
+      "01.8301",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2983.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "495439",
+    "school_name": "Arizona College of Nursing-Fort Lauderdale",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "lat": 26.205783,
+    "lon": -80.138479,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 25973.0,
+      "tuition_and_fees_out_of_state": 25973.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "495420",
+    "school_name": "Arizona College of Nursing-Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.955614,
+    "lon": -82.523369,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 23093.0,
+      "tuition_and_fees_out_of_state": 23093.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "132374",
+    "school_name": "Atlantic Technical College",
+    "city": "Coconut Creek",
+    "state": "FL",
+    "lat": 26.24278,
+    "lon": -80.192271,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4516.0,
+      "attendance_cost_program_year": 16611.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "485768",
+    "school_name": "Atlantis University",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.786495,
+    "lon": -80.211287,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 12720.0,
+      "tuition_and_fees_out_of_state": 12720.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 400.0
+    }
+  },
+  {
+    "school_id": "446048",
+    "school_name": "Ave Maria University",
+    "city": "Ave Maria",
+    "state": "FL",
+    "lat": 26.335983,
+    "lon": -81.438945,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 28222.0,
+      "tuition_and_fees_out_of_state": 28222.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1320.0
+    }
+  },
+  {
+    "school_id": "457411",
+    "school_name": "Aviation Institute of Maintenance-Orlando",
+    "city": "Casselberry",
+    "state": "FL",
+    "lat": 28.680653,
+    "lon": -81.334196,
+    "matching_cips": [
+      "47.0201"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 16757.0,
+      "tuition_and_fees_out_of_state": 16757.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1000.0
+    }
+  },
+  {
+    "school_id": "132471",
+    "school_name": "Barry University",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.878908,
+    "lon": -80.198925,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 33450.0,
+      "tuition_and_fees_out_of_state": 33450.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1500.0
+    }
+  },
+  {
+    "school_id": "132602",
+    "school_name": "Bethune-Cookman University",
+    "city": "Daytona Beach",
+    "state": "FL",
+    "lat": 29.207195,
+    "lon": -81.032946,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14794.0,
+      "tuition_and_fees_out_of_state": 14794.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1450.0
+    }
+  },
+  {
+    "school_id": "137856",
+    "school_name": "Big Bend Technical College",
+    "city": "Perry",
+    "state": "FL",
+    "lat": 30.077954,
+    "lon": -83.565783,
+    "matching_cips": [
+      "15.0303",
+      "48.0508",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4652.0,
+      "attendance_cost_program_year": 16907.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "132709",
+    "school_name": "Broward College",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "lat": 26.119422,
+    "lon": -80.14183,
+    "matching_cips": [
+      "15.0303",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2830.0,
+      "tuition_and_fees_out_of_state": 8952.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 3004.0
+    }
+  },
+  {
+    "school_id": "456977",
+    "school_name": "CBT Technology Institute-Cutler Bay",
+    "city": "Cutler Bay",
+    "state": "FL",
+    "lat": 25.590468,
+    "lon": -80.356565,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13150.0,
+      "tuition_and_fees_out_of_state": 13150.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1800.0
+    }
+  },
+  {
+    "school_id": "449092",
+    "school_name": "CBT Technology Institute-Hialeah",
+    "city": "Hialeah",
+    "state": "FL",
+    "lat": 25.867003,
+    "lon": -80.302213,
+    "matching_cips": [
+      "47.0201"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13150.0,
+      "tuition_and_fees_out_of_state": 13150.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1225.0
+    }
+  },
+  {
+    "school_id": "449083",
+    "school_name": "CBT Technology Institute-Main Campus",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.769052,
+    "lon": -80.329161,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13150.0,
+      "tuition_and_fees_out_of_state": 13150.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1800.0
+    }
+  },
+  {
+    "school_id": "446109",
+    "school_name": "Cambridge College of Healthcare & Technology",
+    "city": "Altamonte Springs",
+    "state": "FL",
+    "lat": 28.66306,
+    "lon": -81.375722,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 15330.0,
+      "tuition_and_fees_out_of_state": 15330.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "454865",
+    "school_name": "Cambridge College of Healthcare & Technology",
+    "city": "Delray Beach",
+    "state": "FL",
+    "lat": 26.438379,
+    "lon": -80.123788,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14908.0,
+      "tuition_and_fees_out_of_state": 14908.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "431558",
+    "school_name": "Cape Coral Technical College",
+    "city": "Cape Coral",
+    "state": "FL",
+    "lat": 26.658582,
+    "lon": -81.976156,
+    "matching_cips": [
+      "01.8301",
+      "15.0303",
+      "51.0801",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 1145.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "457129",
+    "school_name": "Chamberlain University-Florida",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.243517,
+    "lon": -81.586421,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 19686.0,
+      "tuition_and_fees_out_of_state": 19686.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 600.0
+    }
+  },
+  {
+    "school_id": "132976",
+    "school_name": "Charlotte Technical College",
+    "city": "Port Charlotte",
+    "state": "FL",
+    "lat": 27.005558,
+    "lon": -82.147238,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3100.0,
+      "tuition_and_fees_out_of_state": 12100.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1100.0
+    }
+  },
+  {
+    "school_id": "133021",
+    "school_name": "Chipola College",
+    "city": "Marianna",
+    "state": "FL",
+    "lat": 30.789228,
+    "lon": -85.23139,
+    "matching_cips": [
+      "48.0508",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3120.0,
+      "tuition_and_fees_out_of_state": 8950.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 800.0
+    }
+  },
+  {
+    "school_id": "417327",
+    "school_name": "City College-Altamonte Springs",
+    "city": "Altamonte Springs",
+    "state": "FL",
+    "lat": 28.663604,
+    "lon": -81.402219,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 18615.0,
+      "tuition_and_fees_out_of_state": 18615.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1231.0
+    }
+  },
+  {
+    "school_id": "244233",
+    "school_name": "City College-Hollywood",
+    "city": "Hollywood",
+    "state": "FL",
+    "lat": 26.025173,
+    "lon": -80.22004,
+    "matching_cips": [
+      "01.8301",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 18615.0,
+      "tuition_and_fees_out_of_state": 18615.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1231.0
+    }
+  },
+  {
+    "school_id": "132851",
+    "school_name": "College of Central Florida",
+    "city": "Ocala",
+    "state": "FL",
+    "lat": 29.166079,
+    "lon": -82.175692,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2710.0,
+      "tuition_and_fees_out_of_state": 10517.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1400.0
+    }
+  },
+  {
+    "school_id": "423120",
+    "school_name": "Compu-Med Vocational Careers Corp",
+    "city": "Hialeah",
+    "state": "FL",
+    "lat": 25.848446,
+    "lon": -80.306915,
+    "matching_cips": [
+      "51.0801",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 44050.0,
+      "attendance_cost_program_year": 26139.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133845",
+    "school_name": "Concorde Career Institute-Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.23886,
+    "lon": -81.581748,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 17699.0,
+      "attendance_cost_program_year": 31297.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133854",
+    "school_name": "Concorde Career Institute-Miramar",
+    "city": "Miramar",
+    "state": "FL",
+    "lat": 25.977088,
+    "lon": -80.291516,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 18085.0,
+      "attendance_cost_program_year": 29973.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "460190",
+    "school_name": "Concorde Career Institute-Orlando",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.55984,
+    "lon": -81.340421,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 65490.0,
+      "attendance_cost_program_year": 37618.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133863",
+    "school_name": "Concorde Career Institute-Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.959148,
+    "lon": -82.514341,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 18315.0,
+      "attendance_cost_program_year": 28791.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "461306",
+    "school_name": "D A Dorsey Technical College",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.839575,
+    "lon": -80.225732,
+    "matching_cips": [
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3328.0,
+      "attendance_cost_program_year": 7003.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "447014",
+    "school_name": "Daytona College",
+    "city": "Ormond Beach",
+    "state": "FL",
+    "lat": 29.270088,
+    "lon": -81.080155,
+    "matching_cips": [
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 39100.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133386",
+    "school_name": "Daytona State College",
+    "city": "Daytona Beach",
+    "state": "FL",
+    "lat": 29.20278,
+    "lon": -81.049513,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3106.0,
+      "tuition_and_fees_out_of_state": 11994.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1800.0
+    }
+  },
+  {
+    "school_id": "482459",
+    "school_name": "DeVry University-Florida",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.53732,
+    "lon": -81.379188,
+    "matching_cips": [
+      "15.0303"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 17488.0,
+      "tuition_and_fees_out_of_state": 17488.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 400.0
+    }
+  },
+  {
+    "school_id": "132693",
+    "school_name": "Eastern Florida State College",
+    "city": "Melbourne",
+    "state": "FL",
+    "lat": 28.170002,
+    "lon": -80.670781,
+    "matching_cips": [
+      "01.8301",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2496.0,
+      "tuition_and_fees_out_of_state": 9739.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 300.0
+    }
+  },
+  {
+    "school_id": "457378",
+    "school_name": "Emerald Coast Technical College",
+    "city": "DeFuniak Springs",
+    "state": "FL",
+    "lat": 30.73209,
+    "lon": -86.128061,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 7300.0,
+      "attendance_cost_program_year": 19324.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "369419",
+    "school_name": "Erwin Technical College",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.997242,
+    "lon": -82.435933,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4204.0,
+      "attendance_cost_program_year": 14957.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "476939",
+    "school_name": "FVI School of Nursing and Technology",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.773542,
+    "lon": -80.321789,
+    "matching_cips": [
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 17696.0,
+      "attendance_cost_program_year": 30675.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137023",
+    "school_name": "First Coast Technical College",
+    "city": "Saint Augustine",
+    "state": "FL",
+    "lat": 29.924377,
+    "lon": -81.345829,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 6715.0,
+      "attendance_cost_program_year": 17676.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "461245",
+    "school_name": "Flagler Technical College",
+    "city": "Palm Coast",
+    "state": "FL",
+    "lat": 29.47629,
+    "lon": -81.211337,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 1074.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "462035",
+    "school_name": "Florida Academy",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.608576,
+    "lon": -81.825149,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 10100.0,
+      "attendance_cost_program_year": 16095.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "496681",
+    "school_name": "Florida Academy of Nursing",
+    "city": "Miramar",
+    "state": "FL",
+    "lat": 25.980007,
+    "lon": -80.34059,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 24200.0,
+      "attendance_cost_program_year": 19428.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133650",
+    "school_name": "Florida Agricultural and Mechanical University",
+    "city": "Tallahassee",
+    "state": "FL",
+    "lat": 30.428504,
+    "lon": -84.290226,
+    "matching_cips": [
+      "15.0303",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 5785.0,
+      "tuition_and_fees_out_of_state": 17725.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1138.0
+    }
+  },
+  {
+    "school_id": "133669",
+    "school_name": "Florida Atlantic University",
+    "city": "Boca Raton",
+    "state": "FL",
+    "lat": 26.372421,
+    "lon": -80.102978,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 4879.0,
+      "tuition_and_fees_out_of_state": 17324.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1256.0
+    }
+  },
+  {
+    "school_id": "487445",
+    "school_name": "Florida Career College-Boynton Beach",
+    "city": "Boynton Beach",
+    "state": "FL",
+    "lat": 26.54289,
+    "lon": -80.092161,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 38208.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487409",
+    "school_name": "Florida Career College-Hialeah",
+    "city": "Hialeah",
+    "state": "FL",
+    "lat": 25.855552,
+    "lon": -80.319292,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 40349.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487436",
+    "school_name": "Florida Career College-Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.19576,
+    "lon": -81.751361,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 40141.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487418",
+    "school_name": "Florida Career College-Lauderdale Lakes",
+    "city": "Lauderdale Lakes",
+    "state": "FL",
+    "lat": 26.16574,
+    "lon": -80.205267,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 41414.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487454",
+    "school_name": "Florida Career College-Margate",
+    "city": "Margate",
+    "state": "FL",
+    "lat": 26.270878,
+    "lon": -80.203455,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 39068.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133997",
+    "school_name": "Florida Career College-Miami",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.756567,
+    "lon": -80.36778,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 39503.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487472",
+    "school_name": "Florida Career College-Orlando",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.56052,
+    "lon": -81.309471,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 39813.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487384",
+    "school_name": "Florida Career College-Pembroke Pines",
+    "city": "Pembroke Pines",
+    "state": "FL",
+    "lat": 26.010968,
+    "lon": -80.246116,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 38131.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487427",
+    "school_name": "Florida Career College-Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.980705,
+    "lon": -82.337004,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 39386.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "487393",
+    "school_name": "Florida Career College-West Palm Beach",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.705217,
+    "lon": -80.136749,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 39731.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133809",
+    "school_name": "Florida College",
+    "city": "Temple Terrace",
+    "state": "FL",
+    "lat": 28.034936,
+    "lon": -82.383289,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 18920.0,
+      "tuition_and_fees_out_of_state": 18920.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1300.0
+    }
+  },
+  {
+    "school_id": "441423",
+    "school_name": "Florida Education Institute",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.76325,
+    "lon": -80.290496,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 18141.0,
+      "attendance_cost_program_year": 41125.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135160",
+    "school_name": "Florida Gateway College",
+    "city": "Lake City",
+    "state": "FL",
+    "lat": 30.175298,
+    "lon": -82.5679,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3100.0,
+      "tuition_and_fees_out_of_state": 11747.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1271.0
+    }
+  },
+  {
+    "school_id": "433660",
+    "school_name": "Florida Gulf Coast University",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.463638,
+    "lon": -81.7726,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6118.0,
+      "tuition_and_fees_out_of_state": 25162.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1200.0
+    }
+  },
+  {
+    "school_id": "486512",
+    "school_name": "Florida International Training Institute",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.797851,
+    "lon": -80.314681,
+    "matching_cips": [
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 9820.0,
+      "attendance_cost_program_year": 58017.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133951",
+    "school_name": "Florida International University",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.75732,
+    "lon": -80.373928,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6565.0,
+      "tuition_and_fees_out_of_state": 18963.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1350.0
+    }
+  },
+  {
+    "school_id": "408844",
+    "school_name": "Florida National University-Main Campus",
+    "city": "Hialeah",
+    "state": "FL",
+    "lat": 25.86178,
+    "lon": -80.321846,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 16088.0,
+      "tuition_and_fees_out_of_state": 16088.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 200.0
+    }
+  },
+  {
+    "school_id": "138284",
+    "school_name": "Florida Panhandle Technical College",
+    "city": "Chipley",
+    "state": "FL",
+    "lat": 30.77449,
+    "lon": -85.553345,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3942.0,
+      "attendance_cost_program_year": 13922.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133508",
+    "school_name": "Florida SouthWestern State College",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.552403,
+    "lon": -81.887102,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3401.0,
+      "tuition_and_fees_out_of_state": 12979.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1950.0
+    }
+  },
+  {
+    "school_id": "134079",
+    "school_name": "Florida Southern College",
+    "city": "Lakeland",
+    "state": "FL",
+    "lat": 28.032443,
+    "lon": -81.948203,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 42360.0,
+      "tuition_and_fees_out_of_state": 42360.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1250.0
+    }
+  },
+  {
+    "school_id": "133702",
+    "school_name": "Florida State College at Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.334918,
+    "lon": -81.659901,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2878.0,
+      "tuition_and_fees_out_of_state": 9992.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1400.0
+    }
+  },
+  {
+    "school_id": "134097",
+    "school_name": "Florida State University",
+    "city": "Tallahassee",
+    "state": "FL",
+    "lat": 30.443147,
+    "lon": -84.295064,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 5656.0,
+      "tuition_and_fees_out_of_state": 18786.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1000.0
+    }
+  },
+  {
+    "school_id": "135267",
+    "school_name": "Fort Myers Technical College",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.647517,
+    "lon": -81.836596,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2529.0,
+      "attendance_cost_program_year": 18061.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "490975",
+    "school_name": "Fortis College-Cutler Bay",
+    "city": "Cutler Bay",
+    "state": "FL",
+    "lat": 25.585653,
+    "lon": -80.363995,
+    "matching_cips": [
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13171.0,
+      "tuition_and_fees_out_of_state": 13171.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1059.0
+    }
+  },
+  {
+    "school_id": "439792",
+    "school_name": "Fortis College-Orange Park",
+    "city": "Orange Park",
+    "state": "FL",
+    "lat": 30.148278,
+    "lon": -81.759035,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14386.0,
+      "tuition_and_fees_out_of_state": 14386.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1101.0
+    }
+  },
+  {
+    "school_id": "455479",
+    "school_name": "Fortis Institute-Pensacola",
+    "city": "Pensacola",
+    "state": "FL",
+    "lat": 30.510415,
+    "lon": -87.183112,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14767.0,
+      "tuition_and_fees_out_of_state": 14767.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1204.0
+    }
+  },
+  {
+    "school_id": "445744",
+    "school_name": "Fortis Institute-Port Saint Lucie",
+    "city": "Port Saint Lucie",
+    "state": "FL",
+    "lat": 27.3016,
+    "lon": -80.303751,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14087.0,
+      "tuition_and_fees_out_of_state": 14087.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1147.0
+    }
+  },
+  {
+    "school_id": "459329",
+    "school_name": "Fred K Marchman Technical College",
+    "city": "New Port Richey",
+    "state": "FL",
+    "lat": 28.271196,
+    "lon": -82.691779,
+    "matching_cips": [
+      "47.0201",
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3988.0,
+      "attendance_cost_program_year": 13327.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "490090",
+    "school_name": "Gadsden Technical College",
+    "city": "Quincy",
+    "state": "FL",
+    "lat": 30.577656,
+    "lon": -84.578905,
+    "matching_cips": [
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3942.0,
+      "attendance_cost_program_year": 10761.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "406024",
+    "school_name": "Galen College of Nursing-Tampa Bay",
+    "city": "Saint Petersburg",
+    "state": "FL",
+    "lat": 27.865391,
+    "lon": -82.648151,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 16400.0,
+      "tuition_and_fees_out_of_state": 16400.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1350.0
+    }
+  },
+  {
+    "school_id": "496991",
+    "school_name": "Galen Health Institutes-Miami Campus",
+    "city": "Pembroke Pines",
+    "state": "FL",
+    "lat": 25.997073,
+    "lon": -80.337924,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 16400.0,
+      "tuition_and_fees_out_of_state": 16400.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1350.0
+    }
+  },
+  {
+    "school_id": "134291",
+    "school_name": "George Stone Technical College",
+    "city": "Pensacola",
+    "state": "FL",
+    "lat": 30.487547,
+    "lon": -87.290659,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3218.0,
+      "attendance_cost_program_year": 14197.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "492935",
+    "school_name": "Global Medical & Technical Training Institute",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.779693,
+    "lon": -80.225343,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 11455.0,
+      "attendance_cost_program_year": 38855.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "134343",
+    "school_name": "Gulf Coast State College",
+    "city": "Panama City",
+    "state": "FL",
+    "lat": 30.185542,
+    "lon": -85.727918,
+    "matching_cips": [
+      "15.0303",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2370.0,
+      "tuition_and_fees_out_of_state": 8635.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1200.0
+    }
+  },
+  {
+    "school_id": "367875",
+    "school_name": "H W Brewster Technical College",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.96373,
+    "lon": -82.461722,
+    "matching_cips": [
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5256.0,
+      "attendance_cost_program_year": 15102.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "490054",
+    "school_name": "HCI College",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.702663,
+    "lon": -80.085147,
+    "matching_cips": [
+      "01.8301",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 20028.0,
+      "tuition_and_fees_out_of_state": 20028.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "386472",
+    "school_name": "Herzing University-Orlando",
+    "city": "Winter Park",
+    "state": "FL",
+    "lat": 28.615784,
+    "lon": -81.312669,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13420.0,
+      "tuition_and_fees_out_of_state": 13420.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "496973",
+    "school_name": "Herzing University-Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.976414,
+    "lon": -82.335773,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13420.0,
+      "tuition_and_fees_out_of_state": 13420.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "134495",
+    "school_name": "Hillsborough Community College",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.934888,
+    "lon": -82.456253,
+    "matching_cips": [
+      "01.8301",
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2506.0,
+      "tuition_and_fees_out_of_state": 9111.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1560.0
+    }
+  },
+  {
+    "school_id": "367884",
+    "school_name": "Hodges University",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.610865,
+    "lon": -81.821419,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 15580.0,
+      "tuition_and_fees_out_of_state": 15580.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1200.0
+    }
+  },
+  {
+    "school_id": "443234",
+    "school_name": "Hollywood Institute",
+    "city": "Margate",
+    "state": "FL",
+    "lat": 26.243429,
+    "lon": -80.199738,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 9020.0,
+      "attendance_cost_program_year": 22770.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "488332",
+    "school_name": "Hope College of Arts and Sciences",
+    "city": "Pompano Beach",
+    "state": "FL",
+    "lat": 26.226156,
+    "lon": -80.139671,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 30791.0,
+      "attendance_cost_program_year": 17222.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "457387",
+    "school_name": "Immokalee Technical College",
+    "city": "Immokalee",
+    "state": "FL",
+    "lat": 26.426526,
+    "lon": -81.425148,
+    "matching_cips": [
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5142.0,
+      "attendance_cost_program_year": 9020.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "134608",
+    "school_name": "Indian River State College",
+    "city": "Fort Pierce",
+    "state": "FL",
+    "lat": 27.42416,
+    "lon": -80.358682,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2764.0,
+      "tuition_and_fees_out_of_state": 10201.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1350.0
+    }
+  },
+  {
+    "school_id": "483869",
+    "school_name": "InterAmerican Technical Institute",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.760656,
+    "lon": -80.350943,
+    "matching_cips": [
+      "47.0201"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 9350.0,
+      "attendance_cost_program_year": 35400.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "134945",
+    "school_name": "Jacksonville University",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.353227,
+    "lon": -81.60458,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 46180.0,
+      "tuition_and_fees_out_of_state": 46180.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 700.0
+    }
+  },
+  {
+    "school_id": "461281",
+    "school_name": "Jose Maria Vargas University",
+    "city": "Pembroke Pines",
+    "state": "FL",
+    "lat": 26.009656,
+    "lon": -80.281548,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 11260.0,
+      "tuition_and_fees_out_of_state": 11260.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1000.0
+    }
+  },
+  {
+    "school_id": "135081",
+    "school_name": "Keiser University-Ft Lauderdale",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "lat": 26.185869,
+    "lon": -80.163959,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 24136.0,
+      "tuition_and_fees_out_of_state": 24136.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2000.0
+    }
+  },
+  {
+    "school_id": "135179",
+    "school_name": "Lake Technical College",
+    "city": "Eustis",
+    "state": "FL",
+    "lat": 28.833446,
+    "lon": -81.690874,
+    "matching_cips": [
+      "01.8301",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5821.0,
+      "attendance_cost_program_year": 21553.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135188",
+    "school_name": "Lake-Sumter State College",
+    "city": "Leesburg",
+    "state": "FL",
+    "lat": 28.828649,
+    "lon": -81.797193,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3292.0,
+      "tuition_and_fees_out_of_state": 13276.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2600.0
+    }
+  },
+  {
+    "school_id": "135294",
+    "school_name": "Lindsey Hopkins Technical College",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.794676,
+    "lon": -80.208154,
+    "matching_cips": [
+      "47.0201",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3187.0,
+      "attendance_cost_program_year": 10099.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135276",
+    "school_name": "Lively Technical College",
+    "city": "Tallahassee",
+    "state": "FL",
+    "lat": 30.448534,
+    "lon": -84.339057,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5746.0,
+      "attendance_cost_program_year": 12833.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "133155",
+    "school_name": "Lorenzo Walker Technical College",
+    "city": "Naples",
+    "state": "FL",
+    "lat": 26.141141,
+    "lon": -81.763568,
+    "matching_cips": [
+      "01.8301",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 8005.0,
+      "attendance_cost_program_year": 18588.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "441414",
+    "school_name": "M-DCPS The English Center",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.74027,
+    "lon": -80.25167,
+    "matching_cips": [
+      "47.0201"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 700.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135407",
+    "school_name": "Manatee Technical College",
+    "city": "Bradenton",
+    "state": "FL",
+    "lat": 27.447894,
+    "lon": -82.481088,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4500.0,
+      "attendance_cost_program_year": 12574.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "419226",
+    "school_name": "Marion Technical College",
+    "city": "Ocala",
+    "state": "FL",
+    "lat": 29.178271,
+    "lon": -82.147877,
+    "matching_cips": [
+      "01.8301",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 6495.0,
+      "attendance_cost_program_year": 10141.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "488059",
+    "school_name": "Med College",
+    "city": "Hialeah",
+    "state": "FL",
+    "lat": 25.89821,
+    "lon": -80.35256,
+    "matching_cips": [
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 22330.0,
+      "tuition_and_fees_out_of_state": 22330.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1000.0
+    }
+  },
+  {
+    "school_id": "455831",
+    "school_name": "Medical Institute of Palm Beach",
+    "city": "Greenacres",
+    "state": "FL",
+    "lat": 26.620478,
+    "lon": -80.134959,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 25000.0,
+      "attendance_cost_program_year": 45542.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "244279",
+    "school_name": "Meridian College",
+    "city": "Sarasota",
+    "state": "FL",
+    "lat": 27.380724,
+    "lon": -82.425309,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 38100.0,
+      "attendance_cost_program_year": 36062.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135717",
+    "school_name": "Miami Dade College",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.777717,
+    "lon": -80.190856,
+    "matching_cips": [
+      "01.8301",
+      "15.0303",
+      "47.0201",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2838.0,
+      "tuition_and_fees_out_of_state": 9661.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1500.0
+    }
+  },
+  {
+    "school_id": "135647",
+    "school_name": "Miami Lakes Educational Center and Technical College",
+    "city": "Miami Lakes",
+    "state": "FL",
+    "lat": 25.915514,
+    "lon": -80.294424,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2340.0,
+      "attendance_cost_program_year": 7297.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "451103",
+    "school_name": "Miami Regional University",
+    "city": "Miami Springs",
+    "state": "FL",
+    "lat": 25.810667,
+    "lon": -80.267007,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 36366.0,
+      "attendance_cost_program_year": 33571.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "434469",
+    "school_name": "New Professions Technical Institute",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.771488,
+    "lon": -80.261873,
+    "matching_cips": [
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 37628.0,
+      "attendance_cost_program_year": 45944.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136145",
+    "school_name": "North Florida College",
+    "city": "Madison",
+    "state": "FL",
+    "lat": 30.473841,
+    "lon": -83.420732,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3054.0,
+      "tuition_and_fees_out_of_state": 11400.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1400.0
+    }
+  },
+  {
+    "school_id": "132675",
+    "school_name": "North Florida Technical College",
+    "city": "Starke",
+    "state": "FL",
+    "lat": 29.952308,
+    "lon": -82.117224,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 7922.0,
+      "attendance_cost_program_year": 6634.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136233",
+    "school_name": "Northwest Florida State College",
+    "city": "Niceville",
+    "state": "FL",
+    "lat": 30.540017,
+    "lon": -86.47456,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3246.0,
+      "tuition_and_fees_out_of_state": 11625.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1440.0
+    }
+  },
+  {
+    "school_id": "136215",
+    "school_name": "Nova Southeastern University",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "lat": 26.082288,
+    "lon": -80.249891,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 37080.0,
+      "tuition_and_fees_out_of_state": 37080.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2128.0
+    }
+  },
+  {
+    "school_id": "433068",
+    "school_name": "Okaloosa Technical College",
+    "city": "Fort Walton Beach",
+    "state": "FL",
+    "lat": 30.46866,
+    "lon": -86.614844,
+    "matching_cips": [
+      "47.0201",
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4779.0,
+      "attendance_cost_program_year": 16727.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136303",
+    "school_name": "Orange Technical College",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.550422,
+    "lon": -81.383783,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4581.0,
+      "attendance_cost_program_year": 10833.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "138488",
+    "school_name": "Orange Technical College-East Campus",
+    "city": "Winter Park",
+    "state": "FL",
+    "lat": 28.604386,
+    "lon": -81.36174,
+    "matching_cips": [
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4494.0,
+      "attendance_cost_program_year": 28356.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135735",
+    "school_name": "Orange Technical College-South Campus",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.471695,
+    "lon": -81.415996,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2291.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "138372",
+    "school_name": "Orange Technical College-West Campus",
+    "city": "Ocoee",
+    "state": "FL",
+    "lat": 28.597903,
+    "lon": -81.555585,
+    "matching_cips": [
+      "01.8301",
+      "47.0201",
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3874.0,
+      "attendance_cost_program_year": 14458.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "427991",
+    "school_name": "Osceola Technical College",
+    "city": "Kissimmee",
+    "state": "FL",
+    "lat": 28.298648,
+    "lon": -81.349696,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 7171.0,
+      "attendance_cost_program_year": 8169.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "449490",
+    "school_name": "Palm Beach Academy of Health & Beauty",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.63948,
+    "lon": -80.115507,
+    "matching_cips": [
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 14180.0,
+      "attendance_cost_program_year": 28557.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136330",
+    "school_name": "Palm Beach Atlantic University",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.7044,
+    "lon": -80.05247,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 37990.0,
+      "tuition_and_fees_out_of_state": 37990.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1186.0
+    }
+  },
+  {
+    "school_id": "136358",
+    "school_name": "Palm Beach State College",
+    "city": "Lake Worth",
+    "state": "FL",
+    "lat": 26.61256,
+    "lon": -80.08653,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3050.0,
+      "tuition_and_fees_out_of_state": 10910.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2700.0
+    }
+  },
+  {
+    "school_id": "136400",
+    "school_name": "Pasco-Hernando State College",
+    "city": "New Port Richey",
+    "state": "FL",
+    "lat": 28.2751,
+    "lon": -82.646727,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3155.0,
+      "tuition_and_fees_out_of_state": 12032.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1520.0
+    }
+  },
+  {
+    "school_id": "449533",
+    "school_name": "Pensacola School of Massage Therapy & Health Careers",
+    "city": "Pensacola",
+    "state": "FL",
+    "lat": 30.494755,
+    "lon": -87.195529,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 13500.0,
+      "attendance_cost_program_year": 23160.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136473",
+    "school_name": "Pensacola State College",
+    "city": "Pensacola",
+    "state": "FL",
+    "lat": 30.479267,
+    "lon": -87.200265,
+    "matching_cips": [
+      "01.8301",
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2348.0,
+      "tuition_and_fees_out_of_state": 9407.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 900.0
+    }
+  },
+  {
+    "school_id": "136491",
+    "school_name": "Pinellas Technical College-Clearwater",
+    "city": "Clearwater",
+    "state": "FL",
+    "lat": 27.911922,
+    "lon": -82.719064,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5411.0,
+      "attendance_cost_program_year": 18233.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137087",
+    "school_name": "Pinellas Technical College-St. Petersburg",
+    "city": "Saint Petersburg",
+    "state": "FL",
+    "lat": 27.761183,
+    "lon": -82.681534,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5588.0,
+      "attendance_cost_program_year": 24306.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136516",
+    "school_name": "Polk State College",
+    "city": "Winter Haven",
+    "state": "FL",
+    "lat": 28.032411,
+    "lon": -81.711873,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3366.0,
+      "tuition_and_fees_out_of_state": 12272.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2000.0
+    }
+  },
+  {
+    "school_id": "430582",
+    "school_name": "Praxis Institute",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.756567,
+    "lon": -80.36778,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 8500.0,
+      "attendance_cost_program_year": 11463.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "493488",
+    "school_name": "Premiere International College",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.639307,
+    "lon": -81.864154,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 21125.0,
+      "tuition_and_fees_out_of_state": 21125.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1950.0
+    }
+  },
+  {
+    "school_id": "136659",
+    "school_name": "Radford M Locklin Technical College",
+    "city": "Milton",
+    "state": "FL",
+    "lat": 30.648077,
+    "lon": -87.09971,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4634.0,
+      "attendance_cost_program_year": 13023.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "138309",
+    "school_name": "Rasmussen University-Florida",
+    "city": "Ocala",
+    "state": "FL",
+    "lat": 29.175319,
+    "lon": -82.15319,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 15117.0,
+      "tuition_and_fees_out_of_state": 15117.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 70.0
+    }
+  },
+  {
+    "school_id": "136765",
+    "school_name": "Ridge Technical College",
+    "city": "Winter Haven",
+    "state": "FL",
+    "lat": 28.076632,
+    "lon": -81.654463,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3918.0,
+      "tuition_and_fees_out_of_state": 10398.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1475.0
+    }
+  },
+  {
+    "school_id": "137713",
+    "school_name": "Riveroak Technical College",
+    "city": "Live Oak",
+    "state": "FL",
+    "lat": 30.281999,
+    "lon": -82.992512,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4942.0,
+      "attendance_cost_program_year": 14505.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "136826",
+    "school_name": "Robert Morgan Educational Center and Technical College",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.599247,
+    "lon": -80.390054,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 5491.0,
+      "attendance_cost_program_year": 15461.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "449506",
+    "school_name": "SABER College",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.771518,
+    "lon": -80.261299,
+    "matching_cips": [
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 45505.0,
+      "attendance_cost_program_year": 17666.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137281",
+    "school_name": "Saint Johns River State College",
+    "city": "Palatka",
+    "state": "FL",
+    "lat": 29.647516,
+    "lon": -81.681387,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2830.0,
+      "tuition_and_fees_out_of_state": 10352.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2064.0
+    }
+  },
+  {
+    "school_id": "137032",
+    "school_name": "Saint Leo University",
+    "city": "Saint Leo",
+    "state": "FL",
+    "lat": 28.336776,
+    "lon": -82.257801,
+    "matching_cips": [
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 28360.0,
+      "tuition_and_fees_out_of_state": 28360.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 910.0
+    }
+  },
+  {
+    "school_id": "137096",
+    "school_name": "Santa Fe College",
+    "city": "Gainesville",
+    "state": "FL",
+    "lat": 29.681037,
+    "lon": -82.433143,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2563.0,
+      "tuition_and_fees_out_of_state": 9189.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 783.0
+    }
+  },
+  {
+    "school_id": "404338",
+    "school_name": "Schiller International University",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.947866,
+    "lon": -82.459292,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13680.0,
+      "tuition_and_fees_out_of_state": 13680.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137209",
+    "school_name": "Seminole State College of Florida",
+    "city": "Sanford",
+    "state": "FL",
+    "lat": 28.745482,
+    "lon": -81.308003,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3227.0,
+      "tuition_and_fees_out_of_state": 11447.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1300.0
+    }
+  },
+  {
+    "school_id": "137245",
+    "school_name": "Sheridan Technical College",
+    "city": "Hollywood",
+    "state": "FL",
+    "lat": 26.031736,
+    "lon": -80.198024,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3855.0,
+      "attendance_cost_program_year": 14158.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "488891",
+    "school_name": "South Dade Technical College-South Dade Skills Center Campus",
+    "city": "HOMESTEAD",
+    "state": "FL",
+    "lat": 25.50406,
+    "lon": -80.437371,
+    "matching_cips": [
+      "47.0201",
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 3528.0,
+      "attendance_cost_program_year": 6807.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "443252",
+    "school_name": "South Florida Institute of Technology",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.780018,
+    "lon": -80.239586,
+    "matching_cips": [
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 10250.0,
+      "attendance_cost_program_year": 36314.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137315",
+    "school_name": "South Florida State College",
+    "city": "Avon Park",
+    "state": "FL",
+    "lat": 27.56974,
+    "lon": -81.508667,
+    "matching_cips": [
+      "15.0303",
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3165.0,
+      "tuition_and_fees_out_of_state": 11859.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1200.0
+    }
+  },
+  {
+    "school_id": "449898",
+    "school_name": "South University-Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.982269,
+    "lon": -82.500357,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 18238.0,
+      "tuition_and_fees_out_of_state": 18238.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1500.0
+    }
+  },
+  {
+    "school_id": "133465",
+    "school_name": "South University-West Palm Beach",
+    "city": "Royal Palm Beach",
+    "state": "FL",
+    "lat": 26.69215,
+    "lon": -80.200219,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 18238.0,
+      "tuition_and_fees_out_of_state": 18238.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1500.0
+    }
+  },
+  {
+    "school_id": "428170",
+    "school_name": "Southeastern College-West Palm Beach",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.702216,
+    "lon": -80.085966,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 23584.0,
+      "tuition_and_fees_out_of_state": 23584.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2000.0
+    }
+  },
+  {
+    "school_id": "137564",
+    "school_name": "Southeastern University",
+    "city": "Lakeland",
+    "state": "FL",
+    "lat": 28.029733,
+    "lon": -81.918382,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 31732.0,
+      "tuition_and_fees_out_of_state": 31732.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1600.0
+    }
+  },
+  {
+    "school_id": "366553",
+    "school_name": "Southern Technical College",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.596097,
+    "lon": -81.877644,
+    "matching_cips": [
+      "01.8301",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 14742.0,
+      "tuition_and_fees_out_of_state": 14742.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "446552",
+    "school_name": "Southern Technical College",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.44862,
+    "lon": -81.399661,
+    "matching_cips": [
+      "01.8301",
+      "47.0201",
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 18500.0,
+      "attendance_cost_program_year": 27302.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137078",
+    "school_name": "St Petersburg College",
+    "city": "St. Petersburg",
+    "state": "FL",
+    "lat": 27.773264,
+    "lon": -82.636587,
+    "matching_cips": [
+      "01.8301",
+      "15.0303",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2682.0,
+      "tuition_and_fees_out_of_state": 9286.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1600.0
+    }
+  },
+  {
+    "school_id": "137476",
+    "school_name": "St. Thomas University",
+    "city": "Miami Gardens",
+    "state": "FL",
+    "lat": 25.922071,
+    "lon": -80.253273,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 34770.0,
+      "tuition_and_fees_out_of_state": 34770.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 360.0
+    }
+  },
+  {
+    "school_id": "135391",
+    "school_name": "State College of Florida-Manatee-Sarasota",
+    "city": "Bradenton",
+    "state": "FL",
+    "lat": 27.43804,
+    "lon": -82.590887,
+    "matching_cips": [
+      "15.0303",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3074.0,
+      "tuition_and_fees_out_of_state": 11595.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1500.0
+    }
+  },
+  {
+    "school_id": "137120",
+    "school_name": "Suncoast Technical College",
+    "city": "Sarasota",
+    "state": "FL",
+    "lat": 27.285486,
+    "lon": -82.500827,
+    "matching_cips": [
+      "01.8301",
+      "47.0201",
+      "48.0508",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 6644.0,
+      "attendance_cost_program_year": 22724.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "137759",
+    "school_name": "Tallahassee State College",
+    "city": "Tallahassee",
+    "state": "FL",
+    "lat": 30.443866,
+    "lon": -84.339,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2026.0,
+      "tuition_and_fees_out_of_state": 8062.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 800.0
+    }
+  },
+  {
+    "school_id": "449524",
+    "school_name": "Taylor College",
+    "city": "Ocala",
+    "state": "FL",
+    "lat": 29.189031,
+    "lon": -82.102824,
+    "matching_cips": [
+      "51.0801",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 13263.0,
+      "tuition_and_fees_out_of_state": 13263.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 2921.0
+    }
+  },
+  {
+    "school_id": "133960",
+    "school_name": "The College of the Florida Keys",
+    "city": "Key West",
+    "state": "FL",
+    "lat": 24.582748,
+    "lon": -81.74446,
+    "matching_cips": [
+      "47.0201",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3279.0,
+      "tuition_and_fees_out_of_state": 13162.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1633.0
+    }
+  },
+  {
+    "school_id": "137847",
+    "school_name": "The University of Tampa",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.948455,
+    "lon": -82.46483,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 33424.0,
+      "tuition_and_fees_out_of_state": 33424.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1500.0
+    }
+  },
+  {
+    "school_id": "137865",
+    "school_name": "Tom P. Haney Technical College",
+    "city": "Panama City",
+    "state": "FL",
+    "lat": 30.203363,
+    "lon": -85.646585,
+    "matching_cips": [
+      "47.0201",
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4239.0,
+      "attendance_cost_program_year": 12610.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "135522",
+    "school_name": "Traviss Technical College",
+    "city": "Lakeland",
+    "state": "FL",
+    "lat": 27.995822,
+    "lon": -81.892381,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 680.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "486150",
+    "school_name": "Treasure Coast Technical College",
+    "city": "Vero Beach",
+    "state": "FL",
+    "lat": 27.678049,
+    "lon": -80.413849,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 6803.0,
+      "attendance_cost_program_year": 12982.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "442329",
+    "school_name": "Tulsa Welding School-Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.282647,
+    "lon": -81.560428,
+    "matching_cips": [
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 21500.0,
+      "attendance_cost_program_year": 38432.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "476063",
+    "school_name": "Tulsa Welding School-Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.313564,
+    "lon": -81.56007,
+    "matching_cips": [
+      "47.0201"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 22300.0,
+      "attendance_cost_program_year": 33471.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "441371",
+    "school_name": "Ultimate Medical Academy",
+    "city": "Clearwater",
+    "state": "FL",
+    "lat": 27.965294,
+    "lon": -82.78558,
+    "matching_cips": [
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 29925.0,
+      "attendance_cost_program_year": 25673.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "481252",
+    "school_name": "Ultrasound Medical Institute",
+    "city": "Royal Palm Beach",
+    "state": "FL",
+    "lat": 26.68295,
+    "lon": -80.22826,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 49816.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "132903",
+    "school_name": "University of Central Florida",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.602159,
+    "lon": -81.200889,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6368.0,
+      "tuition_and_fees_out_of_state": 22467.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1000.0
+    }
+  },
+  {
+    "school_id": "134130",
+    "school_name": "University of Florida",
+    "city": "Gainesville",
+    "state": "FL",
+    "lat": 29.64629,
+    "lon": -82.347911,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6381.0,
+      "tuition_and_fees_out_of_state": 28659.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1050.0
+    }
+  },
+  {
+    "school_id": "484473",
+    "school_name": "University of Florida-Online",
+    "city": "Gainesville",
+    "state": "FL",
+    "lat": 29.649413,
+    "lon": -82.339848,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 3876.0,
+      "tuition_and_fees_out_of_state": 16579.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1050.0
+    }
+  },
+  {
+    "school_id": "135726",
+    "school_name": "University of Miami",
+    "city": "Coral Gables",
+    "state": "FL",
+    "lat": 25.72126,
+    "lon": -80.278662,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 59926.0,
+      "tuition_and_fees_out_of_state": 59926.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1328.0
+    }
+  },
+  {
+    "school_id": "136172",
+    "school_name": "University of North Florida",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.27194,
+    "lon": -81.509144,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6389.0,
+      "tuition_and_fees_out_of_state": 20793.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1200.0
+    }
+  },
+  {
+    "school_id": "137351",
+    "school_name": "University of South Florida",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 28.061458,
+    "lon": -82.413232,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6410.0,
+      "tuition_and_fees_out_of_state": 17324.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 770.0
+    }
+  },
+  {
+    "school_id": "138354",
+    "school_name": "University of West Florida",
+    "city": "Pensacola",
+    "state": "FL",
+    "lat": 30.549076,
+    "lon": -87.218511,
+    "matching_cips": [
+      "51.0909",
+      "51.0910",
+      "51.1004",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 6360.0,
+      "tuition_and_fees_out_of_state": 19241.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1600.0
+    }
+  },
+  {
+    "school_id": "138187",
+    "school_name": "Valencia College",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.520783,
+    "lon": -81.464275,
+    "matching_cips": [
+      "15.0303",
+      "51.0909",
+      "51.0910",
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 2474.0,
+      "tuition_and_fees_out_of_state": 9383.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 1252.0
+    }
+  },
+  {
+    "school_id": "485272",
+    "school_name": "West Coast University-Miami",
+    "city": "Doral",
+    "state": "FL",
+    "lat": 25.81071,
+    "lon": -80.347651,
+    "matching_cips": [
+      "51.3801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": 23691.0,
+      "tuition_and_fees_out_of_state": 23691.0,
+      "tuition_and_fees_program_year": null,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": 3977.0
+    }
+  },
+  {
+    "school_id": "138479",
+    "school_name": "William T McFatter Technical College",
+    "city": "Davie",
+    "state": "FL",
+    "lat": 26.085022,
+    "lon": -80.232201,
+    "matching_cips": [
+      "48.0508",
+      "51.0801",
+      "51.0909",
+      "51.0910",
+      "51.1004"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 4705.0,
+      "attendance_cost_program_year": 13432.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "491783",
+    "school_name": "Wilton Simpson Technical College",
+    "city": "Brooksville",
+    "state": "FL",
+    "lat": 28.488302,
+    "lon": -82.463419,
+    "matching_cips": [
+      "48.0508"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2838.0,
+      "attendance_cost_program_year": 16492.0,
+      "books_and_supplies": null
+    }
+  },
+  {
+    "school_id": "138497",
+    "school_name": "Withlacoochee Technical College",
+    "city": "Inverness",
+    "state": "FL",
+    "lat": 28.834861,
+    "lon": -82.345563,
+    "matching_cips": [
+      "47.0201",
+      "48.0508",
+      "51.0801"
+    ],
+    "costs": {
+      "tuition_and_fees_in_state": null,
+      "tuition_and_fees_out_of_state": null,
+      "tuition_and_fees_program_year": 2274.0,
+      "attendance_cost_program_year": null,
+      "books_and_supplies": null
+    }
+  }
+]

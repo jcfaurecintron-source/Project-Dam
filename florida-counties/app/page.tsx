@@ -1,12 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MapLive from '../components/MapLive';
 import StcMap from '../components/StcMap';
 import CompetitorMap from '../components/CompetitorMap';
 
+const STORAGE_KEY = 'florida-counties:active-tab';
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'msa' | 'stc' | 'competitor'>('msa');
+
+  useEffect(() => {
+    const storedTab = window.localStorage.getItem(STORAGE_KEY) as 'msa' | 'stc' | 'competitor' | null;
+    if (storedTab) {
+      setActiveTab(storedTab);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem(STORAGE_KEY, activeTab);
+  }, [activeTab]);
 
   return (
     <div className="w-full h-screen flex flex-col">
