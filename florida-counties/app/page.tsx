@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import MapLive from '../components/MapLive';
 import StcMap from '../components/StcMap';
+import CompetitorMap from '../components/CompetitorMap';
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'msa' | 'stc'>('msa');
+  const [activeTab, setActiveTab] = useState<'msa' | 'stc' | 'competitor'>('msa');
 
   return (
     <div className="w-full h-screen flex flex-col">
@@ -32,6 +33,16 @@ export default function Home() {
           >
             STC Campuses
           </button>
+          <button
+            onClick={() => setActiveTab('competitor')}
+            className={`px-6 py-3 font-medium text-sm transition-colors ${
+              activeTab === 'competitor'
+                ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+            }`}
+          >
+            Competitor Overview
+          </button>
         </div>
       </div>
 
@@ -39,6 +50,7 @@ export default function Home() {
       <div className="flex-1 relative overflow-hidden" style={{ minHeight: 0 }}>
         {activeTab === 'msa' && <MapLive />}
         {activeTab === 'stc' && <StcMap />}
+        {activeTab === 'competitor' && <CompetitorMap />}
       </div>
     </div>
   );
