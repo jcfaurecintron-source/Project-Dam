@@ -21,6 +21,7 @@ export interface CollegeScorecardInstitution {
     tuitionProgramYear: number | null;
     attendanceProgramYear: number | null;
     booksAndSupplies: number | null;
+    programReporterFullProgram?: number | null;
   };
 }
 
@@ -50,7 +51,8 @@ const SCORECARD_FIELDS = [
   'latest.cost.tuition.out_of_state',
   'latest.cost.tuition.program_year',
   'latest.cost.attendance.program_year',
-  'latest.cost.booksupply'
+  'latest.cost.booksupply',
+  'latest.cost.program_reporter.program_1.cip_6_digit.full_program'
 ].join(',');
 const PAGE_SIZE = 100;
 
@@ -106,6 +108,15 @@ function toNumber(value: unknown): number | null {
   if (typeof value === 'string') {
     const parsed = parseFloat(value);
     return Number.isFinite(parsed) ? parsed : null;
+  }
+  return null;
+}
+
+function firstValidNumber(...values: (number | null | undefined)[]): number | null {
+  for (const value of values) {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
   }
   return null;
 }
@@ -192,10 +203,20 @@ export async function fetchInstitutionsByCip(
 
       let schoolRecord = schools.get(school.id);
       if (!schoolRecord) {
-        const tuitionInState = toNumber(school?.['latest.cost.tuition.in_state']);
-        const tuitionOutOfState = toNumber(school?.['latest.cost.tuition.out_of_state']);
+        const baseTuitionInState = toNumber(school?.['latest.cost.tuition.in_state']);
+        const baseTuitionOutOfState = toNumber(school?.['latest.cost.tuition.out_of_state']);
         const tuitionProgramYear = toNumber(school?.['latest.cost.tuition.program_year']);
         const attendanceProgramYear = toNumber(school?.['latest.cost.attendance.program_year']);
+        const programReporterFullProgram = toNumber(
+          school?.['latest.cost.program_reporter.program_1.cip_6_digit.full_program']
+        );
+        const fallbackTuition = firstValidNumber(
+          tuitionProgramYear,
+          programReporterFullProgram,
+          attendanceProgramYear
+        );
+        const tuitionInState = firstValidNumber(baseTuitionInState, fallbackTuition);
+        const tuitionOutOfState = firstValidNumber(baseTuitionOutOfState, fallbackTuition);
         const booksAndSupplies = toNumber(school?.['latest.cost.booksupply']);
 
         schoolRecord = {
@@ -215,6 +236,7 @@ export async function fetchInstitutionsByCip(
             tuitionProgramYear,
             attendanceProgramYear,
             booksAndSupplies,
+            programReporterFullProgram,
           },
         };
       }

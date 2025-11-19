@@ -9,6 +9,66 @@ type ProgramInfo = {
   name: string;
 };
 
+const MARKER_COLORS = [
+  '#0ea5e9',
+  '#22c55e',
+  '#f97316',
+  '#e879f9',
+  '#a855f7',
+  '#f472b6',
+  '#fb7185',
+  '#fde047',
+  '#38bdf8',
+  '#2dd4bf',
+];
+
+const hashString = (value: string): number => {
+  let hash = 0;
+  for (let i = 0; i < value.length; i += 1) {
+    hash = (hash << 5) - hash + value.charCodeAt(i);
+    hash |= 0;
+  }
+  return hash;
+};
+
+const getMarkerColor = (value: string) => {
+  const normalized = value.trim().toLowerCase();
+  const index = Math.abs(hashString(normalized || 'default')) % MARKER_COLORS.length;
+  return MARKER_COLORS[index];
+};
+
+const hexToRgb = (hex: string): { r: number; g: number; b: number } | null => {
+  const cleaned = hex.replace('#', '');
+  if (cleaned.length !== 6) return null;
+  const r = parseInt(cleaned.slice(0, 2), 16);
+  const g = parseInt(cleaned.slice(2, 4), 16);
+  const b = parseInt(cleaned.slice(4, 6), 16);
+  if ([r, g, b].some(n => Number.isNaN(n))) return null;
+  return { r, g, b };
+};
+
+const mixWithWhite = (hex: string, amount: number) => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return hex;
+  const mix = (channel: number) => Math.round(channel + (255 - channel) * amount);
+  return `rgb(${mix(rgb.r)}, ${mix(rgb.g)}, ${mix(rgb.b)})`;
+};
+
+const mixWithBlack = (hex: string, amount: number) => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return hex;
+  const mix = (channel: number) => Math.round(channel * (1 - amount));
+  return `rgb(${mix(rgb.r)}, ${mix(rgb.g)}, ${mix(rgb.b)})`;
+};
+
+const rgbaFromHex = (hex: string, alpha: number) => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return `rgba(59,130,246,${alpha})`;
+  return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${alpha})`;
+};
+
+type MarkerVisualStyle = 'dualCircle' | 'pillIcon' | 'outlinePin' | 'dotHalo';
+
 type CostInfo = {
   tuitionInState: number | null;
   tuitionOutOfState: number | null;
@@ -41,6 +101,8 @@ export default function CompetitorMap() {
   const [selectedProgramCode, setSelectedProgramCode] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [schoolQuery, setSchoolQuery] = useState("");
+  const [selectedSchoolId, setSelectedSchoolId] = useState<number | null>(null);
+  const [markerStyle, setMarkerStyle] = useState<MarkerVisualStyle>('dotHalo');
 
   useEffect(() => {
     const fetchCompetitors = async () => {
@@ -165,6 +227,69 @@ export default function CompetitorMap() {
     markersRef.current.forEach(marker => marker.remove());
     markersRef.current = [];
 
+    const createMarkerElement = (
+      style: MarkerVisualStyle,
+      isSelected: boolean,
+      label: string,
+      color: string
+    ) => {
+      const el = document.createElement('div');
+      el.className = 'competitor-marker';
+      if (style === 'dualCircle') {
+        const size = isSelected ? 24 : 20;
+        el.style.width = `${size}px`;
+        el.style.height = `${size}px`;
+        el.style.borderRadius = '50%';
+        el.style.border = '2px solid white';
+        el.style.background = isSelected
+          ? `linear-gradient(135deg, ${mixWithBlack(color, 0.15)}, ${mixWithWhite(color, 0.45)})`
+          : `linear-gradient(135deg, ${mixWithWhite(color, 0.35)}, ${mixWithBlack(color, 0.2)})`;
+        el.style.boxShadow = isSelected ? `0 6px 16px ${rgbaFromHex(color, 0.45)}` : '0 3px 12px rgba(15,23,42,0.35)';
+      } else if (style === 'pillIcon') {
+        el.textContent = label;
+        el.style.width = '34px';
+        el.style.height = '16px';
+        el.style.borderRadius = '999px';
+        el.style.background = '#ffffff';
+        el.style.color = color;
+        el.style.fontWeight = '600';
+        el.style.fontSize = '11px';
+        el.style.display = 'flex';
+        el.style.alignItems = 'center';
+        el.style.justifyContent = 'center';
+        el.style.boxShadow = isSelected ? `0 4px 12px ${rgbaFromHex(color, 0.35)}` : '0 2px 8px rgba(15,23,42,0.2)';
+        el.style.border = `1px solid ${rgbaFromHex(color, isSelected ? 0.9 : 0.4)}`;
+      } else if (style === 'outlinePin') {
+        const size = isSelected ? 28 : 24;
+        el.style.width = `${size}px`;
+        el.style.height = `${size}px`;
+        el.style.borderRadius = '50% 50% 50% 0';
+        el.style.transform = 'rotate(-45deg)';
+        el.style.border = `2px solid ${color}`;
+        el.style.backgroundColor = 'rgba(255,255,255,0.9)';
+        el.style.boxShadow = isSelected
+          ? `0 6px 16px ${rgbaFromHex(color, 0.4)}`
+          : '0 3px 10px rgba(15,23,42,0.25)';
+      } else {
+        const dot = document.createElement('div');
+        dot.style.width = isSelected ? '12px' : '10px';
+        dot.style.height = isSelected ? '12px' : '10px';
+        dot.style.borderRadius = '50%';
+        dot.style.backgroundColor = mixWithBlack(color, 0.3);
+        const halo = document.createElement('div');
+        halo.style.width = isSelected ? '28px' : '22px';
+        halo.style.height = isSelected ? '28px' : '22px';
+        halo.style.borderRadius = '50%';
+        halo.style.backgroundColor = isSelected ? rgbaFromHex(color, 0.4) : rgbaFromHex(color, 0.25);
+        halo.style.display = 'flex';
+        halo.style.alignItems = 'center';
+        halo.style.justifyContent = 'center';
+        halo.appendChild(dot);
+        el.appendChild(halo);
+      }
+      return el;
+    };
+
     filteredCompetitors.forEach(comp => {
       if (typeof comp.longitude !== "number" || typeof comp.latitude !== "number") {
         return;
@@ -196,13 +321,20 @@ export default function CompetitorMap() {
       `;
 
       const popup = new mapboxgl.Popup({ offset: 12 }).setHTML(popupHtml);
-      const marker = new mapboxgl.Marker({ color: "#dc2626" })
+      const markerColor = getMarkerColor(comp.school_name || String(comp.school_id));
+      const markerElement = createMarkerElement(
+        markerStyle,
+        comp.school_id === selectedSchoolId,
+        comp.name?.trim().charAt(0)?.toUpperCase() || "•",
+        markerColor
+      );
+      const marker = new mapboxgl.Marker({ element: markerElement })
         .setLngLat([comp.longitude, comp.latitude])
         .setPopup(popup)
         .addTo(mapRef.current);
       markersRef.current.push(marker);
     });
-  }, [filteredCompetitors, mapReady]);
+  }, [filteredCompetitors, mapReady, selectedSchoolId, markerStyle]);
 
   useEffect(() => {
     if (!containerRef.current || !mapRef.current) return;
@@ -222,6 +354,7 @@ export default function CompetitorMap() {
 
   const handleFocus = (comp: Competitor) => {
     if (!mapRef.current || typeof comp.longitude !== "number" || typeof comp.latitude !== "number") return;
+    setSelectedSchoolId(comp.school_id);
     mapRef.current.flyTo({
       center: [comp.longitude, comp.latitude],
       zoom: 8.5,
@@ -258,6 +391,19 @@ export default function CompetitorMap() {
                   {program.name} ({program.code})
                 </option>
               ))}
+            </select>
+          </label>
+          <label className="block text-[11px] font-semibold uppercase tracking-wide text-gray-500">
+            Marker style
+            <select
+              value={markerStyle}
+              onChange={e => setMarkerStyle(e.target.value as MarkerVisualStyle)}
+              className="mt-1 w-full rounded-lg border border-gray-200 px-2 py-1 text-sm text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            >
+              <option value="dualCircle">Dual-tone circle</option>
+              <option value="pillIcon">Pill with icon</option>
+              <option value="outlinePin">Outlined pin</option>
+              <option value="dotHalo">Dot with halo</option>
             </select>
           </label>
           <label className="block text-[11px] font-semibold uppercase tracking-wide text-gray-500">
@@ -313,7 +459,11 @@ export default function CompetitorMap() {
               {filteredCompetitors.map(comp => (
                 <li
                   key={`${comp.school_id}-${comp.name}`}
-                  className="rounded-lg border border-gray-200 bg-white/90 p-3 text-gray-800 shadow-sm transition hover:border-blue-300"
+                  className={`rounded-lg border p-3 text-gray-800 shadow-sm transition hover:border-blue-300 ${
+                    selectedSchoolId === comp.school_id
+                      ? "border-blue-500 bg-white"
+                      : "border-gray-200 bg-white/90"
+                  }`}
                 >
                   <button
                     type="button"
