@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import mapboxgl, { Map } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import styles from "./CompetitorMap.module.css";
 
 type ProgramInfo = {
   code: string;
@@ -67,7 +68,7 @@ const rgbaFromHex = (hex: string, alpha: number) => {
   return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${alpha})`;
 };
 
-type MarkerVisualStyle = 'dualCircle' | 'pillIcon' | 'outlinePin' | 'dotHalo';
+type MarkerVisualStyle = 'dotHalo';
 
 type CostInfo = {
   tuitionInState: number | null;
@@ -102,7 +103,7 @@ export default function CompetitorMap() {
   const [searchTerm, setSearchTerm] = useState("");
   const [schoolQuery, setSchoolQuery] = useState("");
   const [selectedSchoolId, setSelectedSchoolId] = useState<number | null>(null);
-  const [markerStyle, setMarkerStyle] = useState<MarkerVisualStyle>('dotHalo');
+  const markerStyle: MarkerVisualStyle = 'dotHalo';
 
   useEffect(() => {
     const fetchCompetitors = async () => {
@@ -233,41 +234,53 @@ export default function CompetitorMap() {
       label: string,
       color: string
     ) => {
-      const el = document.createElement('div');
-      el.className = 'competitor-marker';
+      const wrapper = document.createElement('div');
+      wrapper.className = styles.marker;
+      if (isSelected) {
+        const ping = document.createElement('span');
+        ping.className = styles.ping;
+        ping.style.backgroundColor = rgbaFromHex(color, 0.35);
+        ping.style.boxShadow = `0 0 0 1px ${rgbaFromHex(color, 0.25)}`;
+        wrapper.appendChild(ping);
+      }
+      const core = document.createElement('div');
+      core.className = styles.core;
+      wrapper.appendChild(core);
       if (style === 'dualCircle') {
         const size = isSelected ? 24 : 20;
-        el.style.width = `${size}px`;
-        el.style.height = `${size}px`;
-        el.style.borderRadius = '50%';
-        el.style.border = '2px solid white';
-        el.style.background = isSelected
+        core.style.width = `${size}px`;
+        core.style.height = `${size}px`;
+        core.style.borderRadius = '50%';
+        core.style.border = '2px solid white';
+        core.style.background = isSelected
           ? `linear-gradient(135deg, ${mixWithBlack(color, 0.15)}, ${mixWithWhite(color, 0.45)})`
           : `linear-gradient(135deg, ${mixWithWhite(color, 0.35)}, ${mixWithBlack(color, 0.2)})`;
-        el.style.boxShadow = isSelected ? `0 6px 16px ${rgbaFromHex(color, 0.45)}` : '0 3px 12px rgba(15,23,42,0.35)';
+        core.style.boxShadow = isSelected
+          ? `0 6px 16px ${rgbaFromHex(color, 0.45)}`
+          : '0 3px 12px rgba(15,23,42,0.35)';
       } else if (style === 'pillIcon') {
-        el.textContent = label;
-        el.style.width = '34px';
-        el.style.height = '16px';
-        el.style.borderRadius = '999px';
-        el.style.background = '#ffffff';
-        el.style.color = color;
-        el.style.fontWeight = '600';
-        el.style.fontSize = '11px';
-        el.style.display = 'flex';
-        el.style.alignItems = 'center';
-        el.style.justifyContent = 'center';
-        el.style.boxShadow = isSelected ? `0 4px 12px ${rgbaFromHex(color, 0.35)}` : '0 2px 8px rgba(15,23,42,0.2)';
-        el.style.border = `1px solid ${rgbaFromHex(color, isSelected ? 0.9 : 0.4)}`;
+        core.textContent = label;
+        core.style.width = '34px';
+        core.style.height = '16px';
+        core.style.borderRadius = '999px';
+        core.style.background = '#ffffff';
+        core.style.color = color;
+        core.style.fontWeight = '600';
+        core.style.fontSize = '11px';
+        core.style.display = 'flex';
+        core.style.alignItems = 'center';
+        core.style.justifyContent = 'center';
+        core.style.boxShadow = isSelected ? `0 4px 12px ${rgbaFromHex(color, 0.35)}` : '0 2px 8px rgba(15,23,42,0.2)';
+        core.style.border = `1px solid ${rgbaFromHex(color, isSelected ? 0.9 : 0.4)}`;
       } else if (style === 'outlinePin') {
         const size = isSelected ? 28 : 24;
-        el.style.width = `${size}px`;
-        el.style.height = `${size}px`;
-        el.style.borderRadius = '50% 50% 50% 0';
-        el.style.transform = 'rotate(-45deg)';
-        el.style.border = `2px solid ${color}`;
-        el.style.backgroundColor = 'rgba(255,255,255,0.9)';
-        el.style.boxShadow = isSelected
+        core.style.width = `${size}px`;
+        core.style.height = `${size}px`;
+        core.style.borderRadius = '50% 50% 50% 0';
+        core.style.transform = 'rotate(-45deg)';
+        core.style.border = `2px solid ${color}`;
+        core.style.backgroundColor = 'rgba(255,255,255,0.9)';
+        core.style.boxShadow = isSelected
           ? `0 6px 16px ${rgbaFromHex(color, 0.4)}`
           : '0 3px 10px rgba(15,23,42,0.25)';
       } else {
@@ -285,9 +298,9 @@ export default function CompetitorMap() {
         halo.style.alignItems = 'center';
         halo.style.justifyContent = 'center';
         halo.appendChild(dot);
-        el.appendChild(halo);
+        core.appendChild(halo);
       }
-      return el;
+      return wrapper;
     };
 
     filteredCompetitors.forEach(comp => {
@@ -328,13 +341,13 @@ export default function CompetitorMap() {
         comp.name?.trim().charAt(0)?.toUpperCase() || "•",
         markerColor
       );
-      const marker = new mapboxgl.Marker({ element: markerElement })
+      const marker = new mapboxgl.Marker({ element: markerElement, anchor: "center" })
         .setLngLat([comp.longitude, comp.latitude])
         .setPopup(popup)
         .addTo(mapRef.current);
       markersRef.current.push(marker);
     });
-  }, [filteredCompetitors, mapReady, selectedSchoolId, markerStyle]);
+  }, [filteredCompetitors, mapReady, selectedSchoolId]);
 
   useEffect(() => {
     if (!containerRef.current || !mapRef.current) return;
@@ -357,7 +370,7 @@ export default function CompetitorMap() {
     setSelectedSchoolId(comp.school_id);
     mapRef.current.flyTo({
       center: [comp.longitude, comp.latitude],
-      zoom: 8.5,
+      zoom: 11.5,
       essential: true,
     });
   };
@@ -391,19 +404,6 @@ export default function CompetitorMap() {
                   {program.name} ({program.code})
                 </option>
               ))}
-            </select>
-          </label>
-          <label className="block text-[11px] font-semibold uppercase tracking-wide text-gray-500">
-            Marker style
-            <select
-              value={markerStyle}
-              onChange={e => setMarkerStyle(e.target.value as MarkerVisualStyle)}
-              className="mt-1 w-full rounded-lg border border-gray-200 px-2 py-1 text-sm text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-            >
-              <option value="dualCircle">Dual-tone circle</option>
-              <option value="pillIcon">Pill with icon</option>
-              <option value="outlinePin">Outlined pin</option>
-              <option value="dotHalo">Dot with halo</option>
             </select>
           </label>
           <label className="block text-[11px] font-semibold uppercase tracking-wide text-gray-500">
@@ -456,58 +456,63 @@ export default function CompetitorMap() {
               Highlighting Florida institutions sharing Southern Technical College CIP codes.
             </div>
             <ul className="max-h-[60vh] space-y-2 overflow-y-auto pr-1">
-              {filteredCompetitors.map(comp => (
-                <li
-                  key={`${comp.school_id}-${comp.name}`}
-                  className={`rounded-lg border p-3 text-gray-800 shadow-sm transition hover:border-blue-300 ${
-                    selectedSchoolId === comp.school_id
-                      ? "border-blue-500 bg-white"
-                      : "border-gray-200 bg-white/90"
-                  }`}
-                >
-                  <button
-                    type="button"
-                    className="w-full text-left"
-                    onClick={() => handleFocus(comp)}
+              {filteredCompetitors.map(comp => {
+                const accentColor = getMarkerColor(comp.school_name || String(comp.school_id));
+                const isSelected = selectedSchoolId === comp.school_id;
+                return (
+                  <li
+                    key={`${comp.school_id}-${comp.name}`}
+                    className={`rounded-lg border border-gray-200 border-l-4 p-3 text-gray-800 shadow-sm transition hover:border-blue-300 ${
+                      isSelected ? "bg-white" : "bg-white/90"
+                    }`}
+                    style={{
+                      borderLeftColor: isSelected ? accentColor : "transparent",
+                    }}
                   >
-                    <div className="text-sm font-semibold text-gray-900">{comp.name}</div>
-                    <div className="text-xs text-gray-500">
-                      {[comp.city, comp.state].filter(Boolean).join(", ") || "Florida"}
-                    </div>
-                    <div className="mt-2 flex flex-wrap gap-1">
-                      {(comp.matching_programs ?? []).map(program => (
-                        <span
-                          key={`${comp.school_id}-${program.code}`}
-                          className="rounded bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700"
-                        >
-                          {program.name}
-                          <span className="ml-1 text-[10px] font-normal text-blue-900">({program.code})</span>
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-3 space-y-1 text-[11px] text-gray-600">
-                      <div className="flex justify-between">
-                        <span>In-state tuition</span>
-                        <span className="font-semibold text-gray-900">
-                          {formatCurrency(comp.costs?.tuitionInState ?? null)}
-                        </span>
+                    <button
+                      type="button"
+                      className="w-full text-left"
+                      onClick={() => handleFocus(comp)}
+                    >
+                      <div className="text-sm font-semibold text-gray-900">{comp.name}</div>
+                      <div className="text-xs text-gray-500">
+                        {[comp.city, comp.state].filter(Boolean).join(", ") || "Florida"}
                       </div>
-                      <div className="flex justify-between">
-                        <span>Out-of-state tuition</span>
-                        <span className="font-semibold text-gray-900">
-                          {formatCurrency(comp.costs?.tuitionOutOfState ?? null)}
-                        </span>
+                      <div className="mt-2 flex flex-wrap gap-1">
+                        {(comp.matching_programs ?? []).map(program => (
+                          <span
+                            key={`${comp.school_id}-${program.code}`}
+                            className="rounded bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700"
+                          >
+                            {program.name}
+                            <span className="ml-1 text-[10px] font-normal text-blue-900">({program.code})</span>
+                          </span>
+                        ))}
                       </div>
-                      <div className="flex justify-between">
-                        <span>Books & supplies</span>
-                        <span className="font-semibold text-gray-900">
-                          {formatCurrency(comp.costs?.booksAndSupplies ?? null)}
-                        </span>
+                      <div className="mt-3 space-y-1 text-[11px] text-gray-600">
+                        <div className="flex justify-between">
+                          <span>In-state tuition</span>
+                          <span className="font-semibold text-gray-900">
+                            {formatCurrency(comp.costs?.tuitionInState ?? null)}
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Out-of-state tuition</span>
+                          <span className="font-semibold text-gray-900">
+                            {formatCurrency(comp.costs?.tuitionOutOfState ?? null)}
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Books & supplies</span>
+                          <span className="font-semibold text-gray-900">
+                            {formatCurrency(comp.costs?.booksAndSupplies ?? null)}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                </li>
-              ))}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
